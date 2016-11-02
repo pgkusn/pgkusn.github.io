@@ -1,0 +1,418 @@
+@charset "UTF-8";
+/* line 2, ../sass/common/_extend.scss */
+.container .content .inner:before {
+  content: "";
+  display: table;
+}
+/* line 6, ../sass/common/_extend.scss */
+.container .content .inner:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 12, ../sass/common/_extend.scss */
+.container header h1, .container header .share li a {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 17, ../sass/common/_extend.scss */
+.container .content .inner .nutrition ul {
+  list-style-image: url("../images/layout/list.png");
+  padding-left: 1rem;
+}
+/* line 20, ../sass/common/_extend.scss */
+.container .content .inner .nutrition ul a {
+  font-size: 14px;
+  line-height: 30px;
+  color: #01a5ca;
+}
+/* line 24, ../sass/common/_extend.scss */
+.container .content .inner .nutrition ul a:hover {
+  color: #292929;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+/* line 4, ../sass/common/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 21, ../sass/common/_reset.scss */
+html {
+  /*預設字體大小*/
+}
+
+/* line 25, ../sass/common/_reset.scss */
+body {
+  line-height: 1;
+  color: #292929;
+  font-family: Helvetica, Arial, 'LiHei Pro', '微軟正黑體', '新細明體', sans-serif;
+  /*讓英文字元自動斷行*/
+  word-wrap: break-word;
+  word-break: break-all;
+  /*左右齊行*/
+  text-align: justify;
+}
+
+/* line 37, ../sass/common/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 40, ../sass/common/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 43, ../sass/common/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* remember to define focus styles! */
+/* line 50, ../sass/common/_reset.scss */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+/* line 55, ../sass/common/_reset.scss */
+ins {
+  text-decoration: none;
+}
+
+/* line 58, ../sass/common/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 62, ../sass/common/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  /*防止表格被連續的英文或數字撐開*/
+  table-layout: fixed;
+  word-break: break-all;
+}
+
+/*表格框線*/
+/* line 76, ../sass/common/_reset.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 79, ../sass/common/_reset.scss */
+a {
+  text-decoration: none;
+  color: #292929;
+}
+
+/* line 9, ../sass/_layout.scss */
+html {
+  background: url(../images/layout/bg.png) repeat;
+  /* 設定body高度為100% 拉到視窗可視的大小 */
+  height: 100%;
+}
+
+/* line 14, ../sass/_layout.scss */
+body {
+  border-top: 6px solid #292929;
+  /* 設定body高度為100% 拉到視窗可視的大小 */
+  height: 100%;
+}
+
+/* line 19, ../sass/_layout.scss */
+#bg-img {
+  background: url(../images/layout/bg-img.gif);
+  width: 150px;
+  height: 6px;
+  position: absolute;
+  top: -6px;
+  left: -150px;
+}
+
+/* line 25, ../sass/_layout.scss */
+.container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  /* 設定高度最小為100%, 如果內容區塊很多, 可以長大 */
+  min-height: 100%;
+  /* 位置設為relative, 作為footer區塊位置的參考 */
+  position: relative;
+}
+/* line 12, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.9/sass/susy/output/support/_clearfix.scss */
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 32, ../sass/_layout.scss */
+.container p {
+  font-size: 14px;
+  line-height: 25px;
+}
+/* line 36, ../sass/_layout.scss */
+.container i {
+  color: #01a5ca;
+  font-style: normal;
+}
+/* line 41, ../sass/_layout.scss */
+.container header {
+  position: relative;
+  height: 149px;
+  padding: 35px 0 35px 20px;
+}
+/* line 45, ../sass/_layout.scss */
+.container header h1 {
+  background: url(../images/layout/logo.png);
+  width: 171px;
+  height: 82px;
+}
+/* line 49, ../sass/_layout.scss */
+.container header nav {
+  position: absolute;
+  bottom: 35px;
+  right: 20px;
+}
+/* line 53, ../sass/_layout.scss */
+.container header nav li {
+  float: left;
+  padding-right: 30px;
+}
+/* line 56, ../sass/_layout.scss */
+.container header nav li:last-of-type {
+  padding-right: 0;
+}
+/* line 59, ../sass/_layout.scss */
+.container header nav li a {
+  font-size: 17px;
+}
+/* line 61, ../sass/_layout.scss */
+.container header nav li a:hover {
+  color: #01a5ca;
+}
+/* line 67, ../sass/_layout.scss */
+.container header .share {
+  position: absolute;
+  top: 35px;
+  right: 20px;
+}
+/* line 71, ../sass/_layout.scss */
+.container header .share li {
+  float: left;
+}
+/* line 73, ../sass/_layout.scss */
+.container header .share li:first-of-type {
+  padding-right: 15px;
+}
+/* line 76, ../sass/_layout.scss */
+.container header .share li a {
+  display: inline-block;
+}
+/* line 80, ../sass/_layout.scss */
+.container header .share li .twitter {
+  background: url(../images/layout/twitter.png);
+  width: 23px;
+  height: 23px;
+}
+/* line 83, ../sass/_layout.scss */
+.container header .share li .facebook {
+  background: url(../images/layout/facebook.png);
+  width: 23px;
+  height: 23px;
+}
+/* line 90, ../sass/_layout.scss */
+.container .content {
+  /* 留出footer區塊的空間 */
+  padding-bottom: 110px;
+}
+/* line 93, ../sass/_layout.scss */
+.container .content .inner {
+  background-color: #FFF;
+  padding: 35px 48px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+/* line 98, ../sass/_layout.scss */
+.container .content .inner h2 {
+  font-size: 30px;
+  margin-bottom: 19px;
+}
+/* line 105, ../sass/_layout.scss */
+.container footer {
+  /* 設定footer的高度 */
+  height: 110px;
+  /* 設定footer絕對位置在底部 */
+  position: absolute;
+  bottom: 0;
+  /* 展開footer寬度 */
+  width: 100%;
+  padding: 30px 0;
+}
+/* line 115, ../sass/_layout.scss */
+.container footer p {
+  font-size: 14px;
+  text-align: center;
+}
+/* line 119, ../sass/_layout.scss */
+.container footer a {
+  color: #01a5ca;
+}
+/* line 121, ../sass/_layout.scss */
+.container footer a:hover {
+  text-decoration: underline;
+}
+
+/* line 16, ../sass/nutrition.scss */
+.container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.9/sass/susy/output/support/_clearfix.scss */
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 20, ../sass/nutrition.scss */
+.container .content .inner h2 {
+  font-size: 30px;
+  margin-bottom: 19px;
+  clear: both;
+}
+/* line 25, ../sass/nutrition.scss */
+.container .content .inner img {
+  border: #f4f4f4 solid 5px;
+}
+/* line 28, ../sass/nutrition.scss */
+.container .content .inner .introduce {
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+  padding-right: 45px;
+}
+/* line 31, ../sass/nutrition.scss */
+.container .content .inner .introduce img {
+  display: block;
+  float: left;
+}
+/* line 35, ../sass/nutrition.scss */
+.container .content .inner .introduce section {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 37, ../sass/nutrition.scss */
+.container .content .inner .introduce section p {
+  margin-bottom: 5px;
+}
+/* line 39, ../sass/nutrition.scss */
+.container .content .inner .introduce section p:first-of-type {
+  font-weight: bold;
+}
+/* line 43, ../sass/nutrition.scss */
+.container .content .inner .introduce section .wrap {
+  width: 35.89744%;
+  float: left;
+  margin-right: 2.5641%;
+  margin-top: 15px;
+}
+/* line 46, ../sass/nutrition.scss */
+.container .content .inner .introduce section .wrap img {
+  max-width: 100%;
+}
+/* line 50, ../sass/nutrition.scss */
+.container .content .inner .introduce section .eirmod {
+  width: 61.53846%;
+  float: right;
+  margin-right: 0;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+/* line 54, ../sass/nutrition.scss */
+.container .content .inner .introduce section .eirmod .btn {
+  display: block;
+  width: 108px;
+  height: 43px;
+  color: #01a5ca;
+  background-color: #f4f4f4;
+  line-height: 43px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* line 14, ../sass/common/_mixin.scss */
+.container .content .inner .introduce section .eirmod .btn:hover {
+  color: #000;
+  background: #B7B7B7;
+}
+/* line 60, ../sass/nutrition.scss */
+.container .content .inner .introduce section:first-child {
+  margin-bottom: 30px;
+}
+/* line 66, ../sass/nutrition.scss */
+.container .content .inner .nutrition {
+  width: 32.20339%;
+  float: right;
+  margin-right: 0;
+}
+/* line 68, ../sass/nutrition.scss */
+.container .content .inner .nutrition p:first-of-type {
+  font-weight: bold;
+}
+/* line 71, ../sass/nutrition.scss */
+.container .content .inner .nutrition img {
+  display: block;
+  margin: 17px 0;
+}
+/* line 78, ../sass/nutrition.scss */
+.container .content .inner .nutrition .btn {
+  display: block;
+  width: 108px;
+  height: 43px;
+  color: #01a5ca;
+  background-color: #f4f4f4;
+  line-height: 43px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* line 14, ../sass/common/_mixin.scss */
+.container .content .inner .nutrition .btn:hover {
+  color: #000;
+  background: #B7B7B7;
+}
+/* line 87, ../sass/nutrition.scss */
+.container footer {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=nutrition.css.map */

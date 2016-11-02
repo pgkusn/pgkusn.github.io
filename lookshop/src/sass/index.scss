@@ -1,0 +1,980 @@
+@import "susy";
+// @import "compass/css3";
+// @import "ceaser-easing";
+@import "common/variable";
+@import "common/mixin";
+@import "common/extend";
+@import "common/reset";
+
+// common
+a{
+	color: $text-color;
+}
+.inner{
+	max-width: $inner-width;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+ul.shop {
+	@extend %clearfix;
+	display: flex;
+	justify-content: space-between;
+	li{
+		position: relative;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		background-color: #FFF;
+		text-align: center;
+		transition: transform 0.5s;
+		&:hover{
+			transform: scale(1.1,1.1);
+			& .shopIt{
+				opacity: 1;
+			}
+		}
+		// 左上方裝飾
+		&:before {
+	      content: '';
+	      position: absolute;
+          left: 0;
+          top: 0;
+	      display: inline-block;
+	      width: 0;
+	      height: 0;
+	      border: transparent solid 30px;
+	      border-color: #4c4c4c #FFF #FFF #4c4c4c;
+          box-shadow: 1px 1px 5px #888;
+	    }
+	    &:after {
+	        content: 'SALE';
+	        position: absolute;
+	        left: 4px;
+	        top: 7px;
+	        font-size: 12px;
+	        color: #FFF;
+	    }
+		&:last-child{
+			margin-right: 0;
+		}
+		.box{
+			p{
+				&:nth-of-type(1){
+					font-size: 12px;
+					line-height: 2.5;
+				}
+				&:nth-of-type(2){
+					font-size: 22px;
+				}
+			}
+			a{
+				display: inline-block;
+				width: 120px;
+				height: 32px;
+				margin: 11px 0;
+
+				font-size: 12px;
+				line-height: 29px;
+				text-align: center;
+				
+				color: #FFF;
+				background-color: #fd926d;
+				border-bottom: 3px solid #dd6b44;
+			}
+		}
+		.shopIt{
+			opacity: 0;
+			position: absolute;
+		    left: 43px;
+		    top: 80px;
+		    
+			width: 134px;
+			height: 134px;
+
+			color: #FFF;
+			background-color: #4c4c4c;
+			border-radius: 100%;
+
+			cursor: pointer;
+			transition: opacity 0.5s;
+			i{
+				display: block;
+				margin: 30px auto 10px;
+			    font-size: 45px;
+			}
+		}
+	}
+}
+.loadMore{
+	display: none;
+	width: 220px;
+	height: 60px;
+	margin: 0 auto 30px;
+	text-align: center;
+	line-height: 60px;
+	color: #FFF;
+	background-color: #000;
+	&.active{
+		display: block;
+	}
+}
+.menuBtn{
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: center center no-repeat transparent;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADhJREFUeNpi/P//PwOtARMDHQBdLGFBYtMq3BiHT3DRPU4YR4NrNAmPJuHRJDyahEeT8Ii3BCDAAF0WBj5Er5idAAAAAElFTkSuQmCC );
+}
+
+body{
+	min-width: 545px;
+}
+#top{
+	color:#FFF;
+	background-color: #000;
+	.inner{
+		@extend %clearfix;
+		#phone{
+			float: left;
+			span{
+				display: inline-block;
+				font-size: 11px;
+			    line-height: 30px;
+			}
+		}
+		#user{
+			float: right;
+			ul{
+				@extend %clearfix;
+				li{
+					float: left;
+					border-left: gray 2px solid;
+					&:last-child{
+						border-right: gray 2px solid;
+					}
+					span{
+						display: inline-block;
+						padding-left: 15px;
+						padding-right: 15px;
+						font-size: 11px;
+						line-height: 30px;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: $iphone){
+	#top{
+		.inner{
+			#phone{
+				position: absolute;
+				left: 0;
+				top: 0;
+				float: none;
+				width: 100%;
+				min-width: 545px;
+				height: 90px;
+				text-align: center;
+				background-color: #FFF;
+				span{
+					font-size: 30px;
+					color: gray;
+					line-height: 96px;
+				}
+			}
+			#user{
+				float: none;
+				margin-top: 90px;
+				ul{
+					display: flex;
+					justify-content: space-between;
+					&:before {
+					  content: normal;
+					}
+					&:after {
+					  content: normal;
+					}
+					li{
+						border: 0;
+						&:nth-child(1){
+							border-right: gray 2px solid;
+							span{
+								padding-left: 0;
+							}
+						}
+						&:nth-child(3){
+							border-left: gray 2px solid;
+							border-right: 0;
+							span{
+								padding-right: 0;
+							}
+						}
+						span{
+							font-size: 30px;
+							line-height: 96px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+header{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	.inner{
+		@extend %clearfix;
+		h1{
+			@include bg('logo.png');
+			@extend %hide-text;
+			float: left;
+			margin-top: 4px;
+		}
+		.right{
+			float: right;
+			nav{
+				display: inline-block;
+				@media screen and (max-width: $ipad){
+					display: none;
+				}
+				&>ul{
+					@extend %clearfix;
+					&>li{
+						position: relative;
+						float: left;
+						padding: 5px 30px 5px 0;
+						@media screen and (max-width: 860px){
+							padding-right: 20px;
+						}
+						&:hover>ul{
+							height: 72px;
+							transition: height 0.5s;
+						}
+						&>ul{
+							position: absolute;
+							top: 26px;
+							left: 0;
+							z-index: 1;
+							height: 0;
+							overflow: hidden;
+							&>li{
+								&>a{
+									display: block;
+									padding: 10px;
+									color: #fff;
+									background-color: rgba(#000, 0.7);
+									&:hover{
+										background-color: rgba(0,0,0,0.8);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			select{
+				width: 214px;
+				height: 33px;
+				padding-left: 5px;
+				vertical-align: 8px;
+				color: gray;
+			}
+		}
+	}
+}
+@media screen and (max-width: $iphone){
+	header{
+		.inner{
+			h1{
+				@include bg('logo_b.png');
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				float: none;
+				margin: 50px auto;	
+			}
+			.right{
+				float: none;
+				select{
+					width: 100%;
+					height: 90px;
+					padding-left: 25px;
+					font-size: 30px;
+				}
+			}
+		}
+	}
+}
+
+.header{
+	display: none;
+	@media screen and (max-width: $ipad){
+		position: relative;
+		display: block;
+		margin: 0 15px 20px;
+		color: #FFF;
+		text-indent: 1em;
+		line-height: 48px;
+		background-color: #fd926d;
+		.fa-arrow-left{
+			display: none;
+			margin-right: 10px;
+			cursor: pointer;
+		}
+		.menuBtn{
+			position: absolute;
+			top: 4px;
+			right: 15px;
+		}
+		.menu{
+			position: relative;
+			overflow: hidden;
+			.wrap{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 200%;
+				ul{
+					float: left;
+					width: 50%;
+					li{
+						position: relative;
+						background-color: #FFB79E;
+						border-bottom: #FFF 1px solid;
+						&:last-child{
+							border-bottom: 0;
+						}
+						&:hover{
+							background-color: #ffa88a;
+						}
+						ul{
+							display: none;
+							position: absolute;
+						    top: 0;
+						    left: 0;
+						}
+						a{
+							display: block;
+							color: #FFF;
+							i{
+								position: absolute;
+							    top: 0;
+							    right: 1em;
+							    line-height: inherit;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@media screen and (max-width: $iphone){
+		font-size: 30px;
+		line-height: 90px;
+		.menuBtn{
+			top: 27px;
+			right: 25px;
+		}
+	}
+}
+
+main{
+	#slider_wrap{
+		max-width: $total-width;
+		margin: 0 auto;
+		position: relative;
+		#text{
+			position: absolute;
+			left: 10%;
+			top: 13%;
+			z-index: 1;
+			width: 28%;
+			img{
+				width: 100%
+			}
+			#shop_now{
+				display: block;
+				width: 156px;
+				height: 57px;
+				margin: 20px auto 0;
+
+				color: #fff;
+				text-align: center;
+				line-height: 57px;
+
+				background-color: #fd926d;
+				border-bottom: 3px #dd6b44 solid;
+				@media screen and (max-width: $ipad){
+					width: 136px;
+					height: 37px;
+					line-height: 37px;
+					font-size: 14px;
+				}
+			}
+		}
+		#slider{
+			img{
+				width: 100%;
+			}
+			.slick-prev, .slick-next{
+				display: none !important;
+			}
+			.slick-dots li button::before {
+				font-size: 12px;
+				opacity: .5;
+			}
+			.slick-dots li button:hover::before, .slick-dots li button:focus::before{
+				opacity: 1;
+			}
+			.slick-dots li.slick-active button::before{
+				color: #FF6630;
+				opacity: 1;
+			}
+		}
+		@media screen and (max-width: $iphone){
+			display: none;
+		}
+	}
+	#social{
+		color:#6e6e6e;
+		background-color: #EDEDED;
+		margin-top: 60px;
+		.inner{
+			@extend %clearfix;
+			#subscribe{
+				position: relative;
+				float: left;
+				padding: 14px 0;
+				font-size: 12px;
+				input{
+					box-sizing: border-box;
+					width: 160px;
+					height: 28px;
+					margin-left: 5px;
+					padding: 0 37px 0 9px;
+					font-size: 12px;
+					font-style: italic;
+					vertical-align: middle;
+					border: 0;
+				}
+				&:after{
+					content: "+";
+					position: absolute;
+					top: 14px;
+					right: 0;
+
+					box-sizing: border-box;
+					display: inline-block;
+					width: 28px;
+					height: 28px;
+					margin-left: -4px;
+
+					color: #FFF;
+					line-height: 28px;
+					text-align: center;
+					cursor: pointer;
+
+					background-color: #FD926D;
+					border-bottom: 3px #dd6b44 solid;
+				}
+			}
+			#find{
+				float: right;
+				span{
+					display: inline-block;
+					padding-right: 20px;
+				}
+				i{
+					color: #6e6e6e;
+					padding: 20px;
+					&.fa-facebook,&.fa-pinterest{
+						background-color: #F7F7F7;
+					}
+				}
+			}
+		}
+	}
+	@media screen and (max-width: $iphone){
+		#social{
+			margin-top: 20px;
+			background-color: initial;
+			.inner{
+				#subscribe{
+					float: none;
+					padding: 0;
+					span{
+						display: none;
+					}
+					input{
+						width: 100%;
+						height: 90px;
+						box-sizing: border-box;
+						margin-left: 0;
+						padding: 0 115px 0 19px;
+						font-size: 30px;
+						background-color: #EDEDED;
+					}
+					&:after{
+						top: 0;
+						width: 90px;
+						height: 90px;
+						font-size: 70px;
+						line-height: 90px;
+					}
+				}
+				#find{
+					float: none;
+					margin-top: 20px;
+					margin-bottom: 20px;
+					font-size: 30px;
+					text-align: center;
+				}
+			}
+		}
+	}
+	#ads{
+		@media screen and (max-width: $iphone){
+			display: none;
+		}
+		.inner{
+			@extend %clearfix;
+			margin-top: 40px;
+			margin-bottom: 40px;
+			img{
+				display: block;
+				width: 100%;
+				transition:transform 1s;
+			}
+			a{
+				display: block;
+				overflow: hidden;
+			}
+			a:hover img{
+				transform:scale(1.1);
+			}
+			a:nth-child(1){
+				float: left;
+				width: 50%;
+				height: 100%;
+			}
+			a:nth-child(2){
+				float: right;
+				width: 50%;
+				height: 50%;
+			}
+			a:nth-child(3){
+				float: left;
+				width: 25%;
+				height: 50%;
+			}
+			a:nth-child(4){
+				float: right;
+				width: 25%;
+				height: 50%;
+			}
+		}
+	}
+	#product{
+		max-width: $total-width;
+		margin: 0 auto;
+		.inner{
+			@media screen and (max-width: $iphone){
+				display: none;
+			}
+			.control{
+				position: relative;
+				height: 47px;
+				.leftCtrl{
+					padding-right: 120px;
+					ul{
+						display: flex;
+						li{
+							width: 138px;
+							line-height: 47px;
+							text-align: center;
+							&:nth-child(1){
+								&.active a,&:hover a{
+									color: #FFF;
+									background-color: #fd926d;
+								}
+							}
+							&:nth-child(2){
+								&.active a,&:hover a{
+									color: #FFF;
+									background-color: #6DCCFD;
+								}
+							}
+							&:nth-child(3){
+								&.active a,&:hover a{
+									color: #FFF;
+									background-color: #6DFDD4;
+								}
+							}
+							&:nth-child(4){
+								&.active a,&:hover a{
+									color: #FFF;
+									background-color: #FFCF7F;
+								}
+							}
+							a{
+								display: block;
+							}
+						}
+					}
+				}
+				.rightCtrl{
+					position: absolute;
+					top: 0;
+					right: 0;
+					a{
+						float: left;
+						&.disable{
+						    opacity: 0.5;
+						    cursor: default;
+						    &:hover i{
+						    	color: $text-color;
+						    	background-color: #f2f2f2;
+						    }
+						}
+						i{
+							width: 47px;
+							height: 47px;
+							font-size: 45px;
+							line-height: 47px;
+							text-align: center;
+							background-color: #f2f2f2;
+							&:hover{
+								color: #FFF;
+								background-color: #4c4c4c;
+							}
+						}
+					}
+				}
+			}
+		}
+		select{
+			display: none;
+			width: 100%;
+			height: 90px;
+			padding-left: 25px;
+			font-size: 30px;
+			color: #FFF;
+			background-color: #f4845d;
+			border: 0;
+			@media screen and (max-width: $iphone){
+				display: block;
+			}
+		}
+		.wrap{
+			overflow: hidden;
+			position: relative;
+			height: 459px;
+			@media screen and (max-width: $iphone){
+				height: auto;
+			}
+			ul.shop {
+				display: none;
+				position: absolute;
+				@media screen and (max-width: $iphone){
+				    position: static;
+				    width: 530px !important;
+				    margin: 0 auto;
+				}
+				&.active{
+					display: block;
+				}
+				li{
+					float: left;
+					margin-right: 30px;
+					&:first-child{
+						margin-left: 30px;
+					}
+					@media screen and (max-width: $iphone){
+						&:first-child{
+							margin-left: 0;
+						}
+						&:nth-child(2n+1){
+							margin-left: 30px;
+						}
+					}
+				}
+			}
+		}
+	}
+	#clearence{
+		.inner{
+			margin-top: 25px;
+			margin-bottom: 25px;
+			.mark{
+				@include bg('clearance.png');
+				background-position: center center;
+			}
+			ul.shop{
+				@media screen and (max-width: $iphone){
+				    display: block;
+				    width: 530px;
+				    margin: 0 auto;
+				}
+				li{
+					@media screen and (max-width: $inner-width){
+						&:nth-child(4){
+							display: none;
+						}
+					}
+					@media screen and (max-width: $iphone){
+						float: left;
+						margin-right: 30px;
+						&:first-child{
+							margin-left: 0;
+						}
+						&:nth-child(2n+1){
+							margin-left: 30px;
+						}
+					}
+					@media screen and (max-width: 720px){
+						&:nth-child(3){
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	#brands{
+		max-width: $total-width;
+		margin: 0 auto;
+	    border-bottom: #d8d8d8 solid 1px;
+	    @media screen and (max-width: $iphone){
+	    	display: none;
+	    }
+		h2{
+			@extend %hide-text;
+			@include bg('logos_title.png');
+			background-position: center center;
+		}
+		.inner{
+			margin-top: 20px;
+			margin-bottom: 20px;
+			ul{
+				display: flex;
+				justify-content: space-between;
+				li{
+					@for $i from 1 through 8 {
+						&:nth-child(#{$i}){
+							background: sprite($brand,brand#{$i});
+							width:image-width('brand/brand#{$i}.png');
+							height:image-height('brand/brand#{$i}.png');
+							@media screen and (max-width: $ipad){
+								@if $i == 7 or $i == 8 {
+									display: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#about{
+		@media screen and (max-width: $iphone){
+			display: none;
+		}
+		h2{
+			font-size: 30px;
+			text-align: center;
+			line-height: 3;
+		}
+		p{
+		    font-size: 14px;
+			text-align: center;
+		    line-height: 1.2;
+		    color: gray;
+		}
+	}
+	#cards{
+		@media screen and (max-width: $iphone){
+			display: none;
+		}
+		margin: 30px auto 0;
+		background-color: #f7f7f7;
+		.inner{
+			padding-top: 20px;
+			padding-bottom: 20px;
+			text-align: center;
+			ul{
+				display: inline-block;
+				margin-left: 10px;
+			    vertical-align: middle;
+				li{
+					display: inline-block;
+					margin-right: 5px;
+					@for $i from 1 through 11 {
+						&:nth-child(#{$i}){
+							background: sprite($card,card#{$i});
+							width:image-width('card/card#{$i}.png');
+							height:image-height('card/card#{$i}.png');
+						}
+					}
+				}
+			}
+		}
+	}
+	#bottom{
+		@media screen and (max-width: $iphone){
+			display: none;
+		}
+		background-color: #ededed;
+		.inner{
+			position: relative;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			dl{
+				float: left;
+				dt{
+					font-size: 16px;
+					font-weight: bold;
+					margin-bottom: 20px;
+				}
+				dd{
+					font-size: 12px;
+					line-height: 1.5;
+				}
+			}
+			.left{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				padding-right: 340px;
+				dl{
+					&:last-child{
+						margin-right: 0;
+					}
+				}
+				@media screen and (max-width: 900px){
+					padding-right: 278px;
+					dl{
+						width: 50%;
+						padding-right: 20px;
+						padding-bottom: 30px;
+					}
+				}
+			}
+			.right{
+				position: absolute;
+				top: 30px;
+				right: 15px;
+				dl{
+					&:nth-child(1){
+						width: 131px;
+						margin-right: 40px;
+						@for $i from 1 through 6 {
+							dd:nth-of-type(#{$i}){
+								float: left;
+								width: image-width('social/social0#{$i}.png');
+								height: image-height('social/social0#{$i}.png');
+								margin-right: 13px;
+								margin-bottom: 9px;
+								background: sprite($social,social0#{$i});
+								a{
+									display: block;
+									height: 100%;
+								}
+							}
+						}
+						dd:nth-of-type(3n+3){
+							margin-right: 0;
+						}
+					}
+					&:nth-child(2){
+						margin-top: 20px;
+						margin-right: 0;
+						dt{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+footer{
+	height: 74px;
+	background-color: #000;
+	.inner{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	    height: inherit;
+		color: gray;
+		.menuBtn{
+			display: none;
+		}
+		.menu{
+			ul{
+				@extend %clearfix;
+				li{
+					float: left;
+					padding-right: 10px;
+					margin-right: 10px;
+					border-right: gray solid 1px;
+					&:last-child{
+						border-right: none;
+					}
+					a{
+						font-size: 11px;
+						color: gray;
+					}
+				}
+			}
+		}
+		#copyright p{
+			font-size: 11px;
+			line-height: 1.5;
+			text-align: right;
+		}
+	}
+}
+@media screen and (max-width: $iphone){
+	footer{
+		position: relative;
+		height: 108px;
+		.inner{
+			.menuBtn{
+				display: block;
+			}
+			.menu{
+				position: absolute;
+				left: 0;
+				bottom: 108px;
+				display: none;
+				width: 100%;
+				background-color: rgba(0,0,0,0.8);
+				ul{
+					content: '';
+					padding: 10px 0;
+					li{
+						float: none;
+						padding-right: 0;
+						margin-right: 0;
+						border-right: 0;
+						a{
+							display: block;
+							padding: 15px 15px 15px 25px;
+							font-size: 30px;
+							color: #FFF;
+							&:hover {
+							    background-color: rgba(0,0,0,0.5);
+							}
+						}
+					}
+				}
+			}
+			#copyright p{
+				font-size: 30px;
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+$text-color: #292929;
+$total-width: 1200px;
+$inner-width: 970px;
+$ipad: 760px;
+$iphone: 640px;
+
+/* susy setting */
+// 970px wide
+$susy:(
+	// debug:(image: show),
+	columns: 12,
+	column-width: 68px,
+	gutters: 14/68 // gridGutterWidth/column-width
+);
+
+/* Sprite maps */
+$brand: sprite-map('brand/*.png');
+$card: sprite-map('card/*.png');
+$social: sprite-map('social/*.png');

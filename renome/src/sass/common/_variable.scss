@@ -1,0 +1,24 @@
+// layout
+$susy: (
+	// debug: (image: true),
+	container: 1180px,
+	columns: 6
+);
+$large-layout: (
+	columns: 15,
+	output: isolate,
+	column-width: 60px,
+	gutters: 1/3
+);
+
+// breakpoint
+$medium: 620px;
+$large: 920px;
+
+// sprite
+$text: sprite-map('text/*.png');
+
+// color
+$baseColor: #1e2633;
+$high-light: #985e5b;
+$bgColor: #f7f7f7;

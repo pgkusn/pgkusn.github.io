@@ -1,0 +1,48 @@
+@mixin bg($img) {
+	width: image-width($img);
+	height: image-height($img);
+
+	background: image-url($img);
+}
+
+@mixin logo() {
+	line-height: 2em;
+
+	width: 2em;
+
+	text-align: center;
+
+	color: $baseColor;
+	border-radius: 50%;
+	background-color: #fff;
+	@content;
+}
+
+@mixin articleImg($img) {
+	background-image: image-url(#{$img});
+	background-position: 50% 0;
+	background-size: cover;
+}
+
+@mixin articleColor($color) {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	content: '';
+	transition: opacity 0.5s;
+
+	opacity: 0.8;
+	background-color: $color;
+	@content;
+}
+
+@mixin inner-width($wp) {
+	$width: calc(100% - #{$wp});
+	width: $width;
+	padding: 3em calc(50% - (#{$width} / 2));
+    box-sizing: content-box;
+}

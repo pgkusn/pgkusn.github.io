@@ -1,0 +1,606 @@
+@charset "UTF-8";
+/* line 2, ../sass/common/_extend.scss */
+header:before, .content1:before, .content2:before, .content2 div.box:before, .content3 .info .msg > div:before, footer .inner #info ul:before {
+  content: "";
+  display: table;
+}
+/* line 6, ../sass/common/_extend.scss */
+header:after, .content1:after, .content2:after, .content2 div.box:after, .content3 .info .msg > div:after, footer .inner #info ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+/* line 4, ../sass/common/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 14px;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 21, ../sass/common/_reset.scss */
+html {
+  /*預設字體大小*/
+}
+
+/* line 25, ../sass/common/_reset.scss */
+body {
+  line-height: 1;
+  color: #434547;
+  font-family: Helvetica, Arial, 'LiHei Pro', '微軟正黑體', '新細明體', sans-serif;
+  /*讓英文字元自動斷行*/
+  /*左右齊行*/
+}
+
+/* line 37, ../sass/common/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 40, ../sass/common/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 43, ../sass/common/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* remember to define focus styles! */
+/* line 50, ../sass/common/_reset.scss */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+/* line 55, ../sass/common/_reset.scss */
+ins {
+  text-decoration: none;
+}
+
+/* line 58, ../sass/common/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 62, ../sass/common/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  /*防止表格被連續的英文或數字撐開*/
+  table-layout: fixed;
+  word-break: break-all;
+}
+
+/*表格框線*/
+/* line 76, ../sass/common/_reset.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 79, ../sass/common/_reset.scss */
+a {
+  text-decoration: none;
+  color: #434547;
+}
+
+/* line 6, ../sass/_layout.scss */
+p {
+  line-height: 28px;
+}
+
+/* line 10, ../sass/_layout.scss */
+h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+/* line 15, ../sass/_layout.scss */
+h3 {
+  font-size: 24px;
+  line-height: 38px;
+  margin-bottom: 15px;
+}
+
+/* line 21, ../sass/_layout.scss */
+.btn {
+  display: block;
+  width: 150px;
+  height: 50px;
+  color: #FFF;
+  background-color: #5AB7DE;
+  text-align: center;
+  font-weight: bold;
+  line-height: 50px;
+  transition: background-color 0.5s;
+}
+/* line 31, ../sass/_layout.scss */
+.btn:hover {
+  background-color: #2aa0d1;
+}
+
+/* line 36, ../sass/_layout.scss */
+header {
+  width: 1170px;
+  margin: 33px auto 28px auto;
+}
+/* line 40, ../sass/_layout.scss */
+header h1 {
+  font-size: 24px;
+  float: left;
+}
+/* line 43, ../sass/_layout.scss */
+header h1 span {
+  color: #5AB7DE;
+  font-size: 55px;
+}
+/* line 48, ../sass/_layout.scss */
+header .tel {
+  float: right;
+}
+/* line 50, ../sass/_layout.scss */
+header .tel .num {
+  font-size: 24px;
+  text-align: right;
+  margin-bottom: 15px;
+}
+/* line 54, ../sass/_layout.scss */
+header .tel .num i {
+  color: #5AB7DE;
+}
+
+/* line 62, ../sass/_layout.scss */
+nav {
+  margin-top: 35px;
+  clear: both;
+  background-color: #434547;
+}
+/* line 68, ../sass/_layout.scss */
+nav ul {
+  margin: 0 auto;
+}
+/* line 70, ../sass/_layout.scss */
+nav ul li {
+  height: 60px;
+  text-align: center;
+}
+/* line 75, ../sass/_layout.scss */
+nav ul li a {
+  display: block;
+  line-height: 60px;
+  color: #FFF;
+}
+/* line 87, ../sass/_layout.scss */
+nav > ul {
+  width: 1170px;
+  font-size: 0px;
+}
+/* line 93, ../sass/_layout.scss */
+nav > ul > li {
+  width: 107px;
+  display: inline-block;
+  font-size: 16px;
+  transition: background 0.5s;
+  border-right: rgba(122, 122, 122, 0.5) solid 1px;
+}
+/* line 100, ../sass/_layout.scss */
+nav > ul > li:last-of-type {
+  border-right: none;
+}
+/* line 104, ../sass/_layout.scss */
+nav > ul > li:hover {
+  background: #5AB7DE;
+}
+/* line 111, ../sass/_layout.scss */
+nav ul ul {
+  position: absolute;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #F4F4F4;
+  width: 191px;
+}
+/* line 122, ../sass/_layout.scss */
+nav ul ul > li {
+  position: relative;
+  border-bottom: rgba(176, 176, 176, 0.5) solid 1px;
+  text-align: left;
+}
+/* line 126, ../sass/_layout.scss */
+nav ul ul > li:last-of-type {
+  border-bottom: none;
+}
+/* line 129, ../sass/_layout.scss */
+nav ul ul > li a {
+  color: #5AB7DE;
+  padding-left: 20px;
+}
+/* line 132, ../sass/_layout.scss */
+nav ul ul > li a:hover {
+  color: #434547;
+}
+/* line 139, ../sass/_layout.scss */
+nav ul ul ul {
+  top: 0;
+  left: 100%;
+  padding-top: 20px;
+  width: 150px;
+}
+/* line 149, ../sass/_layout.scss */
+nav li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+}
+/* line 153, ../sass/_layout.scss */
+nav li > ul {
+  transition: opacity 0.5s;
+}
+
+/* line 14, ../sass/index.scss */
+.slide {
+  background-color: #F8F8F8;
+}
+/* line 16, ../sass/index.scss */
+.slide .inner {
+  width: 1000px;
+  margin: 0 auto;
+}
+/* line 19, ../sass/index.scss */
+.slide .inner img {
+  max-width: 100%;
+}
+/* line 22, ../sass/index.scss */
+.slide .inner .slick-prev {
+  left: -105px;
+}
+/* line 24, ../sass/index.scss */
+.slide .inner .slick-prev:hover:before {
+  color: #9A9A9A;
+}
+/* line 27, ../sass/index.scss */
+.slide .inner .slick-prev:before {
+  content: '＜';
+  color: #5AB7DE;
+  font-weight: bold;
+}
+/* line 33, ../sass/index.scss */
+.slide .inner .slick-next {
+  right: -105px;
+}
+/* line 35, ../sass/index.scss */
+.slide .inner .slick-next:hover:before {
+  color: #9A9A9A;
+}
+/* line 38, ../sass/index.scss */
+.slide .inner .slick-next:before {
+  content: '＞';
+  color: #5AB7DE;
+  font-weight: bold;
+}
+
+/* line 47, ../sass/index.scss */
+.content1 {
+  width: 1170px;
+  margin: -50px auto 0;
+}
+/* line 51, ../sass/index.scss */
+.content1 div {
+  position: relative;
+  float: left;
+  width: 292.5px;
+  height: 358px;
+  color: #FFF;
+  padding: 30px;
+  transition: all 0.5s;
+}
+/* line 59, ../sass/index.scss */
+.content1 div:nth-child(1), .content1 div:nth-child(3) {
+  background-color: #5bb7de;
+}
+/* line 62, ../sass/index.scss */
+.content1 div:nth-child(2) {
+  background-color: #55b0d6;
+}
+/* line 65, ../sass/index.scss */
+.content1 div:nth-child(4) {
+  background-color: #62bfe6;
+}
+/* line 68, ../sass/index.scss */
+.content1 div:hover {
+  height: 388px;
+  margin-top: -30px;
+}
+/* line 71, ../sass/index.scss */
+.content1 div:hover span {
+  right: 40px;
+}
+/* line 75, ../sass/index.scss */
+.content1 div i {
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+/* line 79, ../sass/index.scss */
+.content1 div span {
+  position: absolute;
+  right: -30px;
+  bottom: 20px;
+  font-size: 30px;
+  transition: right 0.3s;
+}
+
+/* line 89, ../sass/index.scss */
+.content2 {
+  width: 1170px;
+  margin: 0 auto;
+  border-bottom: #5AB7DE 3px solid;
+  margin-bottom: 38px;
+}
+/* line 95, ../sass/index.scss */
+.content2 div.box {
+  box-sizing: content-box;
+  float: left;
+  max-width: 555px;
+  height: 100px;
+  padding: 50px 0 50px 0;
+  margin-right: 30px;
+}
+/* line 103, ../sass/index.scss */
+.content2 div.box i {
+  float: left;
+  margin-right: 30px;
+  width: 100px;
+  height: 100px;
+  background-color: #5AB7DE;
+  font-size: 50px;
+  color: #FFF;
+  text-align: center;
+  line-height: 100px;
+  cursor: default;
+  transition: background-color 0.5s;
+}
+/* line 115, ../sass/index.scss */
+.content2 div.box i:hover {
+  background-color: #2aa0d1;
+}
+/* line 119, ../sass/index.scss */
+.content2 div.box .text {
+  float: right;
+  max-width: 425px;
+}
+/* line 123, ../sass/index.scss */
+.content2 div.box:nth-of-type(1), .content2 div.box:nth-of-type(2) {
+  border-bottom: #D3D3D3 1px solid;
+}
+
+/* line 130, ../sass/index.scss */
+.content3 {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.9/sass/susy/output/support/_clearfix.scss */
+.content3:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 132, ../sass/index.scss */
+.content3 p {
+  margin: 20px 0;
+}
+/* line 135, ../sass/index.scss */
+.content3 .about {
+  width: 31.81818%;
+  float: left;
+  margin-right: 2.27273%;
+}
+/* line 137, ../sass/index.scss */
+.content3 .about p {
+  margin-bottom: 100px;
+}
+/* line 141, ../sass/index.scss */
+.content3 .services {
+  width: 31.81818%;
+  float: left;
+  margin-right: 2.27273%;
+}
+/* line 143, ../sass/index.scss */
+.content3 .services ul {
+  margin-bottom: 20px;
+}
+/* line 145, ../sass/index.scss */
+.content3 .services ul li {
+  padding: 17px 0;
+  border-bottom: #D3D3D3 1px solid;
+}
+/* line 148, ../sass/index.scss */
+.content3 .services ul li:last-of-type {
+  border-bottom: none;
+}
+/* line 151, ../sass/index.scss */
+.content3 .services ul li a {
+  color: #5AB7DE;
+  transition: color 0.5s;
+}
+/* line 154, ../sass/index.scss */
+.content3 .services ul li a i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+/* line 158, ../sass/index.scss */
+.content3 .services ul li a:hover {
+  color: #434547;
+}
+/* line 165, ../sass/index.scss */
+.content3 .info {
+  width: 31.81818%;
+  float: right;
+  margin-right: 0;
+}
+/* line 167, ../sass/index.scss */
+.content3 .info .help {
+  background-color: #5AB7DE;
+  color: #FFF;
+  padding: 30px 35px;
+}
+/* line 171, ../sass/index.scss */
+.content3 .info .help h2 {
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  border-bottom: #FFF 1px solid;
+}
+/* line 175, ../sass/index.scss */
+.content3 .info .help h2 i {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+/* line 180, ../sass/index.scss */
+.content3 .info .help h3 {
+  margin: 20px 0;
+}
+/* line 183, ../sass/index.scss */
+.content3 .info .help dl {
+  line-height: 28px;
+}
+/* line 185, ../sass/index.scss */
+.content3 .info .help dl:last-of-type {
+  padding-bottom: 20px;
+  border-bottom: #FFF 1px solid;
+}
+/* line 189, ../sass/index.scss */
+.content3 .info .help dl dt, .content3 .info .help dl dd {
+  display: inline-block;
+}
+/* line 193, ../sass/index.scss */
+.content3 .info .help p:last-of-type {
+  margin-bottom: 0;
+}
+/* line 197, ../sass/index.scss */
+.content3 .info .msg {
+  background-color: #F5F5F5;
+  padding: 30px;
+  margin-top: 30px;
+}
+/* line 203, ../sass/index.scss */
+.content3 .info .msg > div img {
+  float: left;
+  margin-right: 30px;
+}
+/* line 207, ../sass/index.scss */
+.content3 .info .msg > div .text {
+  float: right;
+  width: 190px;
+  line-height: 28px;
+}
+/* line 211, ../sass/index.scss */
+.content3 .info .msg > div .text q {
+  float: right;
+}
+/* line 213, ../sass/index.scss */
+.content3 .info .msg > div .text q i {
+  color: #5AB7DE;
+  margin-right: 5px;
+}
+/* line 218, ../sass/index.scss */
+.content3 .info .msg > div .text cite {
+  font-style: normal;
+  display: inline-block;
+  margin-top: 10px;
+}
+/* line 222, ../sass/index.scss */
+.content3 .info .msg > div .text cite a {
+  color: #5AB7DE;
+}
+/* line 224, ../sass/index.scss */
+.content3 .info .msg > div .text cite a:hover {
+  text-decoration: underline;
+}
+/* line 231, ../sass/index.scss */
+.content3 .info .msg .slick-dots {
+  position: static;
+  margin-top: 20px;
+}
+/* line 234, ../sass/index.scss */
+.content3 .info .msg .slick-dots li button::before {
+  font-size: 13px;
+}
+/* line 237, ../sass/index.scss */
+.content3 .info .msg .slick-dots li.slick-active button::before, .content3 .info .msg .slick-dots li button:hover::before {
+  color: #5AB7DE;
+}
+
+/* line 246, ../sass/index.scss */
+footer {
+  background-color: #434547;
+}
+/* line 248, ../sass/index.scss */
+footer .inner {
+  width: 1170px;
+  margin: 0 auto;
+}
+/* line 251, ../sass/index.scss */
+footer .inner #info {
+  padding: 70px 0;
+}
+/* line 255, ../sass/index.scss */
+footer .inner #info ul:first-child {
+  margin-bottom: 30px;
+}
+/* line 258, ../sass/index.scss */
+footer .inner #info ul li {
+  display: flex;
+  align-items: center;
+  float: left;
+  height: 70px;
+  margin-right: 57px;
+  color: #888a8c;
+}
+/* line 265, ../sass/index.scss */
+footer .inner #info ul li:last-child {
+  margin-right: 0;
+}
+/* line 268, ../sass/index.scss */
+footer .inner #info ul li p {
+  display: inline-block;
+  width: 213px;
+  margin: 0 30px;
+}
+/* line 272, ../sass/index.scss */
+footer .inner #info ul li p a {
+  color: inherit;
+}
+/* line 276, ../sass/index.scss */
+footer .inner #info ul li i.fa {
+  width: 70px;
+  height: 70px;
+  font-size: 35px;
+  color: #62bfe6;
+  text-align: center;
+  line-height: 70px;
+  background-color: #4a4c4d;
+}
+/* line 288, ../sass/index.scss */
+footer .inner .copyright {
+  color: #888a8c;
+  padding: 20px 0 50px;
+  border-top: #888a8c 1px solid;
+}
+
+/*# sourceMappingURL=index.css.map */

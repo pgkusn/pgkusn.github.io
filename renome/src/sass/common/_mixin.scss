@@ -1,0 +1,21 @@
+@mixin bg($img){
+    background:image-url($img);
+    width:image-width($img);
+    height:image-height($img);
+}
+@mixin sprite-bg($var,$dir,$img) {
+	@extend %hide-text;
+	background: sprite($var,$img);
+	width: image-width('#{$dir}/#{$img}.png');
+	height: image-height('#{$dir}/#{$img}.png');
+}
+@mixin arrow($size, $color, $angle) {
+	content: '';
+	display: inline-block;
+	width: $size;
+	height: $size;
+	border-top: $color 2px solid;
+	border-right: $color 2px solid;
+	transform: rotate($angle);
+	@content;
+}

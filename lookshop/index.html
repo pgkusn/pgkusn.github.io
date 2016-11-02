@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lookshop</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+	<!-- jQery Core -->
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
+	
+	<!-- slick -->
+	<link rel="stylesheet" href="slick/slick.css"/>
+	<link rel="stylesheet" href="slick/slick-theme.css"/>
+	<script src="slick/slick.min.js" defer></script>
+
+	<!-- Custom -->
+	<link rel="stylesheet" href="build/css/index.css">
+	<script src="build/js/index.min.js" defer></script>
+</head>
+<body>
+	<div id="top">
+		<div class="inner">
+			<div id="phone">
+				<span>CUSTOM CARE: 888-23-4567</span>
+			</div>
+			<div id="user">
+				<ul>
+					<li><span>$US ▼</span></li>
+					<li><span><i class="fa fa-user" aria-hidden="true"></i> MY ACCOUNT</span></li>
+					<li><span><i class="fa fa-search" aria-hidden="true"></i></span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<header>
+		<div class="inner">
+			<h1>lookshop</h1>
+			<div class="right">
+				<nav>
+					<ul>
+						<li><a href="#">new</a></li>
+						<li><a href="#">designers</a></li>
+						<li>
+							<a href="#">women</a>
+							<ul>
+								<li><a href="#">Clothes</a></li>
+								<li><a href="#">Accessories</a></li>
+							</ul>
+						</li>
+						<li><a href="#">men</a></li>
+						<li><a href="#">clearence</a></li>
+					</ul>
+				</nav>
+				<select name="cart">
+					<option value="">Your Cart</option>
+					<option value="A">Product A</option>
+					<option value="B">Product B</option>
+				</select>
+			</div>
+		</div>
+	</header>
+
+	<!-- Mobile memu -->
+	<div class="header">
+		<div class="top">
+			<i class="fa fa-arrow-left" aria-hidden="true"></i>
+			MENU
+			<a href="#menuA" class="menuBtn"></a>
+		</div>
+		<div id="menuA" class="menu">
+			<div class="wrap">
+				<ul>
+					<li><a href="#">new</a></li>
+					<li><a href="#">designers</a></li>
+					<li>
+						<a href="#">women</a>
+						<ul>
+							<li><a href="#">Clothes</a></li>
+							<li><a href="#">Accessories</a></li>
+						</ul>
+					</li>
+					<li><a href="#">men</a></li>
+					<li><a href="#">clearence</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<main>
+		<div id="slider_wrap">
+			<div id="text">
+				<img src="build/images/slider_text.png" alt="">
+				<a href="#" id="shop_now">SHOP NOW ►</a>
+			</div>
+			<div id="slider">
+				<div><img src="build/images/slider_img.png" alt=""></div>
+				<div><img src="build/images/slider_img02.png" alt=""></div>
+			</div>
+		</div>
+
+		<div id="social">
+			<div class="inner">
+				<div id="subscribe">
+					<span>Stay updated</span>
+					<input type="text" name="email" placeholder="Your email address">
+				</div>
+				<div id="find">
+					<span>Find us here</span>
+					<a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+
+		<div id="ads">
+			<div class="inner">
+				<a href="#"><img src="build/images/ad01.png" alt=""></a>
+				<a href="#"><img src="build/images/ad02.png" alt=""></a>
+				<a href="#"><img src="build/images/ad03.png" alt=""></a>
+				<a href="#"><img src="build/images/ad04.png" alt=""></a>
+			</div>
+		</div>
+
+		<div id="product">
+			<div class="inner">
+				<div class="control">
+					<div class="leftCtrl">
+						<ul>
+							<li class="active"><a href="#">WHAT'S HOT?</a></li>
+							<li><a href="#">DESIGNERS</a></li>
+							<li><a href="#">FEATURED</a></li>
+							<li><a href="#">LATEST</a></li>
+						</ul>
+					</div>
+					<div class="rightCtrl">
+						<a href="#" class="left disable"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+						<a href="#" class="right"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+
+			<select>
+				<option value="0">WHAT'S HOT?</option>
+				<option value="1">DESIGNERS</option>
+				<option value="2">FEATURED</option>
+				<option value="3">LATEST</option>
+			</select>
+
+			<div class="wrap">
+				
+				<!---------------- USE PHP ----------------
+				<?php for($i=1;$i<=4;$i++):?>
+				<ul class="shop <?=($i==1)?'active':'';?>">
+					<?php for($j=1;$j<=7;$j++):?>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<?php endfor;?>
+				</ul>
+				<?php endfor;?>
+				-->
+
+				<ul class="shop active">
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+				</ul>
+
+				<ul class="shop">
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+				</ul>
+
+				<ul class="shop">
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+				</ul>
+
+				<ul class="shop">
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+				</ul>
+
+				<a href="#" class="loadMore">LOAD MORE</a>
+			</div>
+		</div>
+
+		<div id="clearence">
+			<div class="inner">
+				<div class="mark"></div>
+				<ul class="shop active">
+					<?php for($i=1;$i<=4;$i++):?>
+					<li>
+						<div class="box">
+							<!-- <img src="https://unsplash.it/220/290?random&time=<?=rand(1,1000)?>" onerror="this.src='build/images/fakeimg220x290.png'"> -->
+							<img src="build/images/fakeimg220x290.png">
+							<p>MIMOSA LACE DRESS</p>
+							<p>$76.95</p>
+							<a href="#">ADD TO CART +</a>
+						</div>
+						<div class="shopIt">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<span>SHOP IT</span>
+						</div>
+					</li>
+					<?php endfor;?>
+				</ul>
+				<a href="#" class="loadMore">LOAD MORE</a>
+			</div>
+		</div>
+
+		<div id="brands">
+			<h2>FAVOURITE BRANDS</h2>
+			<div class="inner">
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="about">
+			<div class="inner">
+				<h2>About LookShop</h2>
+				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. </p>
+			</div>
+		</div>
+
+		<div id="cards">
+			<div class="inner">
+				<span>We accept</span>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="bottom">
+			<div class="inner">
+				<div class="left">
+					<dl>
+						<dt>Customer Service</dt>
+						<dd><a href="#">Contact</a></dd>
+						<dd><a href="#">FAQ</a></dd>
+						<dd><a href="#">Terms of payment</a></dd>
+						<dd><a href="#">Terms of sale</a></dd>
+						<dd><a href="#">Delivery terms and conditions</a></dd>
+						<dd><a href="#">Returns and Refunds</a></dd>
+					</dl>
+					<dl>
+						<dt>Information</dt>
+						<dd><a href="#">Affiliate</a></dd>
+						<dd><a href="#">Cookies</a></dd>
+						<dd><a href="#">How to Shop</a></dd>
+						<dd><a href="#">About Nelly</a></dd>
+						<dd><a href="#">Investor relations</a></dd>
+					</dl>
+					<dl>
+						<dt>Campaigns</dt>
+						<dd><a href="#">Evening dresses</a></dd>
+						<dd><a href="#">Makeup</a></dd>
+						<dd><a href="#">Fashion forward</a></dd>
+						<dd><a href="#">training clothes</a></dd>
+						<dd><a href="#">Special Occasion Dresses</a></dd>
+					</dl>
+					<dl>
+						<dt>Stores</dt>
+						<dd><a href="#">Paris</a></dd>
+						<dd><a href="#">New York</a></dd>
+						<dd><a href="#">London</a></dd>
+						<dd><a href="#">Madrid</a></dd>
+						<dd><a href="#">Tokio</a></dd>
+					</dl>
+				</div>
+				<div class="right">
+					<dl>
+						<dt>Social</dt>
+						<dd><a href="#"></a></dd>
+						<dd><a href="#"></a></dd>
+						<dd><a href="#"></a></dd>
+						<dd><a href="#"></a></dd>
+						<dd><a href="#"></a></dd>
+						<dd><a href="#"></a></dd>
+					</dl>
+					<dl>
+						<dt>Promise</dt>
+						<dd><img src="build/images/secured.png" alt="secured" width="107" height="107"></dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="inner">
+			<a href="#menuB" class="menuBtn"></a>
+			<div id="menuB" class="menu">
+				<ul>
+					<li><a href="#">Privacy &amp; Cookies</a></li>
+					<li><a href="#">Terms &amp; Conditions</a></li>
+					<li><a href="#">Accessibility</a></li>
+					<li><a href="#">Store Directory</a></li>
+					<li><a href="#">About Us</a></li>
+				</ul>
+			</div>
+			<div id="copyright">
+				<p>&#169;LookShop.com</p>
+				<p>All Rights Reserved</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
