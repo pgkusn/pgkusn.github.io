@@ -1,3 +1,43 @@
+//判斷是否為IE
+function DetectIsIE() {
+    var ua = window.navigator.userAgent;
+
+    var msie = ua.indexOf('MSIE ');
+    if (msie > 0) {
+        // 回傳版本 <=10 的版本
+        return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+    }
+
+    var trident = ua.indexOf('Trident/');
+    if (trident > 0) {
+        // 回傳版本 >=11 的版本
+        var rv = ua.indexOf('rv:');
+        return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+    }
+
+    var edge = ua.indexOf('Edge/');
+    if (edge > 0) {
+        // 判斷Edge
+        return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+    }
+
+    // other browser
+    return false;
+}
+
+// 判斷是否使用手機瀏覽
+function checkserAgent() {
+    var userAgentInfo = navigator.userAgent;
+    var userAgentKeywords = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod", "MQQBrowser");
+    var flag = false;
+    if (userAgentInfo.indexOf("Windows NT") == -1) { flag = true; }
+    return flag;
+}
+// 切換成手機用影片
+if (checkserAgent()) {
+	$('video').attr('src', 'src/forMobile.mp4');
+}
+
 // video
 $('.videoWrap').each(function(index, el) {
 	var $this = $(this),
@@ -118,33 +158,6 @@ $('.videoWrap').each(function(index, el) {
 	    $(this).addClass('played');
 	}
 });
-
-//判斷是否為IE
-function DetectIsIE() {
-    var ua = window.navigator.userAgent;
-
-    var msie = ua.indexOf('MSIE ');
-    if (msie > 0) {
-        // 回傳版本 <=10 的版本
-        return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
-    }
-
-    var trident = ua.indexOf('Trident/');
-    if (trident > 0) {
-        // 回傳版本 >=11 的版本
-        var rv = ua.indexOf('rv:');
-        return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
-    }
-
-    var edge = ua.indexOf('Edge/');
-    if (edge > 0) {
-        // 判斷Edge
-        return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
-    }
-
-    // other browser
-    return false;
-}
 
 // 當瀏覽器寬度改變時，將#middle底下.wrap的高度設定成和底下.left的高度相同
 (function(){
