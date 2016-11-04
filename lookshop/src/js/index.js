@@ -182,16 +182,6 @@ $('#slider').slick({
 		});
 	});
 
-	$(window).resize(function() {
-		// 回到母選單
-		$wrap.css('left', 0);
-		$('ul.next').remove();
-		$backBtn.hide();
-
-		// 重設選單高度
-		setMenuaHeight();
-	});
-
 	// 將有子選單的母選單上加入箭頭
 	$menuA.find('.wrap>ul>li').each(function(index, el) {
 		var $el=$(el);
@@ -202,13 +192,6 @@ $('#slider').slick({
 
 	setMenuaHeight();
 })();
-
-// 調整底部選單樣式
-$(window).resize(function() {
-	if(window.innerWidth>640){
-		$('footer .menu').removeAttr('style');
-	}
-});
 
 // 顯示/隱藏選單
 $('.menuBtn').click(function(event) {
