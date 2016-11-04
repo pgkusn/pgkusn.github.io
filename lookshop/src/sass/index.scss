@@ -7,6 +7,12 @@
 @import "common/reset";
 
 // common
+html{
+	font-size: $fontSize + px;
+}
+body{
+	min-width: 300px;
+}
 a{
 	color: $text-color;
 }
@@ -24,40 +30,34 @@ ul.shop {
 		position: relative;
 		margin-top: 30px;
 		margin-bottom: 30px;
-		background-color: #FFF;
 		text-align: center;
-		transition: transform 0.5s;
-		&:hover{
-			transform: scale(1.1,1.1);
-			& .shopIt{
-				opacity: 1;
-			}
-		}
-		// 左上方裝飾
-		&:before {
-	      content: '';
-	      position: absolute;
-          left: 0;
-          top: 0;
-	      display: inline-block;
-	      width: 0;
-	      height: 0;
-	      border: transparent solid 30px;
-	      border-color: #4c4c4c #FFF #FFF #4c4c4c;
-          box-shadow: 1px 1px 5px #888;
-	    }
-	    &:after {
-	        content: 'SALE';
-	        position: absolute;
-	        left: 4px;
-	        top: 7px;
-	        font-size: 12px;
-	        color: #FFF;
-	    }
-		&:last-child{
-			margin-right: 0;
-		}
 		.box{
+			position: relative;
+			width: image-width('fakeimg220x290.png');
+			margin: 0 auto;
+			background-color: #FFF;
+			transition: transform 0.5s;
+			// 左上方裝飾
+			&:before {
+		      content: '';
+		      position: absolute;
+	          left: 0;
+	          top: 0;
+		      display: inline-block;
+		      width: 0;
+		      height: 0;
+		      border: transparent solid 30px;
+		      border-color: #4c4c4c #FFF #FFF #4c4c4c;
+	          box-shadow: 1px 1px 5px #888;
+		    }
+		    &:after {
+		        content: 'SALE';
+		        position: absolute;
+		        left: 4px;
+		        top: 7px;
+		        font-size: 12px;
+		        color: #FFF;
+		    }
 			p{
 				&:nth-of-type(1){
 					font-size: 12px;
@@ -80,6 +80,12 @@ ul.shop {
 				color: #FFF;
 				background-color: #fd926d;
 				border-bottom: 3px solid #dd6b44;
+			}
+			&:hover{
+				transform: scale(1.1,1.1);
+				.shopIt{
+					opacity: 1;
+				}
 			}
 		}
 		.shopIt{
@@ -125,10 +131,6 @@ ul.shop {
 	background: center center no-repeat transparent;
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADhJREFUeNpi/P//PwOtARMDHQBdLGFBYtMq3BiHT3DRPU4YR4NrNAmPJuHRJDyahEeT8Ii3BCDAAF0WBj5Er5idAAAAAElFTkSuQmCC );
 }
-
-body{
-	min-width: 545px;
-}
 #top{
 	color:#FFF;
 	background-color: #000;
@@ -164,7 +166,7 @@ body{
 		}
 	}
 }
-@media screen and (max-width: $iphone){
+@media screen and (max-width: $small-width){
 	#top{
 		.inner{
 			#phone{
@@ -173,7 +175,6 @@ body{
 				top: 0;
 				float: none;
 				width: 100%;
-				min-width: 545px;
 				height: 90px;
 				text-align: center;
 				background-color: #FFF;
@@ -236,7 +237,7 @@ header{
 			float: right;
 			nav{
 				display: inline-block;
-				@media screen and (max-width: $ipad){
+				@media screen and (max-width: $medium-width){
 					display: none;
 				}
 				&>ul{
@@ -284,7 +285,7 @@ header{
 		}
 	}
 }
-@media screen and (max-width: $iphone){
+@media screen and (max-width: $small-width){
 	header{
 		.inner{
 			h1{
@@ -300,7 +301,7 @@ header{
 				select{
 					width: 100%;
 					height: 90px;
-					padding-left: 25px;
+					padding-left: 1em;
 					font-size: 30px;
 				}
 			}
@@ -310,7 +311,7 @@ header{
 
 .header{
 	display: none;
-	@media screen and (max-width: $ipad){
+	@media screen and (max-width: $medium-width){
 		position: relative;
 		display: block;
 		margin: 0 15px 20px;
@@ -326,7 +327,7 @@ header{
 		.menuBtn{
 			position: absolute;
 			top: 4px;
-			right: 15px;
+			right: 1em;
 		}
 		.menu{
 			position: relative;
@@ -370,12 +371,11 @@ header{
 			}
 		}
 	}
-	@media screen and (max-width: $iphone){
+	@media screen and (max-width: $small-width){
 		font-size: 30px;
 		line-height: 90px;
 		.menuBtn{
 			top: 27px;
-			right: 25px;
 		}
 	}
 }
@@ -406,7 +406,7 @@ main{
 
 				background-color: #fd926d;
 				border-bottom: 3px #dd6b44 solid;
-				@media screen and (max-width: $ipad){
+				@media screen and (max-width: $medium-width){
 					width: 136px;
 					height: 37px;
 					line-height: 37px;
@@ -433,7 +433,7 @@ main{
 				opacity: 1;
 			}
 		}
-		@media screen and (max-width: $iphone){
+		@media screen and (max-width: $small-width){
 			display: none;
 		}
 	}
@@ -482,9 +482,13 @@ main{
 			}
 			#find{
 				float: right;
+				display: flex;
+				justify-content: space-between;
+			    align-items: center;
 				span{
 					display: inline-block;
 					padding-right: 20px;
+					padding-left: 1em;
 				}
 				i{
 					color: #6e6e6e;
@@ -496,7 +500,7 @@ main{
 			}
 		}
 	}
-	@media screen and (max-width: $iphone){
+	@media screen and (max-width: $small-width){
 		#social{
 			margin-top: 20px;
 			background-color: initial;
@@ -512,7 +516,7 @@ main{
 						height: 90px;
 						box-sizing: border-box;
 						margin-left: 0;
-						padding: 0 115px 0 19px;
+						padding: 0 calc(90px + 1em) 0 1em;
 						font-size: 30px;
 						background-color: #EDEDED;
 					}
@@ -534,8 +538,16 @@ main{
 			}
 		}
 	}
+	@media screen and (max-width: $smaller-width){
+		#social .inner #find{
+			flex-direction: column;
+			.btns{
+				margin-top: 20px;
+			}
+		}
+	}
 	#ads{
-		@media screen and (max-width: $iphone){
+		@media screen and (max-width: $small-width){
 			display: none;
 		}
 		.inner{
@@ -580,7 +592,7 @@ main{
 		max-width: $total-width;
 		margin: 0 auto;
 		.inner{
-			@media screen and (max-width: $iphone){
+			@media screen and (max-width: $small-width){
 				display: none;
 			}
 			.control{
@@ -658,12 +670,12 @@ main{
 			display: none;
 			width: 100%;
 			height: 90px;
-			padding-left: 25px;
+			padding-left: 1em;
 			font-size: 30px;
 			color: #FFF;
 			background-color: #f4845d;
 			border: 0;
-			@media screen and (max-width: $iphone){
+			@media screen and (max-width: $small-width){
 				display: block;
 			}
 		}
@@ -671,16 +683,19 @@ main{
 			overflow: hidden;
 			position: relative;
 			height: 459px;
-			@media screen and (max-width: $iphone){
+			@media screen and (max-width: $small-width){
 				height: auto;
 			}
 			ul.shop {
 				display: none;
 				position: absolute;
-				@media screen and (max-width: $iphone){
+				@media screen and (max-width: $small-width){
 				    position: static;
 				    width: 530px !important;
 				    margin: 0 auto;
+				}
+				@media screen and (max-width: $smaller-width){
+					width: 100% !important;
 				}
 				&.active{
 					display: block;
@@ -691,12 +706,19 @@ main{
 					&:first-child{
 						margin-left: 30px;
 					}
-					@media screen and (max-width: $iphone){
-						&:first-child{
-							margin-left: 0;
-						}
+					@media screen and (max-width: $small-width){
 						&:nth-child(2n+1){
 							margin-left: 30px;
+						}
+					}
+					@media screen and (max-width: $smaller-width){
+						float: none;
+					}
+					@media screen and (max-width: $smaller-width){
+						margin-right: 0;
+						&:first-child,
+						&:nth-child(2n+1){
+							margin-left: 0;
 						}
 					}
 				}
@@ -712,10 +734,13 @@ main{
 				background-position: center center;
 			}
 			ul.shop{
-				@media screen and (max-width: $iphone){
+				@media screen and (max-width: $small-width){
 				    display: block;
 				    width: 530px;
 				    margin: 0 auto;
+				}
+				@media screen and (max-width: $smaller-width){
+					width: 100%;
 				}
 				li{
 					@media screen and (max-width: $inner-width){
@@ -723,7 +748,7 @@ main{
 							display: none;
 						}
 					}
-					@media screen and (max-width: $iphone){
+					@media screen and (max-width: $small-width){
 						float: left;
 						margin-right: 30px;
 						&:first-child{
@@ -731,6 +756,14 @@ main{
 						}
 						&:nth-child(2n+1){
 							margin-left: 30px;
+						}
+					}
+					@media screen and (max-width: $smaller-width){
+						float: none;
+						margin-right: 0;
+						&:first-child,
+						&:nth-child(2n+1){
+							margin-left: 0;
 						}
 					}
 					@media screen and (max-width: 720px){
@@ -746,7 +779,7 @@ main{
 		max-width: $total-width;
 		margin: 0 auto;
 	    border-bottom: #d8d8d8 solid 1px;
-	    @media screen and (max-width: $iphone){
+	    @media screen and (max-width: $small-width){
 	    	display: none;
 	    }
 		h2{
@@ -766,7 +799,7 @@ main{
 							background: sprite($brand,brand#{$i});
 							width:image-width('brand/brand#{$i}.png');
 							height:image-height('brand/brand#{$i}.png');
-							@media screen and (max-width: $ipad){
+							@media screen and (max-width: $medium-width){
 								@if $i == 7 or $i == 8 {
 									display: none;
 								}
@@ -778,7 +811,7 @@ main{
 		}
 	}
 	#about{
-		@media screen and (max-width: $iphone){
+		@media screen and (max-width: $small-width){
 			display: none;
 		}
 		h2{
@@ -794,7 +827,7 @@ main{
 		}
 	}
 	#cards{
-		@media screen and (max-width: $iphone){
+		@media screen and (max-width: $small-width){
 			display: none;
 		}
 		margin: 30px auto 0;
@@ -822,7 +855,7 @@ main{
 		}
 	}
 	#bottom{
-		@media screen and (max-width: $iphone){
+		@media screen and (max-width: $small-width){
 			display: none;
 		}
 		background-color: #ededed;
@@ -937,7 +970,7 @@ footer{
 		}
 	}
 }
-@media screen and (max-width: $iphone){
+@media screen and (max-width: $small-width){
 	footer{
 		position: relative;
 		height: 108px;
@@ -976,5 +1009,66 @@ footer{
 				font-size: 30px;
 			}
 		}
+	}
+}
+
+@media screen and (max-width: $smallest-width){
+	#top .inner #phone{
+		height: 50px;
+	}
+	#top .inner #phone span{
+		font-size: 20px;
+		line-height: 50px;
+	}
+	#top .inner #user{
+		margin-top: 50px;
+	}
+	#top .inner #user ul li span{
+		font-size: 17px;
+		line-height: 69px;
+	}
+	header .inner .right select{
+		font-size: 20px;
+		height: 60px;
+	}
+	header .inner h1{
+		margin: 30px auto;
+	}
+	.header{
+		font-size: 20px;
+		line-height: 60px;
+		.menuBtn{
+			top: 10px;
+		}
+	}
+	main #social .inner #subscribe input{
+		height: 60px;
+		font-size: 20px;
+		padding: 0 calc(60px + 1em) 0 1em;
+	}
+	main #social .inner #subscribe:after{
+		width: 60px;
+		height: 60px;
+		font-size: 40px;
+	    line-height: 60px;
+	}
+	main #social .inner #find{
+		font-size: 20px;
+	}
+	main #product select{
+		height: 60px;
+		font-size: 20px;
+	}
+	footer .inner #copyright p{
+		font-size: 20px;
+	}
+	footer{
+		height: 88px;
+	}
+	footer .inner .menu{
+		bottom: 88px;
+	}
+	footer .inner .menu ul li a{
+		font-size: 20px;
 	}
 }

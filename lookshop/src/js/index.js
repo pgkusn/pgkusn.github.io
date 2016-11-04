@@ -1,5 +1,3 @@
-// "use strict";
-
 // slick
 $('#slider').slick({
 	autoplay:true,
@@ -144,10 +142,6 @@ $('#slider').slick({
 			event.preventDefault();
 			$(this).siblings('.shop.active').children('li:hidden').fadeIn();
 			$(this).removeClass('active');
-		});
-
-		$(window).resize(function() {
-			productStyle();
 		});
 
 		scrollProduct($product.find('.leftCtrl li.active'));
