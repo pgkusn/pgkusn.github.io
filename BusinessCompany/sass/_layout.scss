@@ -115,8 +115,9 @@ nav {
 		visibility: hidden;
 		opacity: 0;
 
-		background-color: #F4F4F4;
+		background-color: #fff;
 		width: 191px;
+		box-shadow: 0px 0px 1px #B0B0B0;
 
 		//第二層li設為relative，使第三層ul的絕對定位(繼承第二層ul)相對於第二層
 		& > li {
@@ -140,8 +141,8 @@ nav {
 			top: 0;
 			left: 100%;
 
-			padding-top: 20px;
 			width: 150px;
+			background-color: #f8f8f8;
 		}
 	}
 
@@ -152,5 +153,9 @@ nav {
 	}
 	li > ul {
 		transition: opacity 0.5s;
+	}
+	.more{
+		position: relative;
+		right: -20px;
 	}
 }

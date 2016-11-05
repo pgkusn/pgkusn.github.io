@@ -19,15 +19,28 @@ $content3:(
 		img{
 			max-width: 100%;
 		}
+		.slick-prev,
+		.slick-next{
+			&:before{
+				font: normal normal normal 30px/1 FontAwesome;
+				color: $highlight;
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				top: -20px;
+				right: -20px;
+				bottom: -20px;
+				left: -20px;
+			}
+		}
 		.slick-prev{
 			left:-105px;
 			&:hover:before{
 				color:#9A9A9A;
 			}
 			&:before{
-				content:'＜';
-				color:$highlight;
-				font-weight: bold;
+				content:'\f053';
 			}
 		}
 		.slick-next{
@@ -36,9 +49,7 @@ $content3:(
 				color:#9A9A9A;
 			}
 			&:before{
-				content:'＞';
-				color:$highlight;
-				font-weight: bold;
+				content: '\f054';
 			}
 		}
 	}
@@ -48,7 +59,7 @@ $content3:(
 	@extend %clearfix;
 	width: $total-width;
 	margin: -50px auto 0;
-	div{
+	.box{
 		position: relative;
 		float: left;
 		width: $total-width / 4;
@@ -68,19 +79,19 @@ $content3:(
 		&:hover{
 			height: 388px;
 			margin-top: -30px;
-			span{
+			.more{
 				right: 40px;
 			}
 		}
-		i{
+		.icon{
 			font-size: 55px;
 			margin-bottom: 20px;
 		}
-		span{
+		.more{
 			position: absolute;
 			right: -30px;
 			bottom: 20px;
-			font-size: 30px;
+			font-size: 20px;
 			transition:right 0.3s;
 		}
 	}
