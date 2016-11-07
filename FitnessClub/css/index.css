@@ -140,109 +140,110 @@ body {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
+  min-width: 940px;
   /* 設定高度最小為100%, 如果內容區塊很多, 可以長大 */
   min-height: 100%;
   /* 位置設為relative, 作為footer區塊位置的參考 */
   position: relative;
 }
-/* line 12, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.9/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.9/sass/susy/output/support/_clearfix.scss */
 .container:after {
   content: " ";
   display: block;
   clear: both;
 }
-/* line 32, ../sass/_layout.scss */
+/* line 33, ../sass/_layout.scss */
 .container p {
   font-size: 14px;
   line-height: 25px;
 }
-/* line 36, ../sass/_layout.scss */
+/* line 37, ../sass/_layout.scss */
 .container i {
   color: #01a5ca;
   font-style: normal;
 }
-/* line 41, ../sass/_layout.scss */
+/* line 42, ../sass/_layout.scss */
 .container header {
   position: relative;
   height: 149px;
   padding: 35px 0 35px 20px;
 }
-/* line 45, ../sass/_layout.scss */
+/* line 46, ../sass/_layout.scss */
 .container header h1 {
   background: url(../images/layout/logo.png);
   width: 171px;
   height: 82px;
 }
-/* line 49, ../sass/_layout.scss */
+/* line 50, ../sass/_layout.scss */
 .container header nav {
   position: absolute;
   bottom: 35px;
   right: 20px;
 }
-/* line 53, ../sass/_layout.scss */
+/* line 54, ../sass/_layout.scss */
 .container header nav li {
   float: left;
   padding-right: 30px;
 }
-/* line 56, ../sass/_layout.scss */
+/* line 57, ../sass/_layout.scss */
 .container header nav li:last-of-type {
   padding-right: 0;
 }
-/* line 59, ../sass/_layout.scss */
+/* line 60, ../sass/_layout.scss */
 .container header nav li a {
   font-size: 17px;
 }
-/* line 61, ../sass/_layout.scss */
+/* line 62, ../sass/_layout.scss */
 .container header nav li a:hover {
   color: #01a5ca;
 }
-/* line 67, ../sass/_layout.scss */
+/* line 68, ../sass/_layout.scss */
 .container header .share {
   position: absolute;
   top: 35px;
   right: 20px;
 }
-/* line 71, ../sass/_layout.scss */
+/* line 72, ../sass/_layout.scss */
 .container header .share li {
   float: left;
 }
-/* line 73, ../sass/_layout.scss */
+/* line 74, ../sass/_layout.scss */
 .container header .share li:first-of-type {
   padding-right: 15px;
 }
-/* line 76, ../sass/_layout.scss */
+/* line 77, ../sass/_layout.scss */
 .container header .share li a {
   display: inline-block;
 }
-/* line 80, ../sass/_layout.scss */
+/* line 81, ../sass/_layout.scss */
 .container header .share li .twitter {
   background: url(../images/layout/twitter.png);
   width: 23px;
   height: 23px;
 }
-/* line 83, ../sass/_layout.scss */
+/* line 84, ../sass/_layout.scss */
 .container header .share li .facebook {
   background: url(../images/layout/facebook.png);
   width: 23px;
   height: 23px;
 }
-/* line 90, ../sass/_layout.scss */
+/* line 91, ../sass/_layout.scss */
 .container .content {
   /* 留出footer區塊的空間 */
   padding-bottom: 110px;
 }
-/* line 93, ../sass/_layout.scss */
+/* line 94, ../sass/_layout.scss */
 .container .content .inner {
   background-color: #FFF;
   padding: 35px 48px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
-/* line 98, ../sass/_layout.scss */
+/* line 99, ../sass/_layout.scss */
 .container .content .inner h2 {
   font-size: 30px;
   margin-bottom: 19px;
 }
-/* line 105, ../sass/_layout.scss */
+/* line 106, ../sass/_layout.scss */
 .container footer {
   /* 設定footer的高度 */
   height: 110px;
@@ -253,16 +254,16 @@ body {
   width: 100%;
   padding: 30px 0;
 }
-/* line 115, ../sass/_layout.scss */
+/* line 116, ../sass/_layout.scss */
 .container footer p {
   font-size: 14px;
   text-align: center;
 }
-/* line 119, ../sass/_layout.scss */
+/* line 120, ../sass/_layout.scss */
 .container footer a {
   color: #01a5ca;
 }
-/* line 121, ../sass/_layout.scss */
+/* line 122, ../sass/_layout.scss */
 .container footer a:hover {
   text-decoration: underline;
 }

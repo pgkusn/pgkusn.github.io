@@ -1,0 +1,83 @@
+@import "susy";
+@import "compass/css3";
+@import "ceaser-easing";
+@import "common/variable";
+@import "common/mixin";
+@import "common/extend";
+@import "common/reset";
+@import "layout";
+
+$susy:(
+	container:940px,
+	columns:12,
+	// debug: (image: show)
+);
+$time:(
+	columns:6,
+	gutter-position:inside,
+	// debug: (image: show)
+);
+
+.container{
+	@include container();
+	.content{
+		.inner{
+			h2{
+				font-size: 30px;
+				margin-bottom: 19px;
+			}
+			.timetable{
+				@include span(8);
+				padding-right: 45px;
+
+				@include with-layout($time){
+					.wrap{
+						@include container;
+						.time{
+							@include span(2 nest);
+							padding: 11px 38px 11px 0;
+							&:nth-of-type(1),&:nth-of-type(2),&:nth-of-type(3){
+								margin-top: 0;
+							}
+							&:nth-of-type(4),&:nth-of-type(5),&:nth-of-type(6){
+								border-top: #F0F0F0 1px solid;
+								border-bottom: #F0F0F0 1px solid;
+							}
+							.week{
+								font-weight: bold;
+							}
+							time{
+								color:$highlight;
+								font-size: 14px;
+								line-height: 25px;
+							}
+						}
+					}
+				}
+			}
+
+			.schedule{
+				@include span(last 4);
+				p:first-of-type{
+					font-weight: bold;
+				}
+				img{
+					display: block;
+					margin:17px 0;
+				}
+				ul{
+					@extend %list_style;
+				}
+				.btn{
+					@include link_btn(108px,$highlight,#f4f4f4,#000,#B7B7B7);
+					margin-top: 20px;
+					font-size: 14px;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	footer{
+		@include full;
+	}
+}

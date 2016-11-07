@@ -140,6 +140,7 @@ $content3:(
 @include with-layout($content3){
 	.content3{
 		@include container;
+		min-width: 1170px;
 		p{
 			margin: 20px 0;
 		}
