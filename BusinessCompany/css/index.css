@@ -369,8 +369,9 @@ nav .more {
   margin: 0 auto;
   border-bottom: #5AB7DE 3px solid;
   margin-bottom: 38px;
+  overflow: hidden;
 }
-/* line 106, ../sass/index.scss */
+/* line 107, ../sass/index.scss */
 .content2 div.box {
   box-sizing: content-box;
   float: left;
@@ -379,7 +380,7 @@ nav .more {
   padding: 50px 0 50px 0;
   margin-right: 30px;
 }
-/* line 114, ../sass/index.scss */
+/* line 115, ../sass/index.scss */
 .content2 div.box i {
   float: left;
   margin-right: 30px;
@@ -393,21 +394,21 @@ nav .more {
   cursor: default;
   transition: background-color 0.5s;
 }
-/* line 126, ../sass/index.scss */
+/* line 127, ../sass/index.scss */
 .content2 div.box i:hover {
   background-color: #2aa0d1;
 }
-/* line 130, ../sass/index.scss */
+/* line 131, ../sass/index.scss */
 .content2 div.box .text {
   float: right;
   max-width: 425px;
 }
-/* line 134, ../sass/index.scss */
+/* line 135, ../sass/index.scss */
 .content2 div.box:nth-of-type(1), .content2 div.box:nth-of-type(2) {
   border-bottom: #D3D3D3 1px solid;
 }
 
-/* line 141, ../sass/index.scss */
+/* line 142, ../sass/index.scss */
 .content3 {
   max-width: 1170px;
   margin-left: auto;
@@ -420,169 +421,169 @@ nav .more {
   display: block;
   clear: both;
 }
-/* line 144, ../sass/index.scss */
+/* line 145, ../sass/index.scss */
 .content3 p {
   margin: 20px 0;
 }
-/* line 147, ../sass/index.scss */
+/* line 148, ../sass/index.scss */
 .content3 .about {
   width: 31.81818%;
   float: left;
   margin-right: 2.27273%;
 }
-/* line 149, ../sass/index.scss */
+/* line 150, ../sass/index.scss */
 .content3 .about p {
   margin-bottom: 100px;
 }
-/* line 153, ../sass/index.scss */
+/* line 154, ../sass/index.scss */
 .content3 .services {
   width: 31.81818%;
   float: left;
   margin-right: 2.27273%;
 }
-/* line 155, ../sass/index.scss */
+/* line 156, ../sass/index.scss */
 .content3 .services ul {
   margin-bottom: 20px;
 }
-/* line 157, ../sass/index.scss */
+/* line 158, ../sass/index.scss */
 .content3 .services ul li {
   padding: 17px 0;
   border-bottom: #D3D3D3 1px solid;
 }
-/* line 160, ../sass/index.scss */
+/* line 161, ../sass/index.scss */
 .content3 .services ul li:last-of-type {
   border-bottom: none;
 }
-/* line 163, ../sass/index.scss */
+/* line 164, ../sass/index.scss */
 .content3 .services ul li a {
   color: #5AB7DE;
   transition: color 0.5s;
 }
-/* line 166, ../sass/index.scss */
+/* line 167, ../sass/index.scss */
 .content3 .services ul li a i {
   margin-right: 10px;
   font-size: 20px;
 }
-/* line 170, ../sass/index.scss */
+/* line 171, ../sass/index.scss */
 .content3 .services ul li a:hover {
   color: #434547;
 }
-/* line 177, ../sass/index.scss */
+/* line 178, ../sass/index.scss */
 .content3 .info {
   width: 31.81818%;
   float: right;
   margin-right: 0;
 }
-/* line 179, ../sass/index.scss */
+/* line 180, ../sass/index.scss */
 .content3 .info .help {
   background-color: #5AB7DE;
   color: #FFF;
   padding: 30px 35px;
 }
-/* line 183, ../sass/index.scss */
+/* line 184, ../sass/index.scss */
 .content3 .info .help h2 {
   margin-bottom: 0;
   padding-bottom: 20px;
   border-bottom: #FFF 1px solid;
 }
-/* line 187, ../sass/index.scss */
+/* line 188, ../sass/index.scss */
 .content3 .info .help h2 i {
   vertical-align: middle;
   margin-right: 10px;
 }
-/* line 192, ../sass/index.scss */
+/* line 193, ../sass/index.scss */
 .content3 .info .help h3 {
   margin: 20px 0;
 }
-/* line 195, ../sass/index.scss */
+/* line 196, ../sass/index.scss */
 .content3 .info .help dl {
   line-height: 28px;
 }
-/* line 197, ../sass/index.scss */
+/* line 198, ../sass/index.scss */
 .content3 .info .help dl:last-of-type {
   padding-bottom: 20px;
   border-bottom: #FFF 1px solid;
 }
-/* line 201, ../sass/index.scss */
+/* line 202, ../sass/index.scss */
 .content3 .info .help dl dt, .content3 .info .help dl dd {
   display: inline-block;
 }
-/* line 205, ../sass/index.scss */
+/* line 206, ../sass/index.scss */
 .content3 .info .help p:last-of-type {
   margin-bottom: 0;
 }
-/* line 209, ../sass/index.scss */
+/* line 210, ../sass/index.scss */
 .content3 .info .msg {
   background-color: #F5F5F5;
   padding: 30px;
   margin-top: 30px;
 }
-/* line 215, ../sass/index.scss */
+/* line 216, ../sass/index.scss */
 .content3 .info .msg > div img {
   float: left;
   margin-right: 30px;
 }
-/* line 219, ../sass/index.scss */
+/* line 220, ../sass/index.scss */
 .content3 .info .msg > div .text {
   float: right;
   width: 190px;
   line-height: 28px;
 }
-/* line 223, ../sass/index.scss */
+/* line 224, ../sass/index.scss */
 .content3 .info .msg > div .text q {
   float: right;
 }
-/* line 225, ../sass/index.scss */
+/* line 226, ../sass/index.scss */
 .content3 .info .msg > div .text q i {
   color: #5AB7DE;
   margin-right: 5px;
 }
-/* line 230, ../sass/index.scss */
+/* line 231, ../sass/index.scss */
 .content3 .info .msg > div .text cite {
   font-style: normal;
   display: inline-block;
   margin-top: 10px;
 }
-/* line 234, ../sass/index.scss */
+/* line 235, ../sass/index.scss */
 .content3 .info .msg > div .text cite a {
   color: #5AB7DE;
 }
-/* line 236, ../sass/index.scss */
+/* line 237, ../sass/index.scss */
 .content3 .info .msg > div .text cite a:hover {
   text-decoration: underline;
 }
-/* line 243, ../sass/index.scss */
+/* line 244, ../sass/index.scss */
 .content3 .info .msg .slick-dots {
   position: static;
   margin-top: 20px;
 }
-/* line 246, ../sass/index.scss */
+/* line 247, ../sass/index.scss */
 .content3 .info .msg .slick-dots li button::before {
   font-size: 13px;
 }
-/* line 249, ../sass/index.scss */
+/* line 250, ../sass/index.scss */
 .content3 .info .msg .slick-dots li.slick-active button::before, .content3 .info .msg .slick-dots li button:hover::before {
   color: #5AB7DE;
 }
 
-/* line 258, ../sass/index.scss */
+/* line 259, ../sass/index.scss */
 footer {
   background-color: #434547;
 }
-/* line 260, ../sass/index.scss */
+/* line 261, ../sass/index.scss */
 footer .inner {
   width: 1170px;
   margin: 0 auto;
 }
-/* line 263, ../sass/index.scss */
+/* line 264, ../sass/index.scss */
 footer .inner #info {
   padding: 70px 0;
 }
-/* line 267, ../sass/index.scss */
+/* line 268, ../sass/index.scss */
 footer .inner #info ul:first-child {
   margin-bottom: 30px;
 }
-/* line 270, ../sass/index.scss */
+/* line 271, ../sass/index.scss */
 footer .inner #info ul li {
   display: flex;
   align-items: center;
@@ -591,21 +592,21 @@ footer .inner #info ul li {
   margin-right: 57px;
   color: #888a8c;
 }
-/* line 277, ../sass/index.scss */
+/* line 278, ../sass/index.scss */
 footer .inner #info ul li:last-child {
   margin-right: 0;
 }
-/* line 280, ../sass/index.scss */
+/* line 281, ../sass/index.scss */
 footer .inner #info ul li p {
   display: inline-block;
   width: 213px;
   margin: 0 30px;
 }
-/* line 284, ../sass/index.scss */
+/* line 285, ../sass/index.scss */
 footer .inner #info ul li p a {
   color: inherit;
 }
-/* line 288, ../sass/index.scss */
+/* line 289, ../sass/index.scss */
 footer .inner #info ul li i.fa {
   width: 70px;
   height: 70px;
@@ -615,7 +616,7 @@ footer .inner #info ul li i.fa {
   line-height: 70px;
   background-color: #4a4c4d;
 }
-/* line 300, ../sass/index.scss */
+/* line 301, ../sass/index.scss */
 footer .inner .copyright {
   color: #888a8c;
   padding: 20px 0 50px;

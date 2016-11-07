@@ -103,6 +103,7 @@ $content3:(
 	margin: 0 auto;
 	border-bottom: $highlight 3px solid;
 	margin-bottom: 38px;
+	overflow: hidden;
 	div.box{
 		@extend %clearfix;
 		box-sizing:content-box;
