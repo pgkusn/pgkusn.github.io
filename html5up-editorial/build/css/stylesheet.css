@@ -155,11 +155,20 @@ h3 {
 }
 
 .link {
+  position: relative;
   border-bottom: dotted 1px;
   transition: color 0.2s;
 }
 .link:hover {
   color: #F56A6A;
+}
+.link::before {
+  position: absolute;
+  top: -1em;
+  right: 0;
+  bottom: -1em;
+  left: 0;
+  content: '';
 }
 
 .image {
@@ -171,6 +180,17 @@ h3 {
   border-radius: 5px;
 }
 
+.zoomIn {
+  display: block;
+  overflow: hidden;
+}
+.zoomIn:hover img {
+  transform: scale(1.1, 1.1);
+}
+.zoomIn img {
+  transition: transform 0.2s;
+}
+
 /**************************************
 	sidebar
 **************************************/
@@ -178,7 +198,6 @@ h3 {
   position: fixed;
   z-index: 2;
   width: 250px;
-  min-width: 250px;
   height: 100%;
   transition: margin-left 0.5s;
   background-color: #f5f6f7;
@@ -349,13 +368,14 @@ h3 {
 }
 
 footer {
+  line-height: 2em;
   margin-bottom: 3em;
 }
 
 /**************************************
 	main
 **************************************/
-#main {
+main {
   width: 100%;
   padding: 0 2em;
   flex-grow: 1;
@@ -366,6 +386,7 @@ footer {
 **************************************/
 header {
   margin-top: 6em;
+  border-bottom: #f56a6a 4px solid;
 }
 
 #social {
@@ -401,21 +422,29 @@ header {
   margin-right: 0;
 }
 #social a {
+  position: relative;
   transition: color 0.2s;
 }
 #social a:hover {
   color: #F56A6A;
+}
+#social a::after {
+  position: absolute;
+  top: -1em;
+  right: -1em;
+  bottom: -1em;
+  left: -1em;
+  content: '';
 }
 #social .label {
   display: none;
 }
 
 #logo {
+  display: inline-block;
   font-family: 'Roboto Slab', serif;
   font-size: 1.5rem;
   line-height: 3;
-  display: block;
-  border-bottom: #f56a6a 4px solid;
   transition: color 0.2s;
 }
 #logo:hover {
@@ -442,7 +471,7 @@ header {
   height: 25em;
   max-height: 50vh;
   border-radius: 5px;
-  background-image: url('../images/pic10.jpg?1478823981');
+  background-image: url('../images/pic10.jpg?1479088150');
   background-size: cover;
 }
 #top h1 {
@@ -550,15 +579,6 @@ header {
 #bottom article:last-child {
   border-bottom: none;
 }
-#bottom .image {
-  overflow: hidden;
-}
-#bottom .image:hover img {
-  transform: scale(1.1, 1.1);
-}
-#bottom .image img {
-  transition: transform 0.2s;
-}
 
 @media (min-width: 480px) {
   #middle article {
@@ -622,6 +642,21 @@ header {
     font-size: 2rem;
   }
 
+  main {
+    padding: 0 5em;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #social {
+    position: static;
+    order: 1;
+  }
+
   #top {
     flex-direction: row;
   }
@@ -674,9 +709,9 @@ header {
   #sidebar {
     position: relative;
     width: 300px;
-    min-width: 300px;
     height: auto;
     box-shadow: none;
+    flex-shrink: 0;
   }
   #sidebar.inactive {
     margin-left: -300px;

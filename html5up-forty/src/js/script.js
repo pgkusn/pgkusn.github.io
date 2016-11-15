@@ -26,8 +26,11 @@ function scrollInit() {
 
 // 收合選單
 (function() {
-    $('#nav_on, nav:not(.inner)').click(function(event) {
+    $('#nav_on, nav').click(function(event) {
         event.preventDefault();
+        if($(event.target).hasClass('content')){
+            return;
+        }
         $('body').toggleClass('is-menu-visible');
     });
 })();

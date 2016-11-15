@@ -26,8 +26,8 @@
 	    $sidebar.toggleClass('inactive');
 	});
 
-	// 點擊 #main 區塊時隱藏側邊欄
-	$('#main').click(function(event) {
+	// 點擊 main 區塊時隱藏側邊欄
+	$('main').click(function(event) {
 	    var inactive = $sidebar.hasClass('inactive'),
 	        pos = $sidebar.css('position');
 

@@ -94,9 +94,20 @@ h3 {
 	}
 }
 .link {
+	position: relative;
+
 	border-bottom: dotted 1px;
 
 	@include link-hover();
+	&::before {
+		position: absolute;
+		top: -1em;
+		right: 0;
+		bottom: -1em;
+		left: 0;
+
+		content: '';
+	}
 }
 .image {
 	display: block;
@@ -108,6 +119,16 @@ h3 {
 		border-radius: 5px;
 	}
 }
+.zoomIn {
+	display: block;
+	overflow: hidden;
+	&:hover img {
+		transform: scale(1.1, 1.1);
+	}
+	img {
+		transition: transform 0.2s;
+	}
+}
 
 /**************************************
 	sidebar
@@ -117,7 +138,6 @@ h3 {
 	z-index: index($z-index, sidebar);
 
 	width: 250px;
-	min-width: 250px;
 	height: 100%;
 
 	transition: margin-left 0.5s;
@@ -300,7 +320,7 @@ h3 {
 		);
 		@each $item, $val in $icons {
 			&.#{$item}::before {
-				content: '#{$val}';
+				content: $val;
 			}
 		}
 		&::before {
@@ -320,13 +340,15 @@ h3 {
 	}
 }
 footer {
+	line-height: 2em;
+
 	margin-bottom: 3em;
 }
 
 /**************************************
 	main
 **************************************/
-#main {
+main {
 	width: 100%;
 	padding: 0 2em;
 
@@ -337,6 +359,7 @@ footer {
 **************************************/
 header {
 	margin-top: 6em;
+	border-bottom: #f56a6a 4px solid;
 }
 #social {
 	position: absolute;
@@ -357,7 +380,7 @@ header {
 		);
 		@each $item, $val in $icons {
 			&.#{$item} a::before {
-				content: '#{$val}';
+				content: $val;
 			}
 		}
 		a::before {
@@ -369,20 +392,29 @@ header {
 		}
 	}
 	a {
+		position: relative;
+
 		@include link-hover();
+		&::after {
+			position: absolute;
+			top: -1em;
+			right: -1em;
+			bottom: -1em;
+			left: -1em;
+
+			content: '';
+		}
 	}
 	.label {
 		display: none;
 	}
 }
 #logo {
+	display: inline-block;
+
 	font-family: 'Roboto Slab', serif;
 	font-size: 1.5rem;
 	line-height: 3;
-
-	display: block;
-
-	border-bottom: #f56a6a 4px solid;
 
 	@include link-hover() {
 		&:hover strong {
@@ -425,7 +457,7 @@ header {
 	main > middle
 **************************************/
 #middle {
-	h2{
+	h2 {
 		font-size: 1.75rem;
 	}
 	.inner {
@@ -457,7 +489,7 @@ header {
 		);
 		@each $item, $val in $icons {
 			&.#{$item}::before {
-				content: '#{$val}';
+				content: $val;
 			}
 		}
 		&::before {
@@ -491,7 +523,7 @@ header {
 	main > bottom
 **************************************/
 #bottom {
-	h2{
+	h2 {
 		font-size: 1.75rem;
 	}
 	.inner {
@@ -508,15 +540,6 @@ header {
 		}
 		&:last-child {
 			border-bottom: none;
-		}
-	}
-	.image {
-		overflow: hidden;
-		&:hover img {
-			transform: scale(1.1, 1.1);
-		}
-		img {
-			transition: transform 0.2s;
 		}
 	}
 }

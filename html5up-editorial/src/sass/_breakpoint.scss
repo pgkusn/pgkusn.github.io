@@ -38,6 +38,7 @@
 		// 倒數最後兩個
 		&:nth-last-child(-n + 2) {
 			padding-bottom: 0;
+
 			border-bottom: none;
 		}
 	}
@@ -49,6 +50,20 @@
 		i {
 			font-size: 2rem;
 		}
+	}
+	main {
+		padding: 0 5em;
+	}
+	header {
+		display: flex;
+
+		justify-content: space-between;
+		align-items: center;
+	}
+	#social {
+		position: static;
+
+		order: 1;
 	}
 	#top {
 		flex-direction: row;
@@ -75,16 +90,17 @@
 		.content {
 			width: 50%;
 		}
-		h1{
+		h1 {
 			font-size: 3.5rem;
+
 			white-space: pre;
 		}
 	}
 }
-@media (min-width: 980px){
-	#middle article{
+@media (min-width: 980px) {
+	#middle article {
 		@include gallery(2);
-		&:nth-child(2n+1){
+		&:nth-child(2n+1) {
 			padding-right: 2em;
 		}
 	}
@@ -94,10 +110,11 @@
 		position: relative;
 
 		width: 300px;
-		min-width: 300px;
 		height: auto;
 
 		box-shadow: none;
+
+		flex-shrink: 0;
 		&.inactive {
 			margin-left: -300px;
 		}
