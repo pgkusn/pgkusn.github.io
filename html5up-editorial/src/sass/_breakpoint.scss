@@ -92,8 +92,10 @@
 		}
 		h1 {
 			font-size: 3.5rem;
-
-			white-space: pre;
+			.first_line::after {
+				content: '\a';
+				white-space: pre;
+			}
 		}
 	}
 }

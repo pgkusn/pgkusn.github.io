@@ -359,6 +359,7 @@ main {
 **************************************/
 header {
 	margin-top: 6em;
+
 	border-bottom: #f56a6a 4px solid;
 }
 #social {
@@ -410,11 +411,11 @@ header {
 	}
 }
 #logo {
-	display: inline-block;
-
 	font-family: 'Roboto Slab', serif;
 	font-size: 1.5rem;
 	line-height: 3;
+
+	display: inline-block;
 
 	@include link-hover() {
 		&:hover strong {
