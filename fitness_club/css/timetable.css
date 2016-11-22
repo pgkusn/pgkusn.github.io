@@ -162,7 +162,7 @@ body {
   /* 位置設為relative, 作為footer區塊位置的參考 */
   position: relative;
 }
-/* line 12, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.9/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.9/sass/susy/output/support/_clearfix.scss */
 .container:after {
   content: " ";
   display: block;
@@ -290,7 +290,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.9/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.9/sass/susy/output/support/_clearfix.scss */
 .container:after {
   content: " ";
   display: block;
@@ -314,7 +314,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.9/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.9/sass/susy/output/support/_clearfix.scss */
 .container .content .inner .timetable .wrap:after {
   content: " ";
   display: block;
