@@ -1,5 +1,5 @@
 # Tools
-HTML (★★★★★)   
+HTML (★★★★☆)   
 CSS (★★★★☆)   
 JavaScript (★★★☆☆)   
 jQuery (★★★☆☆)   
