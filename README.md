@@ -40,15 +40,12 @@ MySQL (★★☆☆☆)
 # 未來展望
 網頁技術日新月異，希望能藉由更多的實務經驗與產業接軌，用更好的技術來解決在開發過程中發現的問題，以幫助企業成長並提升自身的能力水平。  
 
-# 現任公司參與專案
-- 猴年行大運  
-<http://getamped2.cyberstep.com.tw/ga2sp/special/20160128_newyear>
+# 參與專案
+**聚樂數位（前端工程師）**
 
-- 第四屆裝備設計大賽  
-<http://getamped2.cyberstep.com.tw/ga2sp/special/20160311_event_acce>
-
-- GAT 2016 年度大賽  
-<http://getamped2.cyberstep.com.tw/ga2sp/special/gat2016>
+- 猴年行大運 - <http://getamped2.cyberstep.com.tw/ga2sp/special/20160128_newyear>
+- 第四屆裝備設計大賽 - <http://getamped2.cyberstep.com.tw/ga2sp/special/20160311_event_acce>
+- GAT 2016 年度大賽 - <http://getamped2.cyberstep.com.tw/ga2sp/special/gat2016>
 
 # 練習作品
 - Editorial - <https://pgkusn.github.io/html5up-editorial/>
@@ -74,9 +71,9 @@ MySQL (★★☆☆☆)
 	- 頁籤切換功能
 	- CSS 多層下拉選單
 	- CSS Sprite 圖片合併技術
-	- 運用 [FlexSlider plugin](http://flexslider.woothemes.com/) 實作圖片輪播功能
-	- 運用 [Fancybox plugin](http://fancyapps.com/fancybox/) 實作圖片燈箱效果
-	- 運用 [Lazy Load plugin](http://www.appelsiini.net/projects/lazyload) 延遲圖片載入
+	- 運用 [FlexSlider](http://flexslider.woothemes.com/) 實作圖片輪播功能
+	- 運用 [Fancybox](http://fancyapps.com/fancybox/) 實作圖片燈箱效果
+	- 運用 [Lazy Load](http://www.appelsiini.net/projects/lazyload) 延遲圖片載入
 
 - Lookshop - <https://pgkusn.github.io/lookshop/>
 	- RWD 響應式設計
@@ -85,18 +82,18 @@ MySQL (★★☆☆☆)
 	- CSS 多層下拉選單
 	- CSS Sprite 圖片合併技術
 	- CSS3 Animation
-	- 運用 [slick plugin](http://kenwheeler.github.io/slick/) 實作圖片輪播功能
+	- 運用 [slick](http://kenwheeler.github.io/slick/) 實作圖片輪播功能
 
 - Business Company - <https://pgkusn.github.io/business_company/>
 	- CSS 多層下拉選單
 	- CSS3 Animation
 	- 導航列置頂效果
-	- 運用 [slick plugin](http://kenwheeler.github.io/slick/) 實作圖片輪播功能
-	- 運用 [scrollex plugin](https://github.com/ajlkn/jquery.scrollex) 實作頁面載入動畫
+	- 運用 [slick](http://kenwheeler.github.io/slick/) 實作圖片輪播功能
+	- 運用 [scrollex](https://github.com/ajlkn/jquery.scrollex) 實作頁面載入動畫
 
 - Fitness Club（多頁面）- <https://pgkusn.github.io/fitness_club/>
 	- 運用 Google Maps API 自訂地圖
-	- 運用 [slick plugin](http://kenwheeler.github.io/slick/) 實作圖片輪播功能
+	- 運用 [slick](http://kenwheeler.github.io/slick/) 實作圖片輪播功能
 
 - Ticket 訂票紀錄 - <http://yuan-chung.clouds.twgogo.org/site/ticket/>
 	- 運用 jQuery Mobile 建置網頁架構
