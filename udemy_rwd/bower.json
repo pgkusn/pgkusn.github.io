@@ -1,0 +1,21 @@
+{
+  "name": "gulp",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Kenge_NB <pgkusn@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/pgkusn/workspace",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "Font-Awesome#^4.7.0",
+    "jquery": "^3.1.1"
+  }
+}
