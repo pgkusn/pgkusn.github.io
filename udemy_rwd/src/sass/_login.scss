@@ -97,3 +97,9 @@
 #password {
 	background-image: image-url('../images/lock.svg');
 }
+.no-js {
+	#loginEmail,
+	#password {
+		background-image: none;
+	}
+}
