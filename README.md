@@ -47,7 +47,11 @@ MySQL (★★☆☆☆)
 - 第四屆裝備設計大賽 - <http://getamped2.cyberstep.com.tw/ga2sp/special/20160311_event_acce>
 - GAT 2016 年度大賽 - <http://getamped2.cyberstep.com.tw/ga2sp/special/gat2016>
 
-# 練習作品
+# 練習作品（近期至早期）
+- 六角西餐廳 - <https://pgkusn.github.io/udemy_rwd/>
+	- RWD 響應式設計
+	- 運用 Google Maps API 自訂地圖
+
 - Editorial - <https://pgkusn.github.io/html5up-editorial/>
 	- RWD 響應式設計
 	- 側邊欄選單設計
