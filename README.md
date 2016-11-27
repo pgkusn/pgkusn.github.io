@@ -18,13 +18,13 @@ MySQL (★★☆☆☆)
 - 能運用 JavaScript、jQuery 或部分 React 元件進行簡易的網頁互動
 - 能運用 Bootstrap、Pure、jQuery UI 等框架快速完成網頁佈局
 - 能運用 Git 管理程式碼版本
-- 能運用 Ajax 交換外部 JSON 格式資料
+- 能運用 Ajax 交換外部 XML、JSON 格式資料
 - 能針對瀏覽器特性解決常見的兼容性問題
 - 能針對常用程式碼進行模組化，避免重複造輪子
 - 擅長響應式網頁設計（RWD）的開發技巧
 - 了解基本的瀏覽器渲染機制，能對網頁進行效能優化
 - 了解基本的 SEO 優化技巧
-- 了解無障礙網站的開發規範
+- 了解基本的無障礙網站開發規範
 
 # 經歷
 高中時期因就讀於陸軍高中，畢業後即開始服役，完成法定役期後即申請退伍。服役期間透過自學及參加電腦補習班的網頁設計課程，學習到基本的網頁製作技術，並取得了相關證照。
@@ -65,14 +65,13 @@ MySQL (★★☆☆☆)
 
 - Theyalow - <https://pgkusn.github.io/theyalow/>
 	- RWD 響應式設計
-	- 響應式圖片設計
 	- 自訂 video 控制面板與相關事件
-	- 使用 CSS3 漸層製作斑馬紋、棋盤背景
+	- CSS3 漸層背景
 
 - Renome - <https://pgkusn.github.io/renome/>
 	- RWD 響應式設計
 	- 行動裝置選單設計
-	- 頁籤切換功能
+	- 頁籤面板設計
 	- CSS 多層下拉選單
 	- CSS Sprite 圖片合併技術
 	- 運用 [FlexSlider](http://flexslider.woothemes.com/) 實作圖片輪播功能
@@ -82,7 +81,7 @@ MySQL (★★☆☆☆)
 - Lookshop - <https://pgkusn.github.io/lookshop/>
 	- RWD 響應式設計
 	- 行動裝置選單設計
-	- 商品展示頁籤 \+ 左右切換功能
+	- 頁籤面板設計
 	- CSS 多層下拉選單
 	- CSS Sprite 圖片合併技術
 	- CSS3 Animation
