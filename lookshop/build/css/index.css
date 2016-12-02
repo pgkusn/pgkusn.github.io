@@ -292,7 +292,7 @@ header {
   padding-bottom: 20px;
 }
 header .inner h1 {
-  background: url('../images/logo.png?1477965019');
+  background: url('../images/logo.png?1479260281');
   max-width: 120px;
   height: 28px;
   float: left;
@@ -350,7 +350,7 @@ header .inner .right select {
 
 @media screen and (max-width: 640px) {
   header .inner h1 {
-    background: url('../images/logo_b.png?1477965019');
+    background: url('../images/logo_b.png?1479260281');
     max-width: 358px;
     height: 88px;
     background-position: center center;
@@ -787,7 +787,7 @@ main #clearence .inner {
   margin-bottom: 25px;
 }
 main #clearence .inner .mark {
-  background: url('../images/clearance.png?1477965019');
+  background: url('../images/clearance.png?1479260281');
   max-width: 970px;
   height: 157px;
   background-position: center center;
@@ -846,7 +846,7 @@ main #brands {
   }
 }
 main #brands h2 {
-  background: url('../images/logos_title.png?1477965019');
+  background: url('../images/logos_title.png?1479260281');
   max-width: 1200px;
   height: 11px;
   background-position: center center;
