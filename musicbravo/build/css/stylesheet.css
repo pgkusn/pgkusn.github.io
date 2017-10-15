@@ -813,10 +813,10 @@ main.index .banner .wrap {
   background-size: cover;
 }
 main.index .banner .wrap.cn {
-  background-image: -webkit-image-set(url('../images/index/cn-banner.jpg?1507815923') 1x, url('../images/index/cn-banner@2x.jpg?1507815923') 2x, url('../images/index/cn-banner@3x.jpg?1507815923') 3x);
+  background-image: -webkit-image-set(url('../images/Index/cn-banner.jpg?1507815923') 1x, url('../images/Index/cn-banner@2x.jpg?1507815923') 2x, url('../images/Index/cn-banner@3x.jpg?1507815923') 3x);
 }
 main.index .banner .wrap.tw {
-  background-image: -webkit-image-set(url('../images/index/tw-banner.jpg?1507815924') 1x, url('../images/index/tw-banner@2x.jpg?1507815924') 2x, url('../images/index/tw-banner@3x.jpg?1507815924') 3x);
+  background-image: -webkit-image-set(url('../images/Index/tw-banner.jpg?1507815924') 1x, url('../images/Index/tw-banner@2x.jpg?1507815924') 2x, url('../images/Index/tw-banner@3x.jpg?1507815924') 3x);
 }
 main.index article:first-of-type .section {
   height: 184px;
@@ -999,7 +999,7 @@ main.landing .section h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 main.landing .section:nth-child(1) {
-  background-image: -webkit-image-set(url('../images/landing/page1.jpg?1507815934') 1x, url('../images/landing/page1@2x.jpg?1507815934') 2x, url('../images/landing/page1@3x.jpg?1507815935') 3x);
+  background-image: -webkit-image-set(url('../images/Landing/page1.jpg?1507815934') 1x, url('../images/Landing/page1@2x.jpg?1507815934') 2x, url('../images/Landing/page1@3x.jpg?1507815935') 3x);
   background-position: 45% 66px;
 }
 main.landing .section:nth-child(1) .section-content {
@@ -1019,7 +1019,7 @@ main.landing .section:nth-child(1) .section-content p:first-child {
   margin-bottom: 1em;
 }
 main.landing .section:nth-child(2) {
-  background-image: -webkit-image-set(url('../images/landing/page2.jpg?1507815935') 1x, url('../images/landing/page2@2x.jpg?1507815935') 2x, url('../images/landing/page2@3x.jpg?1507815935') 3x);
+  background-image: -webkit-image-set(url('../images/Landing/page2.jpg?1507815935') 1x, url('../images/Landing/page2@2x.jpg?1507815935') 2x, url('../images/Landing/page2@3x.jpg?1507815935') 3x);
   background-position: 60% 76px;
 }
 main.landing .section:nth-child(2) .section-content {
@@ -1054,14 +1054,14 @@ main.landing .section:nth-child(2) .section-content dd {
   word-break: keep-all;
 }
 main.landing .section:nth-child(3) {
-  background-image: -webkit-image-set(url('../images/landing/page3.jpg?1507815936') 1x, url('../images/landing/page3@2x.jpg?1507815936') 2x, url('../images/landing/page3@3x.jpg?1507815936') 3x);
+  background-image: -webkit-image-set(url('../images/Landing/page3.jpg?1507815936') 1x, url('../images/Landing/page3@2x.jpg?1507815936') 2x, url('../images/Landing/page3@3x.jpg?1507815936') 3x);
   background-position: 50% 76px;
 }
 main.landing .section:nth-child(4) {
   display: block;
   height: 50vh !important;
   padding-top: 0 !important;
-  background-image: -webkit-image-set(url('../images/landing/page4.jpg?1507815937') 1x, url('../images/landing/page4@2x.jpg?1507815937') 2x, url('../images/landing/page4@3x.jpg?1507815938') 3x);
+  background-image: -webkit-image-set(url('../images/Landing/page4.jpg?1507815937') 1x, url('../images/Landing/page4@2x.jpg?1507815937') 2x, url('../images/Landing/page4@3x.jpg?1507815938') 3x);
   background-position: 50%;
 }
 main.landing .section:nth-child(4) .fp-tableCell {
@@ -1080,16 +1080,16 @@ main.landing .section:nth-child(4) h1 {
 }
 @media screen and (min-width: 415px) {
   main.landing .section:nth-child(1) {
-    background-image: url('../images/landing/page1_tablet.jpg?1507815935');
+    background-image: url('../images/Landing/page1_tablet.jpg?1507815935');
   }
   main.landing .section:nth-child(2) {
-    background-image: url('../images/landing/page2_tablet.jpg?1507815935');
+    background-image: url('../images/Landing/page2_tablet.jpg?1507815935');
   }
   main.landing .section:nth-child(3) {
-    background-image: url('../images/landing/page3_tablet.jpg?1507815937');
+    background-image: url('../images/Landing/page3_tablet.jpg?1507815937');
   }
   main.landing .section:nth-child(4) {
-    background-image: url('../images/landing/page4_tablet.jpg?1507815938');
+    background-image: url('../images/Landing/page4_tablet.jpg?1507815938');
   }
 }
 main.landing .section-content {
