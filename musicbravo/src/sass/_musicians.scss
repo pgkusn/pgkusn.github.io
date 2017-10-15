@@ -1,0 +1,284 @@
+main.musicians {
+    margin-bottom: 20px;
+    padding-top: 12px;
+    .articleTitle {
+        box-shadow: 1px 0 1px -1px rgba(0, 0, 0, 0.1);
+    }
+    /* ====================================================================== */
+    /* listControls */
+    /* ====================================================================== */
+    .listControls {
+        display: flex;
+
+        box-sizing: content-box;
+        height: 38px;
+        padding: 0 15px;
+
+        border-radius: 0 0 10px 10px;
+        background-color: #fff;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        &.withFilter {
+            border-radius: 0;
+            box-shadow: 1px 0 1px -1px rgba(0, 0, 0, 0.1);
+        }
+    }
+    .filter {
+        font-size: 13px;
+        line-height: 38px;
+
+        display: flex;
+
+        align-items: center;
+        &::after {
+            display: inline-block;
+
+            width: 1px;
+            height: 17px;
+            margin: 0 14px;
+
+            content: "";
+
+            background-color: rgba(74, 74, 74, 0.3);
+        }
+        &.active a {
+            color: $ocean-blue;
+            &::before {
+                background-image: inline-image("Icons/filter-active.svg");
+            }
+        }
+        a {
+            position: relative;
+
+            display: flex;
+
+            color: $dirty-purple;
+
+            align-items: center;
+            &::before {
+                display: block;
+
+                width: 16px;
+                height: 16px;
+
+                content: "";
+
+                background-image: inline-image("Icons/filter.svg");
+                background-size: contain;
+            }
+            &::after {
+                @include clickableArea(38px, 38px, 40px, 40px);
+            }
+        }
+    }
+    /* ====================================================================== */
+    /* 篩選列表 */
+    /* ====================================================================== */
+    .area-content {
+        display: none;
+
+        border-top: solid 1px rgba(155, 155, 155, 0.3);
+        &.active {
+            display: block;
+        }
+    }
+    /* ====================================================================== */
+    /* 音樂人列表 */
+    /* ====================================================================== */
+    .musicianList {
+        position: relative;
+
+        margin-top: 10px;
+
+        // 圖表
+        &.chart {
+            display: flex;
+
+            flex-wrap: wrap;
+            .musicianList-item {
+                @extend %article;
+
+                display: flex;
+                flex-direction: column;
+
+                width: calc((100% - 11px) / 2);
+                margin-top: 0;
+                margin-bottom: 10px;
+                padding: 12px 9px;
+
+                align-items: center;
+                &:nth-child(2n + 1) {
+                    margin-right: 11px;
+                }
+            }
+            .musicianList-item-avatar {
+                margin-bottom: 8px;
+            }
+            .musicianList-item-avatar-img {
+                display: block;
+
+                width: 75px;
+                height: 75px;
+
+                border-radius: 50%;
+            }
+            .musicianList-item-content {
+                display: flex;
+                flex-direction: column;
+
+                width: 100%;
+
+                align-items: center;
+                @each $musician in $musicians {
+                    &.#{$musician} .musicianList-item-content-level::before {
+                        background-image: inline-image("Icons/#{$musician}.svg");
+                    }
+                }
+            }
+            .musicianList-item-content-name {
+                @include ellipsis(152px);
+
+                font-size: 17px;
+                line-height: 17px;
+
+                width: 100%;
+                margin-bottom: 6px;
+
+                text-align: center;
+            }
+            .musicianList-item-content-level {
+                display: flex;
+
+                margin-bottom: 7px;
+
+                text-align: center;
+
+                align-items: center;
+                justify-content: center;
+                &::before {
+                    display: block;
+
+                    width: 16px;
+                    height: 17px;
+                    margin-right: 5px;
+
+                    content: "";
+
+                    background-size: contain;
+                }
+            }
+            .musicianList-item-content-skill {
+                display: flex;
+
+                width: 100%;
+
+                flex-wrap: wrap;
+                justify-content: center;
+                &.max li {
+                    margin-right: 4px;
+                }
+                li {
+                    @extend %skillTag;
+
+                    margin: 0 8px 8px 0;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        // 列表
+        &.list {
+            @extend %article;
+            .musicianList-item {
+                @include border("bottom");
+
+                display: flex;
+
+                padding: 12px 0 10px 14px;
+
+                align-items: center;
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+            .musicianList-item-avatar {
+                width: 60px;
+                height: 60px;
+                margin-right: 12px;
+            }
+            .musicianList-item-avatar-img {
+                display: block;
+
+                border-radius: 50%;
+            }
+            .musicianList-item-content {
+                position: relative;
+
+                min-width: 167px;
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    right: -16px;
+
+                    width: 16px;
+                    height: 17px;
+
+                    content: "";
+
+                    background-size: contain;
+                }
+                @each $musician in $musicians {
+                    &.#{$musician}::after {
+                        background-image: inline-image("Icons/#{$musician}.svg");
+                    }
+                }
+            }
+            .musicianList-item-content-name {
+                @include ellipsis(167px, inline-block);
+
+                font-size: 17px;
+                line-height: 17px;
+
+                margin-bottom: 8px;
+            }
+            .musicianList-item-content-level {
+                display: none;
+            }
+            .musicianList-item-content-skill {
+                display: flex;
+                li {
+                    @extend %skillTag;
+
+                    margin-right: 4px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+            /* 預先指定在圖表中顯示的寬度並隱藏，以套用js做文字限制 */
+            .musicianList-item-content-intro {
+                position: fixed;
+
+                max-width: calc((100% - 24px - 11px) / 2 - 18px); /* .musicianList-item 寬度再減去其 padding(18px) 及 .wrap padding(24px) */
+
+                pointer-events: none;
+
+                opacity: 0;
+            }
+            @media (min-width: 375px) {
+                .musicianList-item-content-intro {
+                    max-width: calc((375px - 24px - 11px) / 2 - 18px); /* .musicianList-item 寬度再減去其 padding(18px) 及 .wrap padding(24px) */
+                }
+            }
+        }
+        a {
+            display: block;
+        }
+        .musicianList-item-content-intro {
+            font-size: 13px;
+            line-height: 20px;
+
+            max-height: 20px * 2;
+        }
+    }
+}

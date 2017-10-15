@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test_jplayer</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+	<!-- jplayer -->
+    <!-- <link rel="stylesheet" href="vendor/jplayer/blue.monday/css/jplayer.blue.monday.css"> -->
+	<script src="vendor/jplayer/jquery.jplayer.min.js"></script>
+    <!-- custom -->
+    <link rel="stylesheet" href="src/reset.css">
+	<link rel="stylesheet" href="build/css/test_jplayer.css">
+</head>
+<body>
+    <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+    <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+        <div class="jp-type-single">
+            <div class="jp-gui jp-interface">
+                <div class="jp-controls">
+                    <button class="jp-play" role="button" tabindex="0">play</button>
+                    <!-- <button class="jp-stop" role="button" tabindex="0">stop</button> -->
+                </div>
+
+                <div class="rightSide">
+                    <p class="rightSide-songName">時光機的隧道</p>
+                    <p class="rightSide-singer">顏如晶</p>
+
+                    <div class="rightSide-bottom">
+                        <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+                        
+                        <div class="jp-progress">
+                            <div class="jp-seek-bar">
+                                <div class="jp-play-bar"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+                    </div>
+                </div>
+
+                <a class="closeBtn" href="javascript:void(0)"></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $("#jquery_jplayer_1").jPlayer({
+            ready: function() {
+                $(this).jPlayer("setMedia", {
+                    title: "Music 8 Ra Vo",
+                    m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a"
+                });
+            },
+            cssSelectorAncestor: "#jp_container_1",
+            swfPath: "/js",
+            supplied: "m4a, oga",
+            useStateClassSkin: true,
+            autoBlur: false,
+            smoothPlayBar: true,
+            keyEnabled: true,
+            remainingDuration: true,
+            toggleDuration: true
+        });
+    </script>
+</body>
+</html>

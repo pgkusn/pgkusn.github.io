@@ -1,0 +1,87 @@
+main.coworkers {
+    margin-bottom: 20px;
+    padding-top: 12px;
+    article {
+        @extend %article;
+    }
+
+    /* ====================================================================== */
+    /* 排序 */
+    /* ====================================================================== */
+    .articleTitle.withTop.fixed .sortControl {
+        display: none;
+    }
+    .sortControl {
+        position: absolute;
+        top: 14px;
+        right: 15px;
+    }
+    .sortControl-item {
+        font-weight: normal;
+    }
+
+    /* ====================================================================== */
+    /* 列表 */
+    /* ====================================================================== */
+    .coworkerList-item {
+        @include border("bottom");
+
+        display: flex;
+
+        padding: 12px 0 10px 14px;
+
+        align-items: center;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    .coworkerList-item-avatar {
+        margin-right: 12px;
+    }
+    .coworkerList-item-avatar-img {
+        display: block;
+
+        width: 60px;
+
+        border-radius: 50%;
+    }
+    .coworkerList-item-content {
+        position: relative;
+        &::after {
+            position: absolute;
+            top: 0;
+            right: -16px;
+
+            width: 16px;
+            height: 17px;
+
+            content: "";
+
+            background-size: contain;
+        }
+        @each $musician in $musicians {
+            &.#{$musician}::after {
+                background-image: inline-image("Icons/#{$musician}.svg");
+            }
+        }
+    }
+    .coworkerList-item-content-name {
+        @include ellipsis(167px, inline-block);
+
+        font-size: 17px;
+        line-height: 17px;
+
+        margin-bottom: 8px;
+    }
+    .coworkerList-item-content-skill {
+        display: flex;
+        li {
+            @extend %skillTag;
+
+            margin-right: 4px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

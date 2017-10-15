@@ -1,0 +1,26 @@
+$z-index: (
+    index-joinUs: 1,
+    landing-title: 1,
+    landing-sectionContent: 1,
+    landing-joinUsBtn: 1,
+    single-aboveMask: 1,
+    musician-header: 1,
+    musician-musicianInfo: 2,
+    musician-shareBtn: 2,
+    fixedTitle: 8,
+    player: 8,
+    header: 9,
+    alert: 10
+);
+
+// 音樂人等級
+$musicians: ("level-1", "level-2", "level-3", "level-4", "level-5", "group-band", "group-record", "group-studio");
+
+// colors
+$ocean-blue: #0078b2;
+$cerulean: #007fbf;
+$dirty-purple: #4a4a4a;
+$dirty-purple-20: rgba(74, 74, 74, 0.2);
+$dirty-purple-40: rgba(74, 74, 74, 0.4);
+
+$headerHeight: 96px;

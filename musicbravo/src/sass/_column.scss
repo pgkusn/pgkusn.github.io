@@ -1,0 +1,390 @@
+main.column {
+    h1.title {
+        @include title(5px);
+
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 25px;
+    }
+    article {
+        @extend %article;
+    }
+    /* ====================================================================== */
+    /* banner */
+    /* ====================================================================== */
+    .banner {
+        margin-bottom: 10px;
+
+        background-color: #000;
+        .wrap {
+            // background-image 由JS設定(行內樣式)
+            display: block;
+
+            height: 160px;
+
+            background-position: 50%;
+            background-size: cover;
+        }
+    }
+    /* ====================================================================== */
+    /* 主文章 */
+    /* ====================================================================== */
+    .main {
+        padding: 10px 15px 20px;
+        .last {
+            margin-bottom: 0;
+        }
+    }
+    .main-title {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 36px;
+
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+
+        color: $ocean-blue;
+        border-bottom: solid 1px rgba(155, 155, 155, 0.3);
+    }
+    .main-subtitle {
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 25px;
+
+        position: relative;
+
+        display: block;
+
+        margin: 0 5px 20px;
+
+        quotes: "\f10d""\f10e";
+
+        color: #4a4a4a;
+        &::before,
+        &::after {
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: 0.87em;
+
+            display: inline-block;
+
+            width: 15px;
+            height: 12px;
+        }
+        &::before {
+            margin-right: 1ch;
+
+            content: open-quote;
+        }
+        &::after {
+            margin-left: 1ch;
+
+            content: close-quote;
+        }
+    }
+    .main-content {
+        font-size: 17px;
+        line-height: 25px;
+
+        margin-bottom: 20px;
+    }
+    .main-illust {
+        $margin: 9px; /* 圖片間距 */
+
+        margin-bottom: 20px;
+        ul {
+            display: flex;
+
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &.combB {
+            li {
+                width: calc((100% - #{$margin}) / 2);
+                &:first-child {
+                    margin-right: $margin;
+                }
+            }
+        }
+        &.combC {
+            li {
+                // 前2張
+                &:nth-child(-n + 2) {
+                    width: calc((100% - #{$margin}) / 2);
+                    margin-bottom: $margin;
+                }
+                &:first-child {
+                    margin-right: $margin;
+                }
+            }
+        }
+        &.combD {
+            li {
+                width: calc((100% - #{$margin}) / 2);
+                // 1、3張
+                &:nth-child(odd) {
+                    margin-right: $margin;
+                }
+                // 前2張
+                &:nth-child(-n + 2) {
+                    margin-bottom: $margin;
+                }
+            }
+        }
+    }
+    .main-video {
+        display: block;
+
+        width: 100%;
+        max-width: 321px;
+        margin: 0 auto 20px;
+    }
+    .main-iframe {
+        position: relative;
+
+        overflow: hidden;
+
+        width: 100%;
+        height: 0;
+        margin-bottom: 20px;
+        padding-top: 56.25%; /* 16:9 */
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .main-info {
+        font-size: 13px;
+        line-height: 20px;
+
+        padding: 9px 0;
+
+        color: $dirty-purple-40;
+        border-bottom: solid 1px rgba(155, 155, 155, 0.3);
+    }
+    .main-info-item {
+        margin-bottom: 6px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .main-author {
+        ul {
+            display: flex;
+
+            flex-wrap: wrap;
+        }
+        li:first-of-type {
+            margin-right: 2.5ch; /* 5個半形空白寬度 */
+        }
+    }
+    .main-author-name::before {
+        content: "\00A0/\00A0";
+    }
+    .main-tag {
+        dl {
+            display: flex;
+        }
+        dt {
+            flex-shrink: 0;
+        }
+    }
+    .main-tag-item {
+        display: inline-block;
+
+        color: rgba(74, 74, 74, 0.8);
+        &::after {
+            content: ",\00A0";
+        }
+        &:last-child::after {
+            display: none;
+        }
+    }
+    /* ====================================================================== */
+    /* 主文章 > 人物資訊 */
+    /* ====================================================================== */
+    .main-musician {
+        display: flex;
+
+        padding: 20px 0;
+
+        border-bottom: solid 1px rgba(155, 155, 155, 0.3);
+
+        align-items: flex-start;
+        flex-wrap: wrap;
+        &.nonMember {
+            h1.title {
+                @include title(5px, $dirty-purple);
+            }
+            .main-musician-avatar {
+                cursor: default;
+                pointer-events: none;
+            }
+            .main-musician-profile {
+                display: none;
+            }
+            .main-musician-profile-link::before {
+                content: attr(data-show);
+            }
+        }
+    }
+    .main-musician-name {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .main-musician-avatar {
+        margin-right: 10px;
+    }
+    .main-musician-avatar-img {
+        display: block;
+
+        width: 75px;
+
+        border-radius: 50%;
+    }
+    .main-musician-content {
+        font-size: 13px;
+        line-height: 20px;
+
+        width: calc(100% - 85px);
+        &.js-dotdotdot {
+            height: 20px * 5; // 限制高度為5行
+        }
+        &.is-truncated + .main-musician-profile {
+            display: block;
+        }
+    }
+    .main-musician-profile {
+        font-size: 13px;
+        line-height: 20px;
+
+        width: 100%;
+        margin-top: 10px;
+
+        text-align: right;
+
+        color: $ocean-blue;
+    }
+    .main-musician-profile-link {
+        font-weight: bold;
+
+        position: relative;
+
+        padding: 14.8px 0;
+
+        color: #0078b2;
+        &::before {
+            content: attr(data-view);
+        }
+        &::after {
+            display: inline-block;
+
+            width: 15px;
+            height: 15px;
+            margin-left: 5px;
+
+            content: "";
+            vertical-align: middle;
+
+            background-image: inline-image("Icons/right#0078b2.svg");
+            background-size: contain;
+        }
+    }
+    /* ====================================================================== */
+    /* 主文章 > 活動資訊 */
+    /* ====================================================================== */
+    .main-activity {
+        margin: 20px 0 10px;
+    }
+    .main-activity-title {
+        margin: 10px 0;
+    }
+    .main-activity-info {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .main-shareBtn {
+        @include btn(321px, 46px, #fff, $ocean-blue, none, 5px, true);
+
+        font-size: 13px;
+        font-weight: bold;
+    }
+    /* ====================================================================== */
+    /* 文章推薦 */
+    /* ====================================================================== */
+    .recommend {
+        margin-bottom: 20px;
+        padding-top: 10px;
+        &.empty {
+            .recommend-list {
+                display: none;
+            }
+            .empty-illust,
+            .empty-text {
+                display: block;
+            }
+        }
+    }
+    .recommend-title {
+        margin-bottom: 16px;
+    }
+    .recommend-list {
+        display: flex;
+
+        flex-wrap: wrap;
+        li {
+            width: 100%;
+
+            border-bottom: solid 1px rgba(155, 155, 155, 0.3);
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+    .recommend-list-item {
+        font-size: 13px;
+        line-height: 20px;
+
+        display: flex;
+
+        padding: 12px 15px 12px 10px;
+
+        color: rgba(74, 74, 74, 0.8);
+
+        align-items: center;
+        &::before {
+            font-size: 11px;
+            line-height: 16px;
+
+            width: 42px;
+            height: 16px;
+            margin-right: 8px;
+
+            content: attr(data-tag);
+            text-align: center;
+
+            color: #fff;
+            background-color: $cerulean;
+
+            flex-shrink: 0;
+        }
+    }
+    .empty-illust,
+    .empty-text {
+        display: none;
+    }
+    .empty-illust {
+        margin: 18px 38px 12px;
+    }
+    .empty-text {
+        font-size: 13px;
+        line-height: 20px;
+
+        margin-bottom: 20px;
+
+        text-align: center;
+    }
+}

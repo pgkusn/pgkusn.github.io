@@ -1,0 +1,210 @@
+main.index {
+    margin-bottom: 20px;
+
+    /* ========================================================================== */
+    /* banner */
+    /* ========================================================================== */
+    .banner {
+        margin-bottom: 10px;
+
+        background-color: #000;
+        .wrap {
+            display: block;
+
+            height: 160px;
+
+            background-position: 50%;
+            background-size: cover;
+
+            &.cn {
+                background-image: -webkit-image-set(image-url("index/cn-banner.jpg") 1x, image-url("index/cn-banner@2x.jpg") 2x, image-url("index/cn-banner@3x.jpg") 3x);
+            }
+            &.tw {
+                background-image: -webkit-image-set(image-url("index/tw-banner.jpg") 1x, image-url("index/tw-banner@2x.jpg") 2x, image-url("index/tw-banner@3x.jpg") 3x);
+            }
+        }
+    }
+
+    /* ========================================================================== */
+    /* article */
+    /* ========================================================================== */
+    article {
+        @extend %article;
+        &:first-of-type .section {
+            height: 184px;
+        }
+    }
+    .column {
+        display: flex;
+
+        align-items: center;
+        flex-wrap: wrap;
+        a {
+            display: block;
+        }
+    }
+    .column-cover {
+        position: relative;
+
+        width: 140px;
+        height: 140px;
+        margin-left: 8px;
+        img {
+            display: block;
+
+            border-radius: 2px;
+        }
+        figcaption {
+            font-weight: bold;
+            line-height: 20px;
+
+            position: absolute;
+            top: 10px;
+            left: 0;
+
+            height: 20px;
+            padding: 0 6px;
+
+            text-align: center;
+
+            color: #fff;
+            background-color: $cerulean;
+        }
+    }
+    .column-text {
+        width: calc(100% - 148px);
+        padding: 0 12px 0 8px;
+    }
+    .column-text-title {
+        font-weight: bold;
+
+        height: 40px;
+    }
+    .column-text-sort {
+        margin: 4px 0;
+
+        color: $dirty-purple-40;
+        span {
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+    .column-text-content {
+        height: 60px;
+    }
+    .section {
+        font-size: 13px;
+        line-height: 20px;
+
+        min-height: 172px;
+
+        border-bottom: solid 1px rgba(155, 155, 155, 0.3);
+        background-color: #fff;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    /* ========================================================================== */
+    /* 輪播圖 */
+    /* ========================================================================== */
+    .carousel {
+        width: 321px;
+        margin: 0 auto;
+        padding-top: 10px;
+    }
+    .carousel-item {
+        display: block;
+
+        width: 321px;
+        height: 150px;
+    }
+    // 自訂底部導航按鈕
+    .owl-controls {
+        display: flex;
+
+        justify-content: center;
+        .owl-dot {
+            cursor: pointer;
+            span {
+                display: block;
+
+                width: 4px;
+                height: 4px;
+                margin: 10px;
+
+                border-radius: 50%;
+                background-color: $dirty-purple-40;
+            }
+            &.active span {
+                background-color: #4a4a4a;
+            }
+        }
+    }
+}
+
+/* ========================================================================== */
+/* 加入我們 */
+/* ========================================================================== */
+.index-joinUs {
+    position: fixed;
+    z-index: map-get($z-index, index-joinUs);
+    right: 0;
+    bottom: -74px;
+    left: 0;
+
+    transition: bottom 0.4s;
+
+    background-color: #181818;
+    &.active {
+        bottom: 0;
+        & ~ main {
+            margin-bottom: 74px + 20;
+        }
+    }
+    .wrap {
+        font-size: 13px;
+        line-height: 20px;
+
+        display: flex;
+
+        height: 74px;
+        padding: 0 14px 0 20px;
+
+        letter-spacing: 3px;
+
+        color: #fff;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+    p {
+        line-height: 20px;
+
+        width: calc(100% - 176px);
+
+        text-align: center;
+        letter-spacing: 3px;
+    }
+    ul {
+        display: flex;
+    }
+    li:first-child {
+        margin-right: 12px;
+    }
+    @media screen and (max-width: 355px) {
+        .wrap {
+            letter-spacing: normal;
+        }
+    }
+}
+.index-joinUs-btn {
+    @include btn(82px, 42px ,#000, #fff);
+
+    letter-spacing: normal;
+
+    &.confirm {
+        color: #fff;
+        background-color: $ocean-blue;
+    }
+}

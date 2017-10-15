@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>musicianProfile</title>
+    <!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" defer></script>
+	<!-- jQuery Easing -->
+	<script src="vendor/jquery.easing.1.3.js" defer></script>
+	<!-- imgLiquid -->
+	<script src="vendor/imgLiquid-min.js" defer></script>
+	<!-- js-dotdotdot -->
+	<script src="vendor/jquery.dotdotdot.min.js" defer></script>
+    <!-- custom -->
+    <link rel="stylesheet" href="src/reset.css">
+    <link rel="stylesheet" href="build/css/stylesheet.css">
+    <script src="src/js/all.js" defer></script>
+    <script src="src/js/musicianProfile.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<div class="top">
+			<a class="top-search" href="javascript:void(0)"></a>
+			<h1 class="top-logo">音樂霸</h1>
+		</div>
+		<nav>
+			<h1>網站連結</h1>
+			<ul>
+				<li>
+					<a class="nav-link active" href="index.html">首頁</a>
+				</li>
+				<li>
+					<a class="nav-link" href="ranking.html">排行</a>
+				</li>
+				<li>
+					<a class="nav-link" href="songs.html">曲庫</a>
+				</li>
+				<li>
+					<a class="nav-link" href="musicians.html">音樂人</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- 如為樂團main加入.band -->
+	<main class="musician">
+        <div class="wrap">
+            <!-- 專長&介紹 -->
+            <article>
+                <header>
+                    <div class="musicianInfo">
+                        <img class="musicianInfo-avatar" src="https://fakeimg.pl/240x240/" alt="">
+                        <h1 class="musicianInfo-name">音樂人名稱</h1>
+                        <ul class="musicianInfo-areaAndLevel">
+                            <li>中國大陸</li>
+                            <li class="level-1">金牌製作人</li>
+                        </ul>
+                    </div>
+					<div class="musicianBg js-imgLiquid">
+						<img src="https://unsplash.it/240/240?random&time=1" alt="">
+					</div>
+					<a class="shareBtn" href=""></a>
+                </header>
+
+				<!-- 成員-預設隱藏，僅樂團顯示(use .band) -->
+				<section class="members">
+					<h1 class="title">成員</h1>
+					<ul id="members-list" class="members-list collapse js-collapse">
+						<li>
+							<a href="javascript:void(0)">
+								<div class="members-list-cover">
+									<img src="https://fakeimg.pl/210x210/" alt="">
+								</div>
+								<p class="members-list-name">音樂人名稱</p>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">
+								<div class="members-list-cover">
+									<img src="https://fakeimg.pl/210x210/" alt="">
+								</div>
+								<p class="members-list-name">音樂人名稱</p>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">
+								<div class="members-list-cover">
+									<img src="https://fakeimg.pl/210x210/" alt="">
+								</div>
+								<p class="members-list-name">音樂人名稱</p>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">
+								<div class="members-list-cover">
+									<img src="https://fakeimg.pl/210x210/" alt="">
+								</div>
+								<p class="members-list-name">音樂人名稱</p>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">
+								<div class="members-list-cover">
+									<img src="https://fakeimg.pl/210x210/" alt="">
+								</div>
+								<p class="members-list-name">音樂人名稱</p>
+							</a>
+						</li>
+					</ul>
+					<a class="foldToggleWithTitle js-foldToggleWithTitle" href="javascript:void(0)" data-show="展開" data-hide="收起" data-type="member"></a>
+				</section>
+				
+				<!-- 專長 -->
+                <section class="skill">
+                    <h1 class="title">專長</h1>
+                    <ul>
+                        <li>某某專長</li>
+                        <li>某某專長</li>
+                        <li>某某專長</li>
+                        <li>某某專長</li>
+                        <li>某某專長</li>
+                        <li>某某專長</li>
+                        <li>某某專長</li>
+                        <li>某某專長</li>
+                        <li>某某專長</li>
+                        <li>某某專長</li>
+                    </ul>
+                </section>
+
+                <!-- 介紹 -->
+                <section class="introduce">
+                    <h1 class="title">介紹</h1>
+                    <div class="introduce-content js-introduce-content collapse js-collapse">
+						<!-- 介紹摘要-預設顯示，非個人時隱藏(use .band) -->
+						<ul class="introduce-content-summary">
+							<li class="group-band">
+								<span>為<mark>大象體操Elephant Gym</mark>樂團成員</span>
+							</li>
+							<li class="group-studio">
+								<span>為<mark>雞設士工作室 Gee Design Studio XXXXXXX</mark>工作室成員</span>
+							</li>
+							<li class="group-record">
+								<span>為<mark>ff studio 錄音室</mark>錄音室成員</span>
+							</li>
+							<li class="group-studio">
+								<span>為<mark>音樂霸 Music Bravo</mark>工作室成員</span>
+							</li>
+						</ul>
+						
+						<p id="introduce-content-detail" class="introduce-content-detail">
+							大象體操的樂曲嘗試以不斷變化卻對位精準的節拍製造出獨特的律動。一般歌曲中常被忽略的貝斯在大象體操卻是主要帶領樂器。成軍後隨即陸續參與巨獸搖滾、簡單生活節、大港開唱、野台開唱等音樂節的演出。團名以「大象」象徵BASS，「體操」則表示曲中的特殊節奏。<br><br>
+							Elephant Gym is a bass driven, Math-Rock band from Kaohsiung, Taiwan, Formed in 2012. The Band is composed of Tif on bass, Tell on guitar and Chia-Chin on drums. The music of Elephant Gym is known for clear and memorable bass line, emotional guitar riffs and melodic drumming. Most songs are instrumental. In 2013, Elephant Gym has started to invite singers to compose with them. <br><br>
+							Tell and Tif are sibling. In their childhood, their mother had taught them classical music until their adolescence. Later on, they had a big crush on rock music, especially post – rock and math -rock. Tell met Tu in high school music club. After realizing they all like the same music genre, they decided to form a rock band.
+						</p>
+					</div>
+                    <a id="introduce-foldToggleWithTitle" class="foldToggleWithTitle js-foldToggleWithTitle" href="javascript:void(0)" data-show="展開" data-hide="收起" data-type="introduce"></a>
+                </section>
+            </article>
+
+            <!-- 最近合作(超過四個工種時.coworkers加入.more，無工種時加入.empty) -->
+            <article class="coworkers more">
+                <h1 class="title">最近合作</h1>
+				
+				<!-- 預設顯示，無工種時隱藏(use .empty) -->
+				<ul class="coworkers-list">
+					<li>
+						<a href="javascript:void(0)">
+							<div class="coworkers-list-cover" data-creation="工種">
+								<img src="https://fakeimg.pl/210x210/" alt="">
+							</div>
+							<p class="coworkers-list-name">姓名</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<div class="coworkers-list-cover" data-creation="工種">
+								<img src="https://fakeimg.pl/210x210/" alt="">
+							</div>
+							<p class="coworkers-list-name">姓名</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<div class="coworkers-list-cover" data-creation="工種">
+								<img src="https://fakeimg.pl/210x210/" alt="">
+							</div>
+							<p class="coworkers-list-name">姓名</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<div class="coworkers-list-cover" data-creation="工種">
+								<img src="https://fakeimg.pl/210x210/" alt="">
+							</div>
+							<p class="coworkers-list-name">姓名</p>
+						</a>
+					</li>
+				</ul>
+				
+				<!-- 預設隱藏，無工種時顯示(use .empty) -->
+				<p class="coworkers-tip">哎呀！這個音樂人還沒有跟任何人合作過！</p>
+				
+				<!-- 預設隱藏，超過四個工種時顯示(use .more) -->
+				<a class="foldToggle" href="coworkers.html">看所有合作對象</a>
+            </article>
+
+			<!-- 最新創作(無作品時.creations加入.empty) -->
+			<article class="creations">
+				<h1 class="title">最新創作</h1>
+				
+				<!-- 預設顯示，無作品時隱藏(use .empty) -->
+				<ul class="creations-list">
+					<li class="js-songWrap" data-songlink="http://musicbravo.blob.core.chinacloudapi.cn/musicbravo/In_a_Heartbeat.mp3">
+						<div class="creations-list-cover">
+							<a href="javascript:void(0)">
+								<img class="creations-list-cover-img" src="https://fakeimg.pl/300x300/" alt="">
+							</a>
+							<a class="playBtn js-playBtn" href="javascript:void(0)"></a>
+						</div>
+						<a class="creations-list-songName" href="javascript:void(0)">歌曲名稱</a>
+					</li>
+					<li class="js-songWrap" data-songlink="http://musicbravo.blob.core.chinacloudapi.cn/musicbravo/In_a_Heartbeat.mp3">
+						<div class="creations-list-cover">
+							<a href="javascript:void(0)">
+								<img class="creations-list-cover-img" src="https://fakeimg.pl/300x300/" alt="">
+							</a>
+							<a class="playBtn js-playBtn" href="javascript:void(0)"></a>
+						</div>
+						<a class="creations-list-songName" href="javascript:void(0)">歌曲名稱</a>
+					</li>
+					<li class="js-songWrap" data-songlink="http://musicbravo.blob.core.chinacloudapi.cn/musicbravo/In_a_Heartbeat.mp3">
+						<div class="creations-list-cover">
+							<a href="javascript:void(0)">
+								<img class="creations-list-cover-img" src="https://fakeimg.pl/300x300/" alt="">
+							</a>
+							<a class="playBtn js-playBtn" href="javascript:void(0)"></a>
+						</div>
+						<a class="creations-list-songName" href="javascript:void(0)">歌曲名稱</a>
+					</li>
+				</ul>
+
+				<!-- 預設隱藏，無作品時顯示(use .empty) -->
+				<p class="creations-tip">無作品</p>
+				
+				<!-- 預設顯示，無作品時隱藏(use .empty) -->
+				<a class="foldToggle" href="creations.html">看所有作品</a>
+			</article>
+		</div>
+    </main>
+</body>
+
+</html>

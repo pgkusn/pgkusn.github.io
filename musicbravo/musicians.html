@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>musicians</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" defer></script>
+    <!-- jQuery Easing -->
+    <script src="vendor/jquery.easing.1.3.js" defer></script>
+    <!-- jQuery UI -->
+    <script src="vendor/jquery-ui.min.js" defer></script>
+    <!-- js-dotdotdot -->
+    <script src="vendor/jquery.dotdotdot.min.js" defer></script>
+    <!-- custom -->
+    <link rel="stylesheet" href="src/reset.css">
+    <link rel="stylesheet" href="build/css/stylesheet.css">
+    <script src="src/js/all.js" defer></script>
+    <script src="src/js/musicians.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <a class="top-search" href="javascript:void(0)"></a>
+            <h1 class="top-logo">音樂霸</h1>
+        </div>
+        <nav>
+            <h1>網站連結</h1>
+            <ul>
+                <li>
+                    <a class="nav-link active" href="index.html">首頁</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="ranking.html">排行</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="songs.html">曲庫</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="musicians.html">音樂人</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="musicians">
+        <div class="wrap">
+            <article>
+                <div id="articleTitle" class="articleTitle withTop">
+                    <h1>音樂人專區</h1>
+                    <a class="articleTitle-backToTop js-backToTop" href="javascript:void(0)"></a>
+                </div>
+
+                <div class="listControls js-listControls">
+                    <!-- 篩選(如有啟用.filter加入.active) -->
+                    <div class="filter js-filter">
+                        <a href="javascript:void(0)">篩選</a>
+                    </div>
+
+                    <!-- 排序 -->
+                    <ul class="sortControl">
+                        <li>
+                            <input id="sortControl-time" type="radio" name="sort" value="time">
+                            <label class="sortControl-item js-sortControl-item desc" for="sortControl-time">
+                            <div class="sortControl-icon">
+                                <div class="triangle upper"></div>
+                                <div class="triangle lower"></div>
+                            </div>
+                            新舊
+                            </label>
+                        </li>
+                        <li>
+                            <input id="sortControl-score" type="radio" name="sort" value="score" checked>
+                            <label class="sortControl-item js-sortControl-item desc" for="sortControl-score">
+                            <div class="sortControl-icon">
+                                <div class="triangle upper"></div>
+                                <div class="triangle lower"></div>
+                            </div>
+                            積分
+                            </label>
+                        </li>
+                    </ul>
+
+                    <!-- 排列 -->
+                    <ul class="arrangeControl">
+                        <li>
+                            <input id="arrangeControl-chart" type="radio" name="arrange" value="chart">
+                            <label class="arrangeControl-item js-arrangeControl-item chart" for="arrangeControl-chart"></label>
+                        </li>
+                        <li>
+                            <input id="arrangeControl-list" type="radio" name="arrange" value="list" checked>
+                            <label class="arrangeControl-item js-arrangeControl-item list" for="arrangeControl-list"></label>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 篩選列表 -->
+                <div class="filterList js-filterList">
+                    <dl id="accordion">
+                        <dt>專長</dt>
+                        <dd class="section">
+                            <ul class="filterOption js-multiple">
+                                <li class="js-all active">全部</li>
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                            </ul>
+                        </dd>
+                        <dt>性別</dt>
+                        <dd class="section">
+                            <ul class="filterOption js-choice">
+                                <li class="active">全部</li>
+                                <li>男</li>
+                                <li>女</li>
+                            </ul>
+                        </dd>
+                        <dt>所在地</dt>
+                        <dd id="area">
+                            <ul class="filterOption js-choice section">
+                                <li class="js-areaOption active">全部</li>
+                                <li class="js-areaOption" data-area="cn">中國大陸</li>
+                                <li class="js-areaOption" data-area="tw">臺灣</li>
+                            </ul>
+                            <div id="cn" class="area-content js-area-content section">
+                                <ul class="filterOption js-multiple">
+                                    <li class="js-all active">全部</li>
+                                    <li>上海</li>
+                                    <li>山西</li>
+                                </ul>
+                            </div>
+                            <div id="tw" class="area-content js-area-content section">
+                                <ul class="filterOption js-multiple">
+                                    <li class="js-all active">全部</li>
+                                    <li>基隆市</li>
+                                    <li>新北市</li>
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
+                    <ul class="filterList-btns">
+                        <li>
+                            <!-- 移除.disable啟用按鈕 -->
+                            <a class="disable" href="javascript:void(0)">恢復默認</a>
+                        </li>
+                        <li>
+                            <a id="filterConfirm" href="javascript:void(0)">確認</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 音樂人列表 -->
+                <ul class="musicianList js-list list">
+                    <li class="musicianList-item">
+                        <a class="musicianList-item-avatar" href="musicianProfile.html">
+                            <img class="musicianList-item-avatar-img" src="https://fakeimg.pl/225x225/" alt="">
+                        </a>
+                        <div class="musicianList-item-content level-1">
+                            <a class="musicianList-item-content-name" href="musicianProfile.html">用戶名用戶名用戶名用戶名</a>
+                            <p class="musicianList-item-content-level">音樂大師</p>
+
+                            <ul class="musicianList-item-content-skill">
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                            </ul>
+
+                            <a class="musicianList-item-content-intro js-dotdotdot" href="musicianProfile.html">簡介文字顯示於此，簡介文字顯示於此，簡介文字顯示於此，簡介文字顯示於此</a>
+                        </div>
+                    </li>
+                    <li class="musicianList-item">
+                        <a class="musicianList-item-avatar" href="">
+                            <img class="musicianList-item-avatar-img" src="https://fakeimg.pl/225x225/" alt="">
+                        </a>
+                        <div class="musicianList-item-content level-1">
+                            <a class="musicianList-item-content-name" href="">用戶名用戶名用戶名用戶名</a>
+                            <p class="musicianList-item-content-level">音樂大師</p>
+
+                            <ul class="musicianList-item-content-skill">
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                            </ul>
+
+                            <a class="musicianList-item-content-intro js-dotdotdot" href="">簡介文字顯示於此，簡介文字顯示於此，簡介文字顯示於此，簡介文字顯示於此</a>
+                        </div>
+                    </li>
+                    <li class="musicianList-item">
+                        <a class="musicianList-item-avatar" href="">
+                            <img class="musicianList-item-avatar-img" src="https://fakeimg.pl/225x225/" alt="">
+                        </a>
+                        <div class="musicianList-item-content level-1">
+                            <a class="musicianList-item-content-name" href="">用戶名用戶名用戶名用戶名</a>
+                            <p class="musicianList-item-content-level">音樂大師</p>
+
+                            <ul class="musicianList-item-content-skill">
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                            </ul>
+
+                            <a class="musicianList-item-content-intro js-dotdotdot" href="">簡介文字顯示於此，簡介文字顯示於此，簡介文字顯示於此，簡介文字顯示於此</a>
+                        </div>
+                    </li>
+                    <li class="musicianList-item">
+                        <a class="musicianList-item-avatar" href="">
+                            <img class="musicianList-item-avatar-img" src="https://fakeimg.pl/225x225/" alt="">
+                        </a>
+                        <div class="musicianList-item-content level-1">
+                            <a class="musicianList-item-content-name" href="">用戶名用戶名用戶名用戶名</a>
+                            <p class="musicianList-item-content-level">音樂大師</p>
+
+                            <ul class="musicianList-item-content-skill">
+                                <li>某某專長</li>
+                                <li>某某專長</li>
+                            </ul>
+
+                            <a class="musicianList-item-content-intro js-dotdotdot" href="">簡介文字顯示於此，簡介文字顯示於此，簡介文字顯示於此，簡介文字顯示於此</a>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+
+            <div class="underline">親，這是我的底線</div>
+        </div>
+    </main>
+</body>
+
+</html>

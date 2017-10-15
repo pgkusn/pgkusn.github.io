@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>single</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" defer></script>
+    <!-- jQuery UI -->
+    <script src="vendor/jquery-ui.min.js" defer></script>
+    <!-- imgLiquid -->
+    <script src="vendor/imgLiquid-min.js" defer></script>
+    <!-- Bootstrap Star Rating -->
+    <link rel="stylesheet" href="vendor/bootstrap-star-rating/css/star-rating.css">
+    <script src="vendor/bootstrap-star-rating/js/star-rating.min.js" defer></script>
+    <!-- custom -->
+    <link rel="stylesheet" href="src/reset.css">
+	<link rel="stylesheet" href="build/css/stylesheet.css">
+	<script src="src/js/player.js" defer></script>
+    <script src="src/js/all.js" defer></script>
+    <script src="src/js/single.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <a class="top-search" href="javascript:void(0)"></a>
+            <h1 class="top-logo">音樂霸</h1>
+        </div>
+        <nav>
+            <h1>網站連結</h1>
+            <ul>
+                <li>
+                    <a class="nav-link active" href="index.html">首頁</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="ranking.html">排行</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="songs.html">曲庫</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="musicians.html">音樂人</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+	<!-- =================================================================== -->
+	<!-- player -->
+	<!-- =================================================================== -->
+	<div class="player js-player">
+		<div class="wrap">
+			<div class="player-play" style="background-image: url(https://fakeimg.pl/210x210/)">
+				<a class="player-play-btn js-player-play-btn" href="javascript:void(0)"></a>
+			</div>
+
+			<div class="rightSide">
+				<p class="player-songName">時光機的隧道</p>
+				<p class="player-singer">顏如晶</p>
+
+				<div class="rightSide-bottom">
+					<div class="player-currentTime js-player-currentTime" role="timer" aria-label="time">00:00</div>
+
+					<div class="player-progress js-player-progress">
+						<div class="player-progress-bar js-player-progress-bar"></div>
+					</div>
+
+					<div class="player-duration js-player-duration" role="timer" aria-label="duration">00:00</div>
+				</div>
+			</div>
+
+			<a class="player-close js-player-close" href="javascript:void(0)"></a>
+
+			<audio src="http://musicbravo.blob.core.chinacloudapi.cn/musicbravo/In_a_Heartbeat.mp3" preload="none"></audio>
+		</div>
+	</div>
+
+    <main class="single js-single">
+        <div class="wrap">
+            <article class="main">
+                <div class="main-top">
+                    <div class="main-top-cover js-songWrap" data-songlink="http://musicbravo.blob.core.chinacloudapi.cn/musicbravo/In_a_Heartbeat.mp3">
+                        <img class="main-top-cover-img" src="https://fakeimg.pl/447x447/" alt="">
+                        <a class="playBtn js-playBtn" href="javascript:void(0)"></a>
+                    </div>
+
+                    <div class="main-top-info">
+                        <h1 class="main-top-info-songName" data-limit="40">歌名</h1>
+                        <p class="main-top-info-singer" data-limit="40">演唱人</p>
+                        <!-- stage 2 -->
+                        <!-- <div class="main-top-info-rating ratingWrap">
+                            <input name="input-name" type="number" class="rating js-rating" readonly>
+                        </div> -->
+                        <time class="main-top-info-time" datetime="2017-12-22">2017-12-22</time>
+                        <ul class="main-top-info-tag">
+                            <li>國語歌曲</li>
+                            <li>純音樂</li>
+                        </ul>
+                        <a class="main-top-info-shareBtn" href="javascript:void(0)">分享</a>
+                    </div>
+                </div>
+
+                <div id="main-content" class="main-detail js-main-detail collapse js-collapse">
+                    <ul>
+                        <li><a class="main-detail-link active" href="#introduce" data-limit="1000">介紹</a></li>
+                        <li><a class="main-detail-link" href="#lyrics">歌詞</a></li>
+                    </ul>
+                    <div id="introduce" class="main-detail-content">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum necessitatibus numquam minus provident at soluta. Corrupti, aliquam. Nesciunt omnis iusto numquam optio distinctio, incidunt doloribus quibusdam, veniam, natus temporibus magnam.
+                    </div>
+                    <div id="lyrics" class="main-detail-content">
+                        簡單點 說話的方式簡單點<br> 遞進的情緒請省略
+                        <br> 你又不是個演員
+                        <br> 別設計那些情節
+                        <br>
+                        <br> 沒意見 我只想看看你怎麼圓<br> 你難過的太表面 像沒天賦的演員<br> 觀眾一眼能看見
+                        <br>
+                        <br> 該配合你演出的我 演視而不見<br> 在逼一個最愛你的人 即興表演<br> 什麼時候我們開始 收起了底線<br> 順應時代的改變 看那些拙劣的表演<br>
+                        <br> 可你曾經那麼愛我 幹嘛演出細節<br> 我該變成什麼樣子 才能延緩厭倦<br> 原來當愛放下防備後的這些那些
+                        <br> 才是考驗
+                        <br>
+                        <br> 沒意見 你想怎樣我都隨便<br> 你演技也有限 又不用說感言<br> 分開就平淡些
+                        <br>
+                        <br> 該配合你演出的我 演視而不見<br> 別逼一個最愛你的人 即興表演<br> 什麼時候我們開始 沒有了底線<br> 順著別人的謊言 被動就不顯得可憐<br>
+                        <br> 可你曾經那麼愛我 幹嘛演出細節<br> 我該變成什麼樣子 才能配合出演<br> 原來當愛放下防備後的這些那些
+                        <br> 都有個期限
+                        <br>
+                        <br> 其實台下的觀眾就我一個
+                        <br> 其實我也看出你有點不捨
+                        <br> 場景也習慣我們來回拉扯
+                        <br> 還計較著什麼
+                        <br>
+                        <br> 其實說分不開的也不見得
+                        <br> 其實感情最怕的就是拖著
+                        <br> 越演到終場戲越哭不出了
+                        <br> 是否還值得
+                        <br>
+                        <br> 該配合你演出的我 盡力在表演<br> 像情感節目裡的嘉賓 任人挑選<br> 如果還能看出我有愛你的那面
+                        <br> 請剪掉那些情節 讓我看上去體面<br> 可你曾經那麼愛我 幹嘛演出細節<br> 不在意的樣子是我最後的表演
+                        <br> 是因為愛你我才選擇表演 這種成全
+                    </div>
+                </div>
+
+                <a class="foldToggle js-foldToggle" href="javascript:void(0)" data-show="展開顯示" data-hide="收起顯示"></a>
+            </article>
+
+            <article class="group">
+                <h1 class="title">製作團隊</h1>
+                <ul id="group-list" class="group-list collapse js-collapse">
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="group-list-cover" data-creation="工種">
+                                <img src="https://fakeimg.pl/210x210/" alt="">
+                            </div>
+                            <p class="group-list-name">姓名</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="group-list-cover" data-creation="工種">
+                                <img src="https://fakeimg.pl/210x210/" alt="">
+                            </div>
+                            <p class="group-list-name">姓名</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="group-list-cover" data-creation="工種">
+                                <img src="https://fakeimg.pl/210x210/" alt="">
+                            </div>
+                            <p class="group-list-name">姓名</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="group-list-cover" data-creation="工種">
+                                <img src="https://fakeimg.pl/210x210/" alt="">
+                            </div>
+                            <p class="group-list-name">姓名</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="group-list-cover" data-creation="工種">
+                                <img src="https://fakeimg.pl/210x210/" alt="">
+                            </div>
+                            <p class="group-list-name">姓名</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="group-list-cover" data-creation="工種">
+                                <img src="https://fakeimg.pl/210x210/" alt="">
+                            </div>
+                            <p class="group-list-name">姓名</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="group-list-cover" data-creation="工種">
+                                <img src="https://fakeimg.pl/210x210/" alt="">
+                            </div>
+                            <p class="group-list-name">姓名</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="group-list-cover" data-creation="工種">
+                                <img src="https://fakeimg.pl/210x210/" alt="">
+                            </div>
+                            <p class="group-list-name">姓名</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="group-list-cover" data-creation="工種">
+                                <img src="https://fakeimg.pl/210x210/" alt="">
+                            </div>
+                            <p class="group-list-name">姓名</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="group-list-cover" data-creation="工種">
+                                <img src="https://fakeimg.pl/210x210/" alt="">
+                            </div>
+                            <p class="group-list-name">姓名</p>
+                        </a>
+                    </li>
+                </ul>
+
+                <a class="foldToggle js-foldToggle" href="javascript:void(0)" data-show="展開顯示" data-hide="收起顯示"></a>
+            </article>
+
+            <article class="recommend">
+                <h1 class="title">你可能會想聽</h1>
+                <a class="recommend-pick" href="javascript:void(0)">換一換</a>
+                <ul class="recommend-list">
+                    <li class="js-songWrap" data-songlink="http://musicbravo.blob.core.chinacloudapi.cn/musicbravo/In_a_Heartbeat.mp3">
+                        <div class="recommend-list-cover">
+                            <a href="javascript:void(0)">
+                                <img class="creations-list-cover-img" src="https://fakeimg.pl/300x300/" alt="">
+                            </a>
+                            <a class="playBtn js-playBtn" href="javascript:void(0)"></a>
+                        </div>
+                        <a class="recommend-list-songName" href="javascript:void(0)">歌曲名稱</a>
+                    </li>
+                    <li class="js-songWrap" data-songlink="http://musicbravo.blob.core.chinacloudapi.cn/musicbravo/In_a_Heartbeat.mp3">
+                        <div class="recommend-list-cover">
+                            <a href="javascript:void(0)">
+                                <img class="creations-list-cover-img" src="https://fakeimg.pl/300x300/" alt="">
+                            </a>
+                            <a class="playBtn js-playBtn" href="javascript:void(0)"></a>
+                        </div>
+                        <a class="recommend-list-songName" href="javascript:void(0)">歌曲名稱</a>
+                    </li>
+                    <li class="js-songWrap" data-songlink="http://musicbravo.blob.core.chinacloudapi.cn/musicbravo/In_a_Heartbeat.mp3">
+                        <div class="recommend-list-cover">
+                            <a href="javascript:void(0)">
+                                <img class="creations-list-cover-img" src="https://fakeimg.pl/300x300/" alt="">
+                            </a>
+                            <a class="playBtn js-playBtn" href="javascript:void(0)"></a>
+                        </div>
+                        <a class="recommend-list-songName" href="javascript:void(0)">歌曲名稱</a>
+                    </li>
+                    <li class="js-songWrap" data-songlink="http://musicbravo.blob.core.chinacloudapi.cn/musicbravo/In_a_Heartbeat.mp3">
+                        <div class="recommend-list-cover">
+                            <a href="javascript:void(0)">
+                                <img class="creations-list-cover-img" src="https://fakeimg.pl/300x300/" alt="">
+                            </a>
+                            <a class="playBtn js-playBtn" href="javascript:void(0)"></a>
+                        </div>
+                        <a class="recommend-list-songName" href="javascript:void(0)">歌曲名稱</a>
+                    </li>
+                    <li class="js-songWrap" data-songlink="http://musicbravo.blob.core.chinacloudapi.cn/musicbravo/In_a_Heartbeat.mp3">
+                        <div class="recommend-list-cover">
+                            <a href="javascript:void(0)">
+                                <img class="creations-list-cover-img" src="https://fakeimg.pl/300x300/" alt="">
+                            </a>
+                            <a class="playBtn js-playBtn" href="javascript:void(0)"></a>
+                        </div>
+                        <a class="recommend-list-songName" href="javascript:void(0)">歌曲名稱</a>
+                    </li>
+                    <li class="js-songWrap" data-songlink="http://musicbravo.blob.core.chinacloudapi.cn/musicbravo/In_a_Heartbeat.mp3">
+                        <div class="recommend-list-cover">
+                            <a href="javascript:void(0)">
+                                <img class="creations-list-cover-img" src="https://fakeimg.pl/300x300/" alt="">
+                            </a>
+                            <a class="playBtn js-playBtn" href="javascript:void(0)"></a>
+                        </div>
+                        <a class="recommend-list-songName" href="javascript:void(0)">歌曲名稱</a>
+                    </li>
+                </ul>
+            </article>
+
+            <a class="moreRecommend" href="javascript:void(0)">更多的音樂驚喜</a>
+        </div>
+
+        <!-- 固定頂部 -->
+        <div id="fixedTop" class="fixedTop hidden">
+            <p id="fixedTop-text" class="fixedTop-text">歌曲名稱顯示測試範例說明示意像是這樣這樣這樣這樣</p>
+            <ul class="fixedTop-icons">
+                <li>
+                    <a id="share" class="fixedTop-icons-share" href="javascript:void(0)"></a>
+                </li>
+                <li>
+                    <a class="js-backToTop fixedTop-icons-backToTop" href="javascript:void(0)"></a>
+                </li>
+            </ul>
+        </div>
+	</main>
+</body>
+
+</html>

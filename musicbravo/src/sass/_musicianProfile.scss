@@ -1,0 +1,439 @@
+main.musician {
+    font-size: 13px;
+    line-height: 20px;
+
+    padding-top: 12px;
+    %content-padding {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    &.band {
+        .members {
+            display: block;
+        }
+        .introduce-content-summary {
+            display: none;
+        }
+        .introduce-content-detail {
+            padding-top: 0;
+
+            border-top: none;
+        }
+    }
+    article {
+        @extend %article;
+        &.coworkers,
+        &.creations {
+            padding-top: 10px;
+        }
+    }
+    h1.title {
+        @include title(5px);
+
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 25px;
+
+        margin-bottom: 10px;
+    }
+    /* ====================================================================== */
+    /* header */
+    /* ====================================================================== */
+    header {
+        position: relative;
+
+        display: flex;
+        overflow: hidden;
+
+        height: 147px;
+        margin-bottom: 10px;
+
+        color: #fff;
+        &::before {
+            @include mask(rgba(#000, 0.2), "color");
+
+            z-index: map-get($z-index, musician-header);
+        }
+    }
+    .musicianInfo {
+        position: relative;
+        z-index: map-get($z-index, musician-musicianInfo);
+
+        display: flex;
+        flex-direction: column;
+
+        margin: auto;
+
+        align-items: center;
+    }
+    .musicianInfo-avatar {
+        width: 80px;
+        height: 80px;
+
+        border: solid 3px #fff;
+        border-radius: 50%;
+    }
+    .musicianInfo-name {
+        font-weight: bold;
+
+        margin: 5px 0 6px;
+    }
+    .musicianInfo-areaAndLevel {
+        line-height: 17px;
+
+        display: flex;
+        li {
+            display: flex;
+
+            align-items: center;
+            &:first-child::after {
+                display: block;
+
+                width: 1px;
+                height: 15px;
+                margin-right: 4px;
+                margin-left: 8px;
+
+                content: "";
+
+                background-color: #fff;
+            }
+            &:last-child {
+                @include musicianLevel(16px, 1px);
+            }
+        }
+    }
+    .musicianBg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        background-size: 400px !important; /* override imgLiquid */
+
+        -webkit-filter: blur(20px);
+                filter: blur(20px);
+    }
+    .shareBtn {
+        @include iconLink("before", 20px, 20px, "share-2#fff");
+
+        position: absolute;
+        z-index: map-get($z-index, musician-shareBtn);
+        top: 16px;
+        right: 15px;
+    }
+    /* ====================================================================== */
+    /* 成員 */
+    /* ====================================================================== */
+    .members {
+        @include border("bottom");
+
+        position: relative;
+
+        display: none;
+
+        margin-bottom: 16px;
+    }
+    .members-list {
+        display: flex;
+        overflow: hidden;
+
+        height: 104px;
+        padding-right: 15px;
+        padding-left: 15px;
+
+        transition: height 0.4s;
+
+        flex-wrap: wrap;
+        &.less + .foldToggleWithTitle {
+            display: none;
+        }
+        li {
+            width: calc((100% - 14px * 3) / 4);
+            height: 92px;
+            margin-right: 14px;
+            margin-bottom: 12px;
+            &:nth-child(4n + 4) {
+                margin-right: 0;
+            }
+        }
+        a {
+            display: inline-block;
+        }
+        @media (max-width: 375px) {
+            padding-right: 5px;
+            padding-left: 5px;
+            li {
+                width: calc((100% - 2px * 3) / 4);
+                margin-right: 2px;
+
+                text-align: center;
+            }
+        }
+    }
+    .members-list-cover {
+        position: relative;
+
+        overflow: hidden;
+
+        width: 70px;
+        height: 70px;
+        margin-bottom: 2px;
+
+        border-radius: 50%;
+        &::after {
+            @include mask(linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 51%, #000));
+        }
+    }
+    .members-list-name {
+        @include ellipsis(70px);
+
+        text-align: center;
+    }
+    /* ====================================================================== */
+    /* 專長 */
+    /* ====================================================================== */
+    .skill {
+        @include border("bottom");
+
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+        ul {
+            @extend %content-padding;
+
+            display: flex;
+
+            box-sizing: content-box;
+            width: calc((48px * 5) + (8px * 4)); /* 項目總寬度+總間距 */
+
+            flex-wrap: wrap;
+        }
+        li {
+            @extend %skillTag;
+
+            margin-right: 8px;
+            &:nth-child(5n + 5) {
+                margin-right: 0;
+            }
+            // 前5項
+            &:nth-child(-n + 5) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    /* ====================================================================== */
+    /* 介紹 */
+    /* ====================================================================== */
+    .introduce {
+        position: relative;
+    }
+    .introduce-content {
+        @extend %content-padding;
+
+        overflow: hidden;
+
+        transition: max-height 0.4s;
+    }
+    .introduce-content-summary {
+        li {
+            @include musicianLevel(17px, 12px) {
+                flex-shrink: 0;
+            }  display: flex;
+
+            margin-bottom: 10px;
+
+            ;
+        }
+        mark {
+            font-weight: bold;
+
+            margin: 0 4px;
+
+            color: $dirty-purple;
+            background-color: transparent;
+        }
+    }
+    .introduce-content-detail {
+        @include border("top");
+
+        box-sizing: content-box;
+        min-height: 20px;
+        padding-top: 10px;
+        padding-bottom: 16px;
+    }
+    /* ====================================================================== */
+    /* 最近合作 */
+    /* ====================================================================== */
+    .coworkers {
+        &.more {
+            .coworkers-list {
+                @include border("bottom");
+            }
+            .foldToggle {
+                display: flex;
+            }
+        }
+        &.empty {
+            .coworkers-list {
+                display: none;
+            }
+            .coworkers-tip {
+                display: block;
+
+                margin: 0 0 16px 15px;
+            }
+        }
+        .foldToggle {
+            display: none;
+        }
+    }
+    .coworkers-list {
+        @extend %content-padding;
+
+        display: flex;
+        li {
+            width: calc((100% - 14px * 3) / 4);
+            height: 92px;
+            margin-right: 14px;
+            margin-bottom: 12px;
+            &:nth-child(4n + 4) {
+                margin-right: 0;
+            }
+        }
+        a {
+            display: inline-block;
+        }
+        @media (max-width: 375px) {
+            padding-right: 5px;
+            padding-left: 5px;
+
+            text-align: center;
+            li {
+                width: calc((100% - 2px * 3) / 4);
+                margin-right: 2px;
+
+                text-align: center;
+            }
+        }
+    }
+    .coworkers-list-cover {
+        position: relative;
+
+        overflow: hidden;
+
+        width: 70px;
+        height: 70px;
+        margin-bottom: 2px;
+
+        border-radius: 50%;
+        &::before {
+            @include ellipsis(40px);
+
+            font-size: 9px;
+            line-height: 9px;
+
+            position: absolute;
+            z-index: map-get($z-index, single-aboveMask);
+            right: 15px;
+            bottom: 7px;
+            left: 15px;
+
+            content: attr(data-creation);
+            text-align: center;
+
+            color: #fff;
+        }
+        &::after {
+            @include mask(linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 51%, #000));
+        }
+    }
+    .coworkers-list-name {
+        @include ellipsis(70px);
+
+        text-align: center;
+    }
+    .coworkers-tip {
+        display: none;
+    }
+    /* ====================================================================== */
+    /* 最新創作 */
+    /* ====================================================================== */
+    .creations {
+        margin-bottom: 20px;
+        &.empty {
+            .creations-list {
+                display: none;
+            }
+            .creations-tip {
+                display: block;
+
+                margin: 0 0 16px 15px;
+
+                border: none;
+            }
+            .foldToggle {
+                display: none;
+            }
+        }
+    }
+    .creations-list {
+        @include border("bottom");
+
+        display: flex;
+
+        padding-right: 15px;
+        padding-left: 15px;
+
+        flex-wrap: wrap;
+        a {
+            display: block;
+        }
+        li {
+            width: calc((100% - 10.5px * 2) / 3);
+            margin-right: 10.5px;
+            margin-bottom: 12px;
+            &:nth-child(3n + 3) {
+                margin-right: 0;
+            }
+        }
+    }
+    .creations-list-cover {
+        @include coverWithPlayBtn(100px, 30px, 10px);
+
+        margin-bottom: 4px;
+        &::after {
+            @include mask(linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.3)));
+
+            pointer-events: none;
+        }
+    }
+    @media (max-width: 375px) {
+        .creations-list {
+            padding-right: 5px;
+            padding-left: 5px;
+
+            text-align: center;
+            li {
+                width: calc((100% - 2px * 2) / 3);
+                margin-right: 2px;
+
+                text-align: center;
+            }
+        }
+        .creations-list-cover {
+            width: 94px;
+        }
+    }
+    .creations-list-cover-img {
+        display: block;
+    }
+    .creations-list-songName {
+        @include ellipsis(100%);
+
+        text-align: center;
+    }
+    .creations-tip {
+        display: none;
+    }
+}

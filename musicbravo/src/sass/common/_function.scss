@@ -1,0 +1,13 @@
+@function rem($px) {
+	$result: $px / 16;
+	@return #{$result}rem;
+}
+
+@function letter($em) {
+	$result: $em / 1000;
+	@return #{$result}em;
+}
+
+@function lineHeight($px, $fz: 16) {
+	@return $px / $fz;
+}

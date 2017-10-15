@@ -1,0 +1,135 @@
+.player {
+    position: fixed;
+    z-index: map-get($z-index, player);
+    right: 0;
+    bottom: -100px;
+    left: 0;
+
+    transition: bottom 0.4s;
+
+    background-image: linear-gradient(to bottom, #292929, #181818);
+    &.active {
+        bottom: 0;
+        & ~ main {
+            margin-bottom: 100px + 20;
+        }
+    }
+    .wrap {
+        position: relative;
+
+        display: flex;
+
+        height: 100px;
+        padding: 0 15px 0 10px;
+
+        color: #fff;
+
+        align-items: center;
+    }
+    .rightSide {
+        font-size: 13px;
+        line-height: 20px;
+
+        width: calc(100% - 70px);
+    }
+    .rightSide-bottom {
+        font-size: 10px;
+        line-height: 10px;
+
+        display: flex;
+
+        align-items: center;
+    }
+}
+.player-play {
+    position: relative;
+
+    display: flex;
+
+    width: 70px;
+    height: 70px;
+    margin-right: 8px;
+
+    border-radius: 2px;
+    background-size: cover;
+
+    flex-shrink: 0;
+}
+.player-play-btn {
+    width: 44px;
+    height: 44px;
+    margin: auto;
+
+    background-image: inline-image("Icons/play-1.svg");
+    background-size: cover;
+    &.pause {
+        background-image: inline-image("Icons/stop-1.svg");
+    }
+}
+.player-songName {
+    @include ellipsis(237px);
+
+    margin-bottom: 2px;
+}
+.player-singer {
+    @include ellipsis(237px);
+
+    margin-bottom: 9px;
+
+    opacity: 0.9;
+}
+.player-currentTime,
+.player-duration {
+    width: 28px;
+
+    opacity: 0.6;
+}
+.player-progress {
+    position: relative;
+
+    height: 3px;
+    margin: 0 10.5px;
+
+    cursor: pointer;
+
+    border-radius: 10px;
+    background-color: #e1e1e1;
+
+    flex-basis: 216px;
+    &::before {
+        @include clickableArea(false, 3px, 44px, 40px);
+    }
+}
+.player-progress-bar {
+    position: relative;
+
+    width: 0;
+    height: 100%;
+
+    background-color: $ocean-blue;
+    &::before {
+        position: absolute;
+        top: -((11px - 3px) / 2);
+        right: -(11px / 2);
+
+        width: 11px;
+        height: 11px;
+
+        content: "";
+
+        border-radius: 50%;
+        background-color: $ocean-blue;
+    }
+}
+.player-duration {
+    text-align: right;
+}
+.player-close {
+    @include iconLink("before", 11.7px, 11.7px, "close#a4a4a4");
+
+    position: absolute;
+    top: 22.4px;
+    right: 15.9px;
+
+    display: block;
+}
