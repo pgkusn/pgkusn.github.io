@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 // Browsersync初始化
 gulp.task('browserSync', function () {
     browserSync.init({
-        proxy: "localhost/pgkusn.github.io/musicbravo",
+        proxy: "localhost/pgkusn.github.io/musicbravo-mobile",
         // 指定<script>標籤插入至</body>前方
         snippetOptions: {
             rule: {
