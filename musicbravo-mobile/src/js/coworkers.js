@@ -4,5 +4,10 @@
 // 定位文章標題
 articleTitle();
 
+// =============================================================================
+// event
+// =============================================================================
 // 切換排序方式
-sortToggle();
+$(document).on("click", ".js-sortControl-item", function(event) {
+    sortToggle($(event.currentTarget));
+});

@@ -69,9 +69,7 @@ $(document).on("click", ".js-foldToggle", function() {
 });
 
 // 按下播放/暫停鍵
-$(document).on("click", ".js-playBtn", function(event) {
-    event.preventDefault();
-
+$(document).on("click", ".js-playBtn", function() {
     // 控制播放/暫停/切換歌曲
     var audio = $("audio")[0];
     if ($(this).hasClass("playing")) {

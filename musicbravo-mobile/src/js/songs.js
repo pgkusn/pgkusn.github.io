@@ -4,9 +4,6 @@
 // 定位文章標題
 articleTitle();
 
-// 切換排序方式
-sortToggle();
-
 // 篩選列表
 $("#accordion").accordion({
     active: false, // 預設全部摺疊
@@ -18,6 +15,11 @@ $("#accordion").accordion({
 // =============================================================================
 // event
 // =============================================================================
+// 切換排序方式
+$(document).on("click", ".js-sortControl-item", function(event) {
+    sortToggle($(event.currentTarget));
+});
+
 // 篩選列表-多選
 $(document).off("click", ".js-multiple li").on("click", ".js-multiple li", function() {
     var $parent = $(this).parent();

@@ -98,19 +98,25 @@ function articleTitle() {
 
 /** 切換排序方式
  * 
+ * @param {object} target 已點擊的排序元件(jQuery object)
  */
-function sortToggle() {
-    // 取得預設排序
-    var sortType = $("input[name=sort]:checked").val();
+function sortToggle(target) {
+    // 點擊原排列方式
+    if (target.siblings("input:radio").prop("checked") === true) {
+        // 切換升冪/降冪排序
+        target.toggleClass("desc");
+    }
+    // 點擊另一種排列方式
+    else {
+        // 切換排列方式
+        $("input[name=sort]:checked").prop("checked", false);
+        target.siblings("input:radio").prop("checked", true);
 
-    $(document).on("click", ".js-sortControl-item", function() {
-        var selected = $(this).parent().find(":radio").val();
-        if (sortType === selected) {
-            $(this).toggleClass("desc");
-        } else {
-            sortType = selected;
+        // 切換降冪排序
+        if (!target.hasClass("desc")) {
+            target.toggleClass("desc");
         }
-    });
+    }
 }
 
 // =============================================================================

@@ -29,6 +29,8 @@ body > header {
         position: absolute;
         top: 26px;
         left: 20px;
+
+        display: none;
     }
     nav {
         h1 {
@@ -253,6 +255,8 @@ body > header {
 .articleTitle.withTop {
     position: absolute;
 
+    display: flex;
+
     transition: right 0.2s, left 0.2s;
 
     border-radius: 10px 10px 0 0;
@@ -263,8 +267,6 @@ body > header {
         top: $headerHeight !important;
         right: 0 !important;
         left: 0 !important;
-
-        display: flex;
 
         height: 43px;
         padding: 0 32px 0 20px;
@@ -525,9 +527,11 @@ body > header {
     }
 }
 .player-songName {
-    @include ellipsis(237px);
+    @include ellipsis(237px, inline-block);
 
     margin-bottom: 2px;
+
+    color: #fff;
 }
 .player-singer {
     @include ellipsis(237px);

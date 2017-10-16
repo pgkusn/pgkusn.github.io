@@ -4,9 +4,6 @@
 // 定位文章標題
 articleTitle();
 
-// 切換排序方式
-sortToggle();
-
 // 限制文字長度
 limitWordLength();
 
@@ -28,6 +25,11 @@ $(".musicianList-item-content-skill").each(function() {
 // =============================================================================
 // event
 // =============================================================================
+// 切換排序方式
+$(document).on("click", ".js-sortControl-item", function(event) {
+    sortToggle($(event.currentTarget));
+});
+
 // 切換所在地-地區
 $(document).off("click", ".js-areaOption").on("click", ".js-areaOption", function() {
     $(".js-area-content").removeClass("active");
