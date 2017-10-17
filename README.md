@@ -1,9 +1,10 @@
 ﻿# 技能
 - 能運用 CSS 搭配 JavaScript 或 jQuery 製作網頁動畫及互動效果
 - 能運用 Bootstrap、Pure、jQuery UI 等框架快速完成網頁佈局
-- 能運用 Ajax 交換外部 XML、JSON 格式資料
+- 能運用 Ajax 交換外部 XML、JSON 等格式資料
 - 能運用 Sass + Compass 增進撰寫樣式的效率並增加可維護性
 - 能運用 Susy 格線系統建置易維護的網頁架構
+- 能運用 Handlebars 樣板引擎提升網頁效能並增加可維護性
 - 能運用 gulp 自動化工具增進開發專案的效率
 - 能運用 Git 管理程式碼版本
 - 能運用 VS Code IDE 提升工作效率
