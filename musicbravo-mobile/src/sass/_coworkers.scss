@@ -45,33 +45,41 @@ main.coworkers {
 
         border-radius: 50%;
     }
-    .coworkerList-item-content {
-        position: relative;
-        &::after {
-            position: absolute;
-            top: 0;
-            right: -16px;
+    .coworkerList-item-content-name {
+        @include ellipsis(183px);
+
+        font-size: 17px;
+        line-height: 17px;
+
+        margin-bottom: 2px;
+    }
+    .coworkerList-item-content-level {
+        font-size: 13px;
+        line-height: 20px;
+
+        display: flex;
+
+        margin-bottom: 5px;
+
+        text-align: center;
+
+        align-items: center;
+        &::before {
+            display: block;
 
             width: 16px;
             height: 17px;
+            margin-right: 5px;
 
             content: "";
 
             background-size: contain;
         }
         @each $musician in $musicians {
-            &.#{$musician}::after {
+            &.#{$musician}::before {
                 background-image: inline-image("Icons/#{$musician}.svg");
             }
         }
-    }
-    .coworkerList-item-content-name {
-        @include ellipsis(167px, inline-block);
-
-        font-size: 17px;
-        line-height: 17px;
-
-        margin-bottom: 8px;
     }
     .coworkerList-item-content-skill {
         display: flex;
