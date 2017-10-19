@@ -33,40 +33,49 @@
 
 # 參與專案
 **布拉沃科技公司（在職中）**
-- 音樂霸 - <https://uat.musicbravo.com.tw>
-- 音樂霸（手機版）
-	- <https://pgkusn.github.io/musicbravo-mobile>
-	- <https://uat.musicbravo.com.tw/mobile>
+- 音樂霸  
+  <https://uat.musicbravo.com.tw>
+- 音樂霸（手機版）  
+  <https://uat.musicbravo.com.tw/mobile>  
+  <https://pgkusn.github.io/musicbravo-mobile>
 
 **聚樂數位（2015/12~2016/12）**
-- 官網 - <http://www.cyberstep.com.tw>
-- 特設頁
-	- 猴年行大運 - <http://getamped2.cyberstep.com.tw/ga2sp/special/20160128_newyear>
-	- 第四屆裝備設計大賽 - <http://getamped2.cyberstep.com.tw/ga2sp/special/20160311_event_acce>
-	- GAT 2016 年度大賽 - <http://getamped2.cyberstep.com.tw/ga2sp/special/gat2016>
+- 官網  
+  <http://www.cyberstep.com.tw>
+- 特設頁  
+  <http://getamped2.cyberstep.com.tw/ga2sp/special/20160128_newyear>
+  <http://getamped2.cyberstep.com.tw/ga2sp/special/20160311_event_acce>
+  <http://getamped2.cyberstep.com.tw/ga2sp/special/gat2016>
 
 # 作品
-- 六角西餐廳 - <https://pgkusn.github.io/udemy_rwd>
+- 六角西餐廳  
+  <https://pgkusn.github.io/udemy_rwd>  
+  <https://pgkusn.github.io/udemy_rwd/cart.html>  
+  <https://pgkusn.github.io/udemy_rwd/login.html>
 	- RWD 響應式設計
 	- 運用 Google Maps API 自訂地圖
 
-- Editorial - <https://pgkusn.github.io/html5up-editorial>
+- Editorial  
+  <https://pgkusn.github.io/html5up-editorial>
 	- RWD 響應式設計
 	- 側邊欄選單設計
 
-- Forty - <https://pgkusn.github.io/html5up-forty>
+- Forty  
+  <https://pgkusn.github.io/html5up-forty>
 	- RWD 響應式設計
 	- 導航列置頂效果
 	- 全螢幕選單設計
 	- 頁面載入動畫
 	- CSS3 Animation
 
-- Theyalow - <https://pgkusn.github.io/theyalow>
+- Theyalow  
+  <https://pgkusn.github.io/theyalow>
 	- RWD 響應式設計
 	- 自訂 video 控制面板與相關事件
 	- CSS3 漸層背景
 
-- Renome - <https://pgkusn.github.io/renome>
+- Renome  
+  <https://pgkusn.github.io/renome>
 	- RWD 響應式設計
 	- 行動裝置選單設計
 	- 頁籤面板設計
@@ -76,7 +85,8 @@
 	- 運用 [Fancybox](http://fancyapps.com/fancybox) 實作圖片燈箱效果
 	- 運用 [Lazy Load](http://www.appelsiini.net/projects/lazyload) 延遲圖片載入
 
-- Lookshop - <https://pgkusn.github.io/lookshop>
+- Lookshop  
+  <https://pgkusn.github.io/lookshop>
 	- RWD 響應式設計
 	- 行動裝置選單設計
 	- 頁籤面板設計
@@ -85,24 +95,29 @@
 	- CSS3 Animation
 	- 運用 [slick](http://kenwheeler.github.io/slick) 實作圖片輪播功能
 
-- Business Company - <https://pgkusn.github.io/business_company>
+- Business Company  
+  <https://pgkusn.github.io/business_company>
 	- CSS 多層下拉選單
 	- CSS3 Animation
 	- 導航列置頂效果
 	- 運用 [slick](http://kenwheeler.github.io/slick) 實作圖片輪播功能
 	- 運用 [scrollex](https://github.com/ajlkn/jquery.scrollex) 實作頁面載入動畫
 
-- Fitness Club（多頁面）- <https://pgkusn.github.io/fitness_club>
+- Fitness Club  
+  <https://pgkusn.github.io/fitness_club>
 	- 運用 Google Maps API 自訂地圖
 	- 運用 [slick](http://kenwheeler.github.io/slick) 實作圖片輪播功能
 
-- Ticket 訂票紀錄 - <http://yuan-chung.clouds.twgogo.org/site/ticket>
+- Ticket 訂票紀錄  
+  <http://yuan-chung.clouds.twgogo.org/site/ticket>
 	- 運用 jQuery Mobile 建置網頁架構
 	- 運用 HTML5 Web Storage 存取 Client 端資料
 	- 運用 PHP + MySQL 進行資料備份 & 還原
 
-- 不可來書店 - <http://yuan-chung.clouds.twgogo.org/site/bookstore/public>
+- 不可來書店  
+  <http://yuan-chung.clouds.twgogo.org/site/bookstore/public>
 	- 運用 PHP + MySQL 搭配 Laravel Framework 建置網頁架構
 	- 運用 Bootstrap theme、jQuery UI 建置網頁佈局
 
-- 其它 - <http://codepen.io/yuan-chung/pens/public>
+- 其它  
+  <http://codepen.io/yuan-chung/pens/public>
