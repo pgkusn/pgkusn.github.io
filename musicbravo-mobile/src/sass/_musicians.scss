@@ -95,6 +95,8 @@ main.musicians {
             width: 100%;
         }
         .musicianList-item-content-level {
+            @include musicianLevel(16px, 5px);
+
             font-size: 13px;
             line-height: 20px;
 
@@ -105,22 +107,6 @@ main.musicians {
             text-align: center;
 
             align-items: center;
-            &::before {
-                display: block;
-
-                width: 16px;
-                height: 17px;
-                margin-right: 5px;
-
-                content: "";
-
-                background-size: contain;
-            }
-            @each $musician in $musicians {
-                &.#{$musician}::before {
-                    background-image: inline-image("Icons/#{$musician}.svg");
-                }
-            }
         }
         // 圖表
         &.chart {
@@ -144,13 +130,11 @@ main.musicians {
                 }
             }
             .musicianList-item-avatar {
-                margin-bottom: 8px;
-            }
-            .musicianList-item-avatar-img {
-                display: block;
+                overflow: hidden;
 
                 width: 75px;
                 height: 75px;
+                margin-bottom: 8px;
 
                 border-radius: 50%;
             }
@@ -207,12 +191,11 @@ main.musicians {
                 }
             }
             .musicianList-item-avatar {
+                overflow: hidden;
+
                 width: 60px;
                 height: 60px;
                 margin-right: 12px;
-            }
-            .musicianList-item-avatar-img {
-                display: block;
 
                 border-radius: 50%;
             }

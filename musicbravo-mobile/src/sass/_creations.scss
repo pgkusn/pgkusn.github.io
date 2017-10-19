@@ -18,7 +18,8 @@ main.creations {
     /* 作品列表 */
     /* ====================================================================== */
     .creationList {
-        a {
+        a,
+        img {
             display: block;
         }
 
@@ -51,9 +52,6 @@ main.creations {
                     pointer-events: none;
                 }
             }
-            .creationList-cover-img {
-                display: block;
-            }
             .creationList-songName {
                 @include ellipsis(100%);
 
@@ -63,7 +61,7 @@ main.creations {
                 display: none;
             }
         }
-        @media (max-width: 375px) {
+        @media (max-width: 374px) {
             &.chart {
                 padding-right: 5px;
                 padding-left: 5px;
@@ -112,7 +110,7 @@ main.creations {
                 }
             }
             .creationList-cover-img {
-                display: block;
+                overflow: hidden;
 
                 width: 40px;
                 height: 40px;

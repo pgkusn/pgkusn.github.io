@@ -80,6 +80,9 @@ main.songs {
         a {
             display: block;
         }
+        .creationList-cover-img img {
+            display: block;
+        }
 
         // 圖表
         &.chart {
@@ -110,9 +113,6 @@ main.songs {
                     pointer-events: none;
                 }
             }
-            .creationList-cover-img {
-                display: block;
-            }
             .creationList-songName {
                 @include ellipsis(100%);
 
@@ -122,7 +122,7 @@ main.songs {
                 display: none;
             }
         }
-        @media (max-width: 375px) {
+        @media (max-width: 374px) {
             &.chart {
                 padding-right: 5px;
                 padding-left: 5px;
@@ -171,7 +171,7 @@ main.songs {
                 }
             }
             .creationList-cover-img {
-                display: block;
+                overflow: hidden;
 
                 width: 70px;
                 height: 70px;

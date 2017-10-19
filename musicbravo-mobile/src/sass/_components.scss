@@ -315,7 +315,7 @@ body > header {
         content: "";
 
         background-color: rgba(155, 155, 155, 0.3);
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 374px) {
             width: 90px;
         }
     }
