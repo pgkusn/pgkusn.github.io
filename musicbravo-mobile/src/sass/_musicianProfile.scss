@@ -217,13 +217,13 @@ main.musician {
         li {
             @extend %skillTag;
 
-            margin-right: 8px;
+            margin: 0 8px 10px 0;
             &:nth-child(5n + 5) {
                 margin-right: 0;
             }
-            // 前5項
-            &:nth-child(-n + 5) {
-                margin-bottom: 10px;
+            // 後5項
+            &:nth-last-child(-n + 5) {
+                margin-bottom: 0;
             }
         }
     }

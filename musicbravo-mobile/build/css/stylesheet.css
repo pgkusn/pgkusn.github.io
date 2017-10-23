@@ -2497,13 +2497,13 @@ main.musician .skill ul {
   flex-wrap: wrap;
 }
 main.musician .skill li {
-  margin-right: 8px;
+  margin: 0 8px 10px 0;
 }
 main.musician .skill li:nth-child(5n + 5) {
   margin-right: 0;
 }
-main.musician .skill li:nth-child(-n + 5) {
-  margin-bottom: 10px;
+main.musician .skill li:nth-last-child(-n + 5) {
+  margin-bottom: 0;
 }
 main.musician .introduce {
   position: relative;
