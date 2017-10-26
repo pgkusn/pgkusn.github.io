@@ -2804,7 +2804,7 @@ main.coworkers .coworkerList-item-content-name {
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: 17px;
-  line-height: 17px;
+  line-height: 25px;
   margin-bottom: 2px;
 }
 main.coworkers .coworkerList-item-content-level {
