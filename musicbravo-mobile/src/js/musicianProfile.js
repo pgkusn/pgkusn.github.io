@@ -34,14 +34,17 @@ if ($member.length > 4) {
  */
 function setIntroduceHeight(first = true) {
     var introduceHeight = 0;
-    if ($("main").hasClass("band")) {
-        // 樂團：三行高+段落下邊距
-        introduceHeight = 76;
-    } else {
+    // 有介紹摘要
+    if ($(".introduce-content-summary").length) {
         $(".introduce-content-summary li:lt(3)").each(function() {
-            // 個人：前三項高+下邊距
+            // 前三項高+下邊距
             introduceHeight += $(this).outerHeight(true);
         });
+    }
+    // 無介紹摘要
+    else {
+        // 三行高+段落下邊距
+        introduceHeight = 76;
     }
     $introduce.css("max-height", introduceHeight);
 

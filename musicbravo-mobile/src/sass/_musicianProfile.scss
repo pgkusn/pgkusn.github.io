@@ -14,11 +14,6 @@ main.musician {
         .introduce-content-summary {
             display: none;
         }
-        .introduce-content-detail {
-            padding-top: 0;
-
-            border-top: none;
-        }
     }
     article {
         @extend %article;
@@ -241,14 +236,19 @@ main.musician {
         transition: max-height 0.4s;
     }
     .introduce-content-summary {
+        & + .introduce-content-detail {
+            @include border("top");
+
+            padding-top: 10px;
+        }
         li {
             @include musicianLevel(17px, 12px) {
                 flex-shrink: 0;
-            }  display: flex;
+            };
+
+            display: flex;
 
             margin-bottom: 10px;
-
-            ;
         }
         mark {
             font-weight: bold;
@@ -259,12 +259,15 @@ main.musician {
             background-color: transparent;
         }
     }
+    .group-band-link {
+        position: relative;
+        &::before {
+            @include clickableArea(false, 15px);
+        }
+    }
     .introduce-content-detail {
-        @include border("top");
-
         box-sizing: content-box;
         min-height: 20px;
-        padding-top: 10px;
         padding-bottom: 16px;
     }
     /* ====================================================================== */

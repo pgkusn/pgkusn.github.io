@@ -2274,10 +2274,6 @@ main.musician.band .members {
 main.musician.band .introduce-content-summary {
   display: none;
 }
-main.musician.band .introduce-content-detail {
-  padding-top: 0;
-  border-top: none;
-}
 main.musician article.coworkers, main.musician article.creations {
   padding-top: 10px;
 }
@@ -2512,6 +2508,10 @@ main.musician .introduce-content {
   overflow: hidden;
   transition: max-height 0.4s;
 }
+main.musician .introduce-content-summary + .introduce-content-detail {
+  border-top: solid 1px rgba(155, 155, 155, 0.3);
+  padding-top: 10px;
+}
 main.musician .introduce-content-summary li {
   display: flex;
   margin-bottom: 10px;
@@ -2555,11 +2555,20 @@ main.musician .introduce-content-summary mark {
   color: #4a4a4a;
   background-color: transparent;
 }
+main.musician .group-band-link {
+  position: relative;
+}
+main.musician .group-band-link::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  left: 0;
+  top: -14.5px;
+  bottom: -14.5px;
+}
 main.musician .introduce-content-detail {
-  border-top: solid 1px rgba(155, 155, 155, 0.3);
   box-sizing: content-box;
   min-height: 20px;
-  padding-top: 10px;
   padding-bottom: 16px;
 }
 main.musician .coworkers.more .coworkers-list {
