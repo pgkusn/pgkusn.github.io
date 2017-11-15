@@ -142,6 +142,7 @@ $(".js-player").each(function() {
         
         // 隱藏播放器
         $(this).removeClass("active");
+        $("main").removeClass("playing");
 
         // 當播放器完全隱藏後
         $(this).one("transitionend", function() {

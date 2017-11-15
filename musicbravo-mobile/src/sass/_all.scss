@@ -9,6 +9,9 @@ a {
 }
 main {
     transition: margin-bottom 0.4s;
+    &.playing {
+        margin-bottom: 100px + 20 !important;;
+    }
 }
 .wrap {
     min-width: 320px;

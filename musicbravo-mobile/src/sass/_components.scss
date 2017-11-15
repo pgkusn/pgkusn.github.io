@@ -470,9 +470,6 @@ body > header {
     background-image: linear-gradient(to bottom, #292929, #181818);
     &.active {
         bottom: 0;
-        & ~ main {
-            margin-bottom: 100px + 20;
-        }
     }
     .wrap {
         position: relative;

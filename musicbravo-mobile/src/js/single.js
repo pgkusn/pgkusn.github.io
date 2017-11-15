@@ -100,4 +100,5 @@ $(document).on("click", ".js-playBtn", function() {
     
     // 顯示播放器
     $(".js-player").addClass("active");
+    $("main").addClass("playing");
 });
