@@ -177,8 +177,15 @@ main.column {
 
             flex-wrap: wrap;
         }
-        li:first-of-type {
-            margin-right: 2.5ch; /* 5個半形空白寬度 */
+        li {
+            display: flex;
+            align-items: center;
+            &:first-of-type {
+                margin-right: 2.5ch; /* 5個半形空白寬度 */
+            }
+            &::before {
+                content: attr(data-type);
+            }
         }
     }
     .main-author-name::before {
@@ -190,6 +197,9 @@ main.column {
         }
         dt {
             flex-shrink: 0;
+            &::before {
+                content: attr(data-type);
+            }
         }
     }
     .main-tag-item {

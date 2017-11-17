@@ -20,8 +20,12 @@ body > header {
         width: 113px;
         height: 28px;
         margin: 0 auto;
-
-        background-image: inline-image("Icons/logo.svg");
+        &.tw {
+            background-image: inline-image("Icons/logo-tw.svg");
+        }
+        &.cn {
+            background-image: inline-image("Icons/logo-cn.svg");
+        }
     }
     .top-search {
         @include iconLink("before", 16px, 16px, "search#fff");
