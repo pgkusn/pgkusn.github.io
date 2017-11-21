@@ -23,6 +23,17 @@ main.index {
                 background-image: -webkit-image-set(image-url("Index/tw-banner.jpg") 1x, image-url("Index/tw-banner@2x.jpg") 2x, image-url("Index/tw-banner@3x.jpg") 3x);
             }
         }
+        @media (min-width: 450px) {
+            .wrap {
+                height: 328px;
+                &.cn {
+                    background-image: image-url("Index/cn-banner@2x.jpg");
+                }
+                &.tw {
+                    background-image: image-url("Index/tw-banner@2x.jpg");
+                }
+            }
+        }
     }
 
     /* ========================================================================== */
@@ -31,7 +42,21 @@ main.index {
     article {
         @extend %article;
         &:first-of-type .section {
-            height: 184px;
+            width: 321px;
+            height: 170px;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
+        &:last-of-type .section {
+            min-height: 172px;
+        }
+    }
+    @media (min-width: 768px) {
+        article {
+            &:first-of-type .section {
+                width: 714px;
+                height: 354px;
+            }
         }
     }
     .column {
@@ -95,8 +120,6 @@ main.index {
         font-size: 13px;
         line-height: 20px;
 
-        min-height: 172px;
-
         border-bottom: solid 1px rgba(155, 155, 155, 0.3);
         background-color: #fff;
         &:last-child {
@@ -107,16 +130,15 @@ main.index {
     /* ========================================================================== */
     /* 輪播圖 */
     /* ========================================================================== */
-    .carousel {
-        width: 321px;
-        margin: 0 auto;
-        padding-top: 10px;
-    }
     .carousel-item {
         display: block;
 
         width: 321px;
-        height: 150px;
+    }
+    @media (min-width: 768px) {
+        .carousel-item {
+            width: 714px;
+        }
     }
     // 自訂底部導航按鈕
     .owl-controls {

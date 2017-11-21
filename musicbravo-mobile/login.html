@@ -2,7 +2,7 @@
 <html lang="zh-Hant-TW">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>login</title>
 	<!-- jQuery -->
@@ -40,71 +40,85 @@
         </nav>
     </header>
 
-    <main class="loginPage">
+    <main class="login">
         <header>
-            <hgroup>
-                <h1 class="header-title">歡迎來到音樂霸</h1>
-                <h2 class="header-subtitle">對音樂人最友善的平台</h2>
-            </hgroup>
-            <ul>
-                <li>
-                    <a href="">註冊</a>
-                </li>
-                <li>
-                    <a href="">登入</a>
-                </li>
-            </ul>
+            <div class="wrap">
+                <hgroup class="header-titles">
+                    <h1>歡迎來到音樂霸</h1>
+                    <h2>對音樂人最友善的平台</h2>
+                </hgroup>
+                <ul class="header-tabs">
+                    <li>
+                        <a href="#registerArea">註冊</a>
+                    </li>
+                    <li class="active">
+                        <a href="#loginArea">登入</a>
+                    </li>
+                </ul>
+            </div>
         </header>
 
         <!-- 註冊 -->
-        <div class="register">
+        <div class="registerArea">
             無內容
         </div>
 
         <!-- 登入 -->
-        <div class="login">
-            <ul class="login-field">
+        <div class="loginArea active">
+            <ul class="loginArea-field">
                 <li>
-                    <select>
-                        <option value="+86">+86</option>
-                        <option value="+87">+87</option>
-                    </select>
-                    <input type="number" placeholder="請輸入手機號碼">
-                    <button class="del"></button>
+                    <ul class="loginArea-field-phoneNum">
+                        <li>
+                            <select>
+                                <option value="+86">+86</option>
+                                <option value="+87">+87</option>
+                            </select>
+                        </li>
+                        <li>
+                            <input type="number" placeholder="請輸入手機號碼">
+                            <a class="del" href="javascript:void(0)"></a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <input type="text" placeholder="請輸入密碼">
-                    <button class="del"></button>
-                    <button class="hiddenToggle"></button>
+                    <ul class="loginArea-field-pwd">
+                        <li>
+                            <input type="text" placeholder="請輸入密碼">
+                            <a class="del" href="javascript:void(0)"></a>
+                        </li>
+                        <li>
+                            <button class="hiddenToggle"></button>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             
-            <div class="login-type">
+            <div class="loginArea-type">
                 <p>用 <a href="#">手機短信</a> / <a href="#">郵箱密碼</a> 登入</p>
                 <a href="#">忘記密碼</a>
             </div>
 
-            <p class="login-notExist">帳號不存在</p>
+            <p class="loginArea-notExist">帳號不存在</p>
             
-            <a class="login-send" href="#">登入</a>
+            <a class="loginArea-send" href="#">登入</a>
             
             <p>使用其他方式登入</p>
             <!-- tw -->
-            <ul class="login-others tw">
+            <ul class="loginArea-others tw">
                 <li>
-                    <button class="login-others-fb"></button>
+                    <button class="loginArea-others-fb"></button>
                 </li>
             </ul>
             <!-- cn -->
-            <ul class="login-others cn">
+            <ul class="loginArea-others cn">
                 <li>
-                    <button class="login-others-wechat"></button>
+                    <button class="loginArea-others-wechat"></button>
                 </li>
                 <li>
-                    <button class="login-others-sina"></button>
+                    <button class="loginArea-others-sina"></button>
                 </li>
                 <li>
-                    <button class="login-others-qq"></button>
+                    <button class="loginArea-others-qq"></button>
                 </li>
             </ul>
         </div>

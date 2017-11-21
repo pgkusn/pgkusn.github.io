@@ -75,15 +75,23 @@ function articleTitle() {
 
     // 重新定位標題
     $(window).on("resize", function() {
-        var lastArticleLeft = $article.offset().left;
-        if (articlePos.left !== lastArticleLeft) {
-            articlePos.left = lastArticleLeft;
-            $title.css({
-                top: articlePos.top,
-                left: articlePos.left,
-                right: $(window).width() - (articlePos.left + $article.outerWidth())
-            });
+        var lastArticle = {
+            left: $article.offset().left,
+            top: $article.offset().top
+        };
+        
+        if (articlePos.left !== lastArticle.left) {
+            articlePos.left = lastArticle.left;
         }
+        if (articlePos.top !== lastArticle.top) {
+            articlePos.top = lastArticle.top;
+        }
+
+        $title.css({
+            top: articlePos.top,
+            left: articlePos.left,
+            right: $(window).width() - (articlePos.left + $article.outerWidth())
+        });
     });
 
     // 固定標題
