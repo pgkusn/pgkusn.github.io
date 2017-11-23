@@ -313,15 +313,19 @@ body > header {
     justify-content: space-between;
     &::before,
     &::after {
-        width: 110px;
+        width: calc(50% - 65px);
         height: 1px;
 
         content: "";
 
         background-color: rgba(155, 155, 155, 0.3);
-        @media screen and (max-width: 374px) {
-            width: 90px;
-        }
+    }
+    p {
+        width: 110px;
+
+        text-align: center;
+
+        flex-shrink: 0;
     }
 }
 

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>login</title>
+	<title>accountZone</title>
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" defer></script>
 	<!-- custom -->
@@ -34,13 +34,13 @@
                     <a class="nav-link" href="musicians.html">音樂人</a>
                 </li>
                 <li>
-                    <a class="nav-link active" href="">我的</a>
+                    <a class="nav-link active" href="#">我的</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main class="login">
+    <main class="accountZone">
         <header>
             <div class="wrap">
                 <hgroup class="header-titles">
@@ -59,12 +59,10 @@
         </header>
 
         <!-- 註冊 -->
-        <div class="registerArea">
-            無內容
-        </div>
+        <div class="registerArea"></div>
 
         <!-- 登入 -->
-        <div class="loginArea active">
+        <div class="loginArea wrap active">
             <ul class="loginArea-field">
                 <li>
                     <ul class="loginArea-field-phoneNum">
@@ -87,40 +85,46 @@
                             <a class="del" href="javascript:void(0)"></a>
                         </li>
                         <li>
-                            <button class="hiddenToggle"></button>
+                            <button class="loginArea-field-pwd-toggle"></button>
                         </li>
                     </ul>
                 </li>
             </ul>
             
             <div class="loginArea-type">
-                <p>用 <a href="#">手機短信</a> / <a href="#">郵箱密碼</a> 登入</p>
-                <a href="#">忘記密碼</a>
+                <p>用 <a href="javascript:void(0)">手機短信</a> <i class="loginArea-type-divide">/</i> <a href="javascript:void(0)">郵箱密碼</a> 登入</p>
+                <a href="javascript:void(0)">忘記密碼</a>
             </div>
 
-            <p class="loginArea-notExist">帳號不存在</p>
+            <p class="loginArea-notExist active">帳號不存在</p>
             
-            <a class="loginArea-send" href="#">登入</a>
+            <a class="loginArea-send" href="javascript:void(0)">登入</a>
             
-            <p>使用其他方式登入</p>
-            <!-- tw -->
-            <ul class="loginArea-others tw">
-                <li>
-                    <button class="loginArea-others-fb"></button>
-                </li>
-            </ul>
-            <!-- cn -->
-            <ul class="loginArea-others cn">
-                <li>
-                    <button class="loginArea-others-wechat"></button>
-                </li>
-                <li>
-                    <button class="loginArea-others-sina"></button>
-                </li>
-                <li>
-                    <button class="loginArea-others-qq"></button>
-                </li>
-            </ul>
+            <div class="loginArea-sns">
+                <div class="loginArea-sns-title">
+                    <p>使用其他方式登入</p>
+                </div>
+
+                <!-- tw -->
+                <ul class="loginArea-sns-btns tw active">
+                    <li>
+                        <button class="facebook"></button>
+                    </li>
+                </ul>
+
+                <!-- cn -->
+                <ul class="loginArea-sns-btns cn">
+                    <li>
+                        <button class="wechat"></button>
+                    </li>
+                    <li>
+                        <button class="weibo"></button>
+                    </li>
+                    <li>
+                        <button class="qq"></button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </main>
 </body>

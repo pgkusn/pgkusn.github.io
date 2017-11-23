@@ -1,4 +1,4 @@
-main.login {
+main.accountZone {
     select,
     input,
     button {
@@ -11,6 +11,9 @@ main.login {
            -moz-appearance: none;
                 appearance: none;
     }
+    .wrap {
+        max-width: 375px;
+    }
     /* ====================================================================== */
     /* header */
     /* ====================================================================== */
@@ -22,7 +25,9 @@ main.login {
 
             height: 253px;
 
-            background-image: -webkit-image-set(image-url("Login/header.jpg") 1x, image-url("Login/header@2x.jpg") 2x, image-url("Login/header@3x.jpg") 3x);
+            background-image: -webkit-image-set(image-url("AccountZone/header.jpg") 1x, image-url("AccountZone/header@2x.jpg") 2x, image-url("AccountZone/header@3x.jpg") 3x);
+            background-repeat: no-repeat;
+            background-position: 50% 0;
         }
     }
     .header-titles {
@@ -77,8 +82,15 @@ main.login {
             font-size: 17px;
             line-height: 25px;
 
+            position: relative;
+
+            display: inline-block;
+
             opacity: 0.6;
             color: #fff;
+            &::before {
+                @include clickableArea(34px, 25px);
+            }
         }
     }
 
@@ -96,9 +108,13 @@ main.login {
     /* 登入 */
     /* ====================================================================== */
     .loginArea {
+        font-size: 13px;
+        line-height: 20px;
+
         display: none;
 
         margin-top: 22px;
+        margin-bottom: 20px;
         padding: 0 32px;
         &.active {
             display: block;
@@ -114,27 +130,13 @@ main.login {
             align-items: center;
         }
         & > li {
-            padding-bottom: 10px;
+            margin-bottom: 10px;
+            padding-bottom: 12px;
 
             border-bottom: 1px solid rgba(155, 155, 155, 0.3);
 
             align-items: center;
-            &:first-child {
-                &::before {
-                    display: block;
-
-                    width: 20px;
-                    height: 20px;
-
-                    content: "";
-
-                    background-image: inline-image("Icons/mobile.svg");
-                    background-repeat: no-repeat;
-                    background-position: 50%;
-                    background-size: contain;
-                }
-            }
-            &:last-child::before {
+            &::before {
                 display: block;
 
                 width: 20px;
@@ -142,8 +144,15 @@ main.login {
 
                 content: "";
 
-                background-image: inline-image("Icons/password.svg");
+                background-repeat: no-repeat;
+                background-position: 50%;
                 background-size: contain;
+            }
+            &:first-child::before {
+                background-image: inline-image("Icons/mobile.svg");
+            }
+            &:last-child::before {
+                background-image: inline-image("Icons/password.svg");
             }
         }
         select {
@@ -163,6 +172,9 @@ main.login {
             flex-shrink: 0;
         }
         input {
+            line-height: 20px;
+
+            width: 100%;
             @mixin placeholder {
                 font-size: 13px;
                 line-height: 20px;
@@ -186,29 +198,16 @@ main.login {
 
             width: 10px;
             height: 10px;
-            padding: 0 8px 0 11px;
+            margin: 0 8px 0 11px;
 
             background-image: inline-image("Icons/delete.svg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
+
+            flex-shrink: 0;
             &::before {
                 @include clickableArea(10px, 10px);
-            }
-        }
-        .hiddenToggle {
-            position: relative;
-
-            width: 12px;
-            height: 12px;
-
-            background-image: inline-image("Icons/eye-hide.svg");
-            background-size: contain;
-            &.show {
-                background-image: inline-image("Icons/eye-show.svg");
-            }
-            &::before {
-                @include clickableArea(12px, 12px, 26px, 26px);
             }
         }
     }
@@ -229,10 +228,140 @@ main.login {
                 flex-shrink: 0;
             }
         }
-        input {
-            line-height: 20px;
+    }
+    .loginArea-field-pwd {
+        li {
+            &:first-child {
+                margin-left: 10px;
+            }
+            &:last-child {
+                width: 30px;
+                &::before {
+                    width: 1px;
+                    height: 20px;
 
+                    content: "";
+
+                    background-color: #dcdcdc;
+
+                    flex-shrink: 0;
+                }
+            }
+        }
+        input {
             width: 100%;
+        }
+        .del::before {
+            @include clickableArea(10px, 10px, 29px, 44px);
+        }
+    }
+    .loginArea-field-pwd-toggle {
+        position: relative;
+
+        width: 12px;
+        height: 12px;
+        margin: 0 7px 0 10px;
+
+        background-image: inline-image("Icons/eye-hide.svg");
+        background-size: contain;
+        &.show {
+            background-image: inline-image("Icons/eye-show.svg");
+        }
+        &::before {
+            @include clickableArea(12px, 12px, 29px, 44px);
+        }
+    }
+    .loginArea-type {
+        display: flex;
+
+        justify-content: space-between;
+        a {
+            position: relative;
+
+            color: $ocean-blue;
+            &::before {
+                @include clickableArea(false, 20px);
+            }
+        }
+    }
+    .loginArea-type-divide {
+        color: $dirty-purple-40;
+    }
+    .loginArea-notExist {
+        margin: 10px 0;
+
+        text-align: center;
+
+        opacity: 0;
+        color: #ed5168;
+        &.active {
+            opacity: 1;
+        }
+    }
+    .loginArea-send {
+        @include btn(100%, 40px, #fff, $ocean-blue);
+    }
+    .loginArea-sns {
+        margin-top: 20px;
+        button {
+            position: relative;
+
+            display: block;
+
+            width: 30px;
+            height: 30px;
+
+            background-size: contain;
+            @each $type in $sns {
+                &.#{$type} {
+                    background-image: inline-image("Icons/#{$type}.svg");
+                }
+            }
+            &::before {
+                @include clickableArea(30px, 30px);
+            }
+        }
+    }
+    .loginArea-sns-title {
+        font-size: 13px;
+        line-height: 20px;
+
+        display: flex;
+
+        color: $dirty-purple-40;
+
+        align-items: center;
+        justify-content: space-between;
+        &::before,
+        &::after {
+            width: calc(50% - 62px);
+            height: 1px;
+
+            content: "";
+
+            background-color: rgba(155, 155, 155, 0.3);
+        }
+        p {
+            width: 104px;
+
+            text-align: center;
+
+            flex-shrink: 0;
+        }
+    }
+    .loginArea-sns-btns {
+        display: none;
+
+        width: 170px;
+        margin: 15px auto 0;
+        &.active {
+            display: flex;
+        }
+        &.tw {
+            justify-content: center;
+        }
+        &.cn {
+            justify-content: space-between;
         }
     }
 }
