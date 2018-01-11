@@ -36,8 +36,7 @@
 - 音樂霸  
   <https://uat.musicbravo.com.tw>
 - 音樂霸（手機版）  
-  <https://uat.musicbravo.com.tw/mobile>  
-  <https://pgkusn.github.io/musicbravo-mobile>
+  <https://uat.musicbravo.com.tw/mobile>
 
 **聚樂數位（2015/12~2016/12）**
 - 官網  
