@@ -34,6 +34,9 @@
 	<!-- Google Maps API -->
 	<script src="build/js/map.min.js" defer></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBg1VHd6SQoVY_Rl_gllxk7Xy1O98uaAk8&callback=initMap" defer></script>
+
+	<script src="vendor/jquery.min.js" defer></script>
+	<script src="build/js/index.min.js" defer></script>
 	
 	<!-- Google Tag Manager -->
 	<script src="build/js/ga.min.js"></script>
@@ -49,7 +52,7 @@
 		<div class="wrap">
 			<h1>
 				六角西餐廳
-				<a href="#" class="logoTop"></a>
+				<a href="index.html" class="logoTop"></a>
 			</h1>
 			<label for="toggle" id="toggleBtn">
 				<i class="fa fa-bars" aria-hidden="true"></i>
@@ -58,9 +61,11 @@
 			<nav>
 				<h1>網站連結</h1>
 				<ul>
-					<li><a href="#">特色</a></li>
-					<li><a href="#">主廚</a></li>
-					<li><a href="#">地圖</a></li>
+					<li><a class="js-nav" data-target="feature" href="#">特色</a></li>
+					<li><a class="js-nav" data-target="chef" href="#">主廚</a></li>
+					<li><a class="js-nav" data-target="reserve" href="#">地圖</a></li>
+					<li><a href="cart.html">線上訂購</a></li>
+					<li><a href="login.html">登入</a></li>
 				</ul>
 			</nav>
 		</div>
