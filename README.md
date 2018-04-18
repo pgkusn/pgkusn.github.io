@@ -43,6 +43,8 @@
 	- JavaScript 技術  
 		jQuery  
 		Handlebars
+	- CSS 技術
+		Sass
 
 **布拉沃科技公司（2016/12~2017/12）**
 - 音樂霸（<https://www.musicbravo.com.tw>）  
@@ -52,6 +54,8 @@
 		jQuery  
 		Handlebars  
 		PushState + Ajax
+	- CSS 技術
+		Sass
 	- 網站分析  
 		Google Analytics
 
@@ -63,6 +67,9 @@
 	- JavaScript 技術  
 		jQuery  
 		gulp
+	- CSS 技術
+		Sass
+		Susy
 	- 網站分析  
 		Google Analytics
 
