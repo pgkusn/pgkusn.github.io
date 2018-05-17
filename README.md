@@ -54,7 +54,7 @@
 		jQuery  
 		Handlebars  
 		PushState + Ajax
-	- CSS 技術
+	- CSS 技術  
 		Sass
 	- 網站分析  
 		Google Analytics
@@ -67,7 +67,7 @@
 	- JavaScript 技術  
 		jQuery  
 		gulp
-	- CSS 技術
+	- CSS 技術  
 		Sass
 		Susy
 	- 網站分析  
