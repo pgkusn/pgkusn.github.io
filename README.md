@@ -68,7 +68,7 @@
 		jQuery  
 		gulp
 	- CSS 技術  
-		Sass
+		Sass  
 		Susy
 	- 網站分析  
 		Google Analytics
