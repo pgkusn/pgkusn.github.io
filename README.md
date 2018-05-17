@@ -43,7 +43,7 @@
 	- JavaScript 技術  
 		jQuery  
 		Handlebars
-	- CSS 技術
+	- CSS 技術  
 		Sass
 
 **布拉沃科技公司（2016/12~2017/12）**
