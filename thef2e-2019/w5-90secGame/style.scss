@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+}
+body {
+    display: flex;
+    height: 100vh;
+    font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    position: relative;
+    width: 800px;
+    height: 600px;
+}
+.clock {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em 23px;
+    border-radius: 0 0 30px 30px;
+    background-color: #262626;
+    color: #fff;
+    &::before {
+        content: 'TIME';
+        font-size: 14px;
+    }
+    p {
+        font-size: 58px;
+    }
+}
+.start {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 150px;
+    height: 50px;
+    border: 3px solid #000;
+    border-radius: 25px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 50px;
+}
+.popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    display: none;
+    flex-direction: column;
+    margin: auto;
+    width: 300px;
+    height: 180px;
+    border-radius: 30px;
+    background-color: #fff;
+    justify-content: space-evenly;
+    align-items: center;
+    &.active {
+        display: flex;
+    }
+    &-title {
+        color: #ff952b;
+        @at-root {
+            .popup.win .popup-title {
+                text-align: center;
+                font-size: 27px;
+            }
+            .popup.lose .popup-title {
+                font-size: 20px;
+            }
+        }
+    }
+    &-content {
+        color: #707070;
+        font-size: 14px;
+    }
+    a {
+        width: 150px;
+        height: 50px;
+        border: 1px solid #707070;
+        border-radius: 5px;
+        background-color: #ff952b;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+        line-height: 50px;
+    }
+}
