@@ -79,7 +79,7 @@ function handleComplete(evt, comp) {
         };
         return newArr;
     }
-    
+
     function addBall() {
         if (distanceLeft < 800) return;
 
@@ -90,8 +90,8 @@ function handleComplete(evt, comp) {
         ];
         let ranBallPos = getRanArr([180, 290, 400, 510, 620], 2);
         let ranBallTypeIdx = getRanArr([0, 1, 2], 2);
-        
-        ranBallPos.forEach((val,idx) => {
+
+        ranBallPos.forEach((val, idx) => {
             let typeIdx = ranBallTypeIdx[idx];
             ballType[typeIdx].x = val;
             ballType[typeIdx].y = 0;
