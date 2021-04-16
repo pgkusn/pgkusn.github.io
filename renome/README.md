@@ -1,1 +1,0 @@
-樣板下載網址：<http://downloadpsd.com/templates/responsive-restaurant-website-free-psd-templates>

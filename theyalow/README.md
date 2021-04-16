@@ -1,1 +1,0 @@
-樣板下載網址：<http://goo.gl/iX73ar>
